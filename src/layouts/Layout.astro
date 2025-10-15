@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { withBase } from '../utils/paths';
 
 interface Props {
 	title: string;
@@ -8,6 +9,26 @@ interface Props {
 
 const { title } = Astro.props;
 const description = "my-aicustom.com adalah solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.";
+const faviconHref = withBase('favicon.svg');
+const siteRoot = new URL(import.meta.env.BASE_URL, 'https://ddos-spec.github.io').toString();
+const orgJsonLd = JSON.stringify(
+        {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                name: "my-aicustom.com",
+                url: siteRoot,
+                logo: "https://via.placeholder.com/200x200.png?text=Logo",
+                description:
+                        "Solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.",
+                contactPoint: {
+                        "@type": "ContactPoint",
+                        email: "info@my-aicustom.com",
+                        contactType: "Customer Service",
+                },
+        },
+        null,
+        2,
+);
 ---
 
 <!doctype html>
@@ -17,39 +38,25 @@ const description = "my-aicustom.com adalah solusi AI untuk mengotomatiskan pros
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                <link rel="icon" type="image/svg+xml" href={faviconHref} />
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://my-aicustom.com/" />
+                <meta property="og:url" content={siteRoot} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=my-aicustom.com" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://my-aicustom.com/" />
+                <meta property="twitter:url" content={siteRoot} />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=my-aicustom.com" />
 
 		<!-- Schema.org markup for Google+ -->
-		<script type="application/ld+json">
-		{
-		  "@context": "http://schema.org",
-		  "@type": "Organization",
-		  "name": "my-aicustom.com",
-		  "url": "https://my-aicustom.com",
-		  "logo": "https://via.placeholder.com/200x200.png?text=Logo",
-		  "description": "Solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.",
-		  "contactPoint": {
-		    "@type": "ContactPoint",
-		    "email": "info@my-aicustom.com",
-		    "contactType": "Customer Service"
-		  }
-		}
-		</script>
+                <script type="application/ld+json">{orgJsonLd}</script>
 		<style>
 			/* Simple style for smooth scrolling */
 			html {

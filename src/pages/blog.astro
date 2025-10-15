@@ -1,28 +1,135 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/paths';
+
+const contactHref = withBase('contact/');
 ---
 
-<Layout title="Blog - my-aicustom.com">
+<Layout title="Blog & Insight AI - my-aicustom.com">
   <!-- Hero Section -->
-  <section class="relative bg-gray-700 text-white py-20 lg:py-32">
+  <section class="relative bg-slate-900 text-white py-20 lg:py-28">
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1200" alt="Blog Hero Image" class="w-full h-full object-cover opacity-30">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200" alt="Tim data science" class="w-full h-full object-cover opacity-40" loading="lazy" />
     </div>
     <div class="container mx-auto px-6 max-w-screen-xl relative z-10 text-center">
-      <h1 class="text-4xl lg:text-5xl font-extrabold">Blog & Wawasan AI</h1>
-      <p class="mt-4 text-lg lg:text-xl">Tetap update dengan tren terbaru dalam otomatisasi dan kecerdasan buatan.</p>
+      <span class="inline-flex items-center px-4 py-1 text-sm font-semibold uppercase tracking-wide bg-white/20 rounded-full">Wawasan AI Terbaru</span>
+      <h1 class="mt-6 text-4xl lg:text-5xl font-extrabold">Blog & Insight untuk Transformasi Bisnis Berbasis AI</h1>
+      <p class="mt-4 text-lg lg:text-xl text-slate-200">Artikel, studi kasus, dan panduan praktis untuk membantu Anda menerapkan AI dengan percaya diri.</p>
+    </div>
+  </section>
+
+  <!-- Category Pills -->
+  <section class="bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 max-w-screen-xl py-12">
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 text-sm font-medium bg-blue-100 text-blue-700 rounded-full">Automation</span>
+        <span class="px-4 py-2 text-sm font-medium bg-purple-100 text-purple-700 rounded-full">Data & Analytics</span>
+        <span class="px-4 py-2 text-sm font-medium bg-emerald-100 text-emerald-700 rounded-full">Strategy</span>
+        <span class="px-4 py-2 text-sm font-medium bg-amber-100 text-amber-700 rounded-full">Best Practice</span>
+        <span class="px-4 py-2 text-sm font-medium bg-rose-100 text-rose-700 rounded-full">Case Study</span>
+      </div>
     </div>
   </section>
 
   <!-- Featured Article -->
-  <section class="py-20 lg:py-24">
+  <section class="py-8 lg:py-12 bg-gray-50 dark:bg-gray-800">
     <div class="container mx-auto px-6 max-w-screen-xl">
-      <h2 class="text-3xl font-extrabold text-center mb-12">Artikel Unggulan</h2>
       <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="Featured Article Image" class="rounded-lg shadow-xl">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=1200" alt="Kolaborasi tim AI" class="rounded-3xl shadow-xl" loading="lazy" />
         <div>
-          <span class="text-gray-500">14 Oktober 2025</span>
-          <h3 class="mt-2 text-2xl lg:text-3xl font-bold">
-            Bagaimana AI Mengubah Lanskap Bisnis di Indonesia
-          </h3
-
+          <span class="text-sm font-semibold text-blue-600">Studi Kasus</span>
+          <h2 class="mt-4 text-3xl font-extrabold text-gray-900 dark:text-white">Bagaimana AI Menghemat 1.200 Jam Operasional dalam 3 Bulan</h2>
+          <p class="mt-4 text-gray-600 dark:text-gray-400">Pelajari bagaimana salah satu klien enterprise kami mengotomatiskan proses verifikasi dokumen dan menurunkan kesalahan manual hingga 84%.</p>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">Baca Selengkapnya</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="py-20 lg:py-24 bg-white dark:bg-gray-900">
+    <div class="container mx-auto px-6 max-w-screen-xl">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Artikel Terbaru</h2>
+          <p class="mt-3 text-lg text-gray-600 dark:text-gray-400">Insight praktis seputar penerapan AI di berbagai industri, disusun oleh praktisi kami.</p>
+        </div>
+        <a href={contactHref} class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">Butuh saran implementasi? Konsultasi Gratis</a>
+      </div>
+
+      <div class="mt-12 grid gap-12 md:grid-cols-2 xl:grid-cols-3">
+        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600" alt="Roadmap AI" class="w-full h-48 object-cover rounded-2xl" loading="lazy" />
+          <div class="mt-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-blue-600">Strategy</span>
+            <h3 class="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">Menyusun Roadmap AI Perusahaan dalam 90 Hari</h3>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Framework praktis untuk memprioritaskan use case dan menghitung potensi ROI.</p>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Baca artikel</a>
+        </article>
+
+        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600" alt="Automasi dokumen" class="w-full h-48 object-cover rounded-2xl" loading="lazy" />
+          <div class="mt-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-purple-600">Automation</span>
+            <h3 class="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">Checklist Implementasi Automation untuk Tim Operasional</h3>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Langkah-langkah kunci sebelum meluncurkan bot otomasi di departemen Anda.</p>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Baca artikel</a>
+        </article>
+
+        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600" alt="Dashboard analitik" class="w-full h-48 object-cover rounded-2xl" loading="lazy" />
+          <div class="mt-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-emerald-600">Data & Analytics</span>
+            <h3 class="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">5 Dashboard Wajib untuk Tim Eksekutif berbasis AI</h3>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Panduan menentukan metrik utama yang mudah dipantau oleh stakeholder.</p>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Baca artikel</a>
+        </article>
+
+        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1527430253228-e93688616381?w=600" alt="Tim customer support" class="w-full h-48 object-cover rounded-2xl" loading="lazy" />
+          <div class="mt-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-rose-600">Customer Experience</span>
+            <h3 class="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">Meningkatkan CSAT dengan Chatbot AI di Industri Finansial</h3>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Pelajaran penting dari implementasi chatbot multi-bahasa untuk bank regional.</p>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Baca artikel</a>
+        </article>
+
+        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600" alt="Data scientist" class="w-full h-48 object-cover rounded-2xl" loading="lazy" />
+          <div class="mt-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-amber-600">Talent</span>
+            <h3 class="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">Membangun Tim Data Science tanpa Friksi Rekrutmen</h3>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Strategi kolaborasi antara HR, IT, dan unit bisnis untuk percepat hiring.</p>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Baca artikel</a>
+        </article>
+
+        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
+          <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=600" alt="Meeting strategy" class="w-full h-48 object-cover rounded-2xl" loading="lazy" />
+          <div class="mt-6">
+            <span class="text-xs font-semibold uppercase tracking-wide text-slate-600">Leadership</span>
+            <h3 class="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">Checklist Governance AI untuk C-Level</h3>
+            <p class="mt-3 text-sm text-gray-600 dark:text-gray-400">Elemen tata kelola yang wajib ada sebelum mengeksekusi program AI strategis.</p>
+          </div>
+          <a href="#" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Baca artikel</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="bg-gray-50 dark:bg-gray-800 py-20">
+    <div class="container mx-auto px-6 max-w-3xl text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Langganan Insight eksklusif setiap bulan</h2>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Dapatkan rangkuman tren, template implementasi, dan strategi praktis langsung ke inbox Anda.</p>
+      <form class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+        <input type="email" required placeholder="Email perusahaan" class="w-full sm:w-72 px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:ring-blue-500" />
+        <button type="submit" class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">Langganan</button>
+      </form>
+    </div>
+  </section>
+</Layout>
