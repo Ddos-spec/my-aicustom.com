@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogHero from '../../components/blog/BlogHero.astro';
+import FeaturedArticle from '../../components/blog/FeaturedArticle.astro';
+import ArticleGrid from '../../components/blog/ArticleGrid.astro';
+import NewsletterCTA from '../../components/blog/NewsletterCTA.astro';
+import CategoryPill from '../../components/blog/CategoryPill.astro';
+import { allCategories, featuredPost, latestArticles } from '../../data/blogPosts';
+---
+<Layout title="Blog & Insight AI - my-aicustom.com">
+  <!-- Blog Hero Section -->
+  <BlogHero
+    eyebrow="Insight AI Enterprise"
+    title="Strategi, automation, dan governance untuk tim yang ingin scale AI dengan percaya diri"
+    description="Eksplorasi studi kasus dan blueprint siap pakai dari engagement kami bersama perusahaan enterprise di Asia Tenggara."
+  />
+
+  <!-- Category Navigation Section -->
+  <section class="bg-white py-14 dark:bg-slate-950">
+    <div class="mx-auto flex max-w-5xl flex-wrap justify-center gap-4 px-6">
+      {allCategories.map((category) => (
+        <CategoryPill label={category.label} variant={category.key} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured Article Section -->
+  <FeaturedArticle post={featuredPost} />
+
+  <!-- Latest Articles Section -->
+  <ArticleGrid
+    title="Artikel Terbaru"
+    description="Insight terkurasi yang memadukan pengalaman implementasi AI, best practice automasi, hingga governance lintas fungsi."
+    posts={latestArticles}
+  />
+
+  <!-- Newsletter CTA Section -->
+  <NewsletterCTA
+    title="Langganan insight eksklusif setiap bulan"
+    description="Dapatkan rangkuman strategi, kerangka kerja operasional, dan template implementasi langsung di inbox Anda."
+  />
+</Layout>

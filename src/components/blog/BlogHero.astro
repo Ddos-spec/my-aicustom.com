@@ -1,0 +1,62 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+}
+
+const { eyebrow, title, description } = Astro.props;
+---
+<!-- Blog Hero -->
+<section class="relative overflow-hidden bg-slate-950 text-white">
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-900/70"></div>
+    <img
+      src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=2000&q=80"
+      alt="Visualisasi kecerdasan buatan"
+      class="h-full w-full object-cover opacity-40"
+      loading="lazy"
+    />
+    <div class="absolute -top-48 right-0 h-[32rem] w-[32rem] rounded-full bg-sky-500/20 blur-3xl"></div>
+  </div>
+  <div class="relative">
+    <div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-24 lg:flex-row lg:items-center lg:justify-between lg:py-32">
+      <div class="max-w-2xl">
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold tracking-widest uppercase">
+          <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+          {eyebrow}
+        </span>
+        <h1 class="mt-6 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+          {title}
+        </h1>
+        <p class="mt-6 text-lg text-slate-200 sm:text-xl">{description}</p>
+      </div>
+      <div class="grid w-full max-w-md gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur md:max-w-sm">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-widest text-slate-300">Apa yang kami bahas</p>
+          <ul class="mt-4 space-y-3 text-sm text-slate-200">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
+              Automasi operasional, playbook eksekusi AI, dan governance.
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
+              Insight praktis dari engagement enterprise di Asia Tenggara.
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
+              Template siap pakai untuk mempercepat experiment dan scale.
+            </li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-white/10 p-5">
+          <p class="text-sm text-slate-100">
+            "Tim my-aicustom membantu kami mentransformasi operasi customer support hanya dalam 8 minggu. Konten mereka merangkum
+            pengalaman tersebut menjadi langkah-langkah nyata."
+          </p>
+          <p class="mt-4 text-sm font-semibold text-white">- VP Operations, Klien Enterprise</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

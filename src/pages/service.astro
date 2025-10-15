@@ -1,137 +1,32 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CTA from '../components/CTA.astro';
+import ServiceHero from '../components/service/ServiceHero.astro';
+import ServicePackages from '../components/service/ServicePackages.astro';
+import WorkflowSteps from '../components/service/WorkflowSteps.astro';
 import { withBase } from '../utils/paths';
 
-const contactHref = withBase('contact/');
+const konsultasiHref = withBase('konsultasi/');
+const heroImage = 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80';
 ---
 
+<!-- Image inventory for this page:
+  - Hero illustration: https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80
+  - Service card imagery: defined in src/data/servicePackages.ts
+-->
 <Layout title="Layanan AI Automation - my-aicustom.com">
-  <!-- Hero Section -->
-  <section class="relative bg-slate-900 text-white py-20 lg:py-28">
-    <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200" alt="Layanan transformasi AI" class="w-full h-full object-cover opacity-40" loading="lazy" />
-    </div>
-    <div class="container mx-auto px-6 max-w-screen-xl relative z-10 text-center lg:text-left">
-      <div class="max-w-3xl">
-        <span class="inline-flex items-center px-4 py-1 text-sm font-semibold uppercase tracking-wide bg-white/10 rounded-full">Solusi End-to-End</span>
-        <h1 class="mt-6 text-4xl lg:text-5xl font-extrabold">Layanan AI untuk Skalakan Operasional Bisnis Anda</h1>
-        <p class="mt-4 text-lg text-slate-200">Mulai dari otomasi proses hingga analitik prediktif, kami membantu mengimplementasikan AI yang memberikan dampak nyata.</p>
-        <a href={contactHref} class="mt-8 inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100">Jadwalkan Konsultasi Gratis</a>
-      </div>
-    </div>
-  </section>
+  <ServiceHero
+    heading="Layanan AI untuk Skalakan Operasional Bisnis Anda"
+    subheading="Mulai dari otomasi proses hingga analitik prediktif, kami membantu mengimplementasikan AI yang memberikan dampak nyata."
+    ctaLabel="Jadwalkan Konsultasi Gratis"
+    ctaHref={konsultasiHref}
+    imageSrc={heroImage}
+    imageAlt="Ilustrasi profesional tim bisnis memanfaatkan AI untuk otomasi"
+  />
 
-  <!-- Services Grid -->
-  <section class="py-20 lg:py-24 bg-white dark:bg-gray-900">
-    <div class="container mx-auto px-6 max-w-screen-xl">
-      <div class="max-w-3xl text-center mx-auto">
-        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Paket Layanan Kami</h2>
-        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Setiap solusi dirancang modular agar mudah disesuaikan dengan kebutuhan operasional dan industri Anda.</p>
-      </div>
-      <div class="mt-16 grid gap-10 md:grid-cols-2 xl:grid-cols-3">
-        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600" alt="Chatbot AI" class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
-          <h3 class="mt-6 text-2xl font-semibold text-gray-900 dark:text-white">Chatbot AI Custom</h3>
-          <p class="mt-3 text-gray-600 dark:text-gray-400">Bangun asisten virtual yang memahami konteks bisnis Anda dan terintegrasi dengan CRM maupun kanal digital lainnya.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-            <li>• NLP bilingual & integrasi WhatsApp</li>
-            <li>• Knowledge base dinamis</li>
-            <li>• Dashboard monitoring percakapan</li>
-          </ul>
-          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Diskusikan Solusi</a>
-        </article>
+  <ServicePackages />
 
-        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600" alt="Business Process Automation" class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
-          <h3 class="mt-6 text-2xl font-semibold text-gray-900 dark:text-white">Business Process Automation</h3>
-          <p class="mt-3 text-gray-600 dark:text-gray-400">Otomatisasi alur kerja manual seperti input data, validasi dokumen, hingga pelaporan rutin untuk menghemat jam kerja tim.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-            <li>• Audit proses end-to-end</li>
-            <li>• Integrasi dengan ERP/CRM</li>
-            <li>• Dashboard performa real-time</li>
-          </ul>
-          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Pelajari Implementasi</a>
-        </article>
+  <WorkflowSteps />
 
-        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?w=600" alt="AI Analytics" class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
-          <h3 class="mt-6 text-2xl font-semibold text-gray-900 dark:text-white">AI Analytics & Insights</h3>
-          <p class="mt-3 text-gray-600 dark:text-gray-400">Eksplorasi data dengan model prediktif dan dashboard visual untuk mendukung pengambilan keputusan yang cepat dan akurat.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-            <li>• Data pipeline & governance</li>
-            <li>• Model prediksi custom</li>
-            <li>• Visualisasi interaktif</li>
-          </ul>
-          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Minta Demo Insight</a>
-        </article>
-
-        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=600" alt="Computer vision" class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
-          <h3 class="mt-6 text-2xl font-semibold text-gray-900 dark:text-white">Computer Vision & OCR</h3>
-          <p class="mt-3 text-gray-600 dark:text-gray-400">Automasi verifikasi dokumen, inspeksi visual, dan quality control dengan model vision akurasi tinggi.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-            <li>• Model deteksi custom</li>
-            <li>• Integrasi kamera industrial</li>
-            <li>• Pelaporan otomatis</li>
-          </ul>
-          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Bahas Kebutuhan Anda</a>
-        </article>
-
-        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600" alt="Pelatihan AI" class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
-          <h3 class="mt-6 text-2xl font-semibold text-gray-900 dark:text-white">Training & Change Management</h3>
-          <p class="mt-3 text-gray-600 dark:text-gray-400">Bimbing tim Anda agar siap mengadopsi solusi AI melalui workshop interaktif dan pendampingan implementasi.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-            <li>• Workshop onsite/online</li>
-            <li>• Playbook adopsi AI</li>
-            <li>• Support pasca implementasi</li>
-          </ul>
-          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Rancang Program</a>
-        </article>
-
-        <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
-          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600" alt="Strategi AI" class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
-          <h3 class="mt-6 text-2xl font-semibold text-gray-900 dark:text-white">AI Strategy & Advisory</h3>
-          <p class="mt-3 text-gray-600 dark:text-gray-400">Definisikan roadmap AI perusahaan, prioritas inisiatif, dan tata kelola yang selaras dengan tujuan bisnis jangka panjang.</p>
-          <ul class="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-            <li>• Assessment maturity AI</li>
-            <li>• Business case & KPI</li>
-            <li>• Blueprint implementasi</li>
-          </ul>
-          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Mulai Konsultasi</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Section -->
-  <section class="bg-gray-50 dark:bg-gray-800 py-20">
-    <div class="container mx-auto px-6 max-w-screen-xl">
-      <div class="max-w-3xl text-center mx-auto">
-        <span class="inline-flex items-center px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-600 bg-blue-100 rounded-full">Workflow</span>
-        <h2 class="mt-4 text-3xl font-extrabold text-gray-900 dark:text-white">Cara Kami Bekerja</h2>
-        <p class="mt-3 text-gray-600 dark:text-gray-400">Pendekatan kolaboratif untuk memastikan setiap implementasi AI memberikan ROI yang terukur.</p>
-      </div>
-      <div class="mt-12 grid gap-8 md:grid-cols-3">
-        <div class="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
-          <span class="text-sm font-semibold text-blue-600">01. Assessment</span>
-          <h3 class="mt-4 text-xl font-semibold text-gray-900 dark:text-white">Discovery & Alignment</h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-400">Workshop untuk memahami target bisnis, constraint, dan kesiapan data.</p>
-        </div>
-        <div class="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
-          <span class="text-sm font-semibold text-blue-600">02. Build</span>
-          <h3 class="mt-4 text-xl font-semibold text-gray-900 dark:text-white">Prototyping & Iteration</h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-400">Kembangkan solusi secara agile dengan feedback loop yang cepat.</p>
-        </div>
-        <div class="p-8 bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
-          <span class="text-sm font-semibold text-blue-600">03. Scale</span>
-          <h3 class="mt-4 text-xl font-semibold text-gray-900 dark:text-white">Deploy & Enablement</h3>
-          <p class="mt-2 text-gray-600 dark:text-gray-400">Roll-out terukur lengkap dengan dokumentasi, pelatihan, dan support.</p>
-        </div>
-      </div>
-      <div class="mt-16 text-center">
-        <a href={contactHref} class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">Mulai Diskusi Proyek</a>
-      </div>
-    </div>
-  </section>
+  <CTA />
 </Layout>
