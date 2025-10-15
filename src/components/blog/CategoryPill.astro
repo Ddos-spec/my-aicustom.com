@@ -1,0 +1,21 @@
+---
+import type { CategoryKey } from '../../data/blogPosts';
+import { categoryStyles } from '../../data/blogPosts';
+
+interface Props {
+  label: string;
+  variant: CategoryKey;
+  size?: 'sm' | 'md';
+  className?: string;
+}
+
+const { label, variant, size = 'md', className } = Astro.props;
+const sizeClass = size === 'sm' ? 'px-3 py-1 text-xs' : 'px-4 py-1.5 text-sm';
+---
+<span
+  class={`inline-flex items-center font-semibold tracking-wide uppercase rounded-full ${sizeClass} ${categoryStyles[variant].pill} ${
+    className ?? ''
+  }`}
+>
+  {label}
+</span>

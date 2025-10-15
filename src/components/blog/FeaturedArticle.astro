@@ -1,0 +1,76 @@
+---
+import type { BlogPostMeta } from '../../data/blogPosts';
+import CategoryPill from './CategoryPill.astro';
+import { withBase } from '../../utils/paths';
+
+interface Props {
+  post: BlogPostMeta;
+}
+
+const { post } = Astro.props;
+const href = withBase(`blog/${post.slug}/`);
+---
+<!-- Featured Article Section -->
+<section class="bg-white py-16 dark:bg-slate-950">
+  <div class="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+    <div class="group relative overflow-hidden rounded-[2.5rem] border border-slate-100 shadow-[0_28px_90px_-40px_rgba(15,23,42,0.6)] transition-transform duration-500 hover:-translate-y-1 dark:border-slate-800/80 dark:bg-slate-900">
+      <a href={href} class="block">
+        <img
+          src={post.heroImage}
+          alt={post.title}
+          loading="lazy"
+          class="h-full max-h-[32rem] w-full object-cover"
+        />
+      </a>
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/20 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+        <CategoryPill label={post.categoryLabel} variant={post.category} />
+        <h2 class="mt-4 text-3xl font-semibold leading-tight md:text-4xl">
+          <a href={href} class="transition-colors duration-300 hover:text-sky-300">{post.title}</a>
+        </h2>
+        <p class="mt-4 text-base text-slate-100 md:text-lg">{post.excerpt}</p>
+        <div class="mt-6 flex flex-wrap items-center gap-4 text-xs font-semibold uppercase tracking-widest text-slate-200">
+          <span>{post.publishDate}</span>
+          <span aria-hidden="true" class="hidden h-1 w-1 rounded-full bg-slate-200 sm:inline"></span>
+          <span>{post.readTime}</span>
+        </div>
+      </div>
+    </div>
+    <div class="space-y-6">
+      <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">FEATURED STORY</p>
+      <h3 class="text-3xl font-semibold text-slate-900 dark:text-white">
+        Blueprint implementasi yang bisa langsung dieksekusi untuk tim Anda.
+      </h3>
+      <p class="text-lg text-slate-600 dark:text-slate-300">
+        Kami merangkum pelajaran terbesar dari proyek enterprise—mulai dari arsitektur solusi hingga manajemen perubahan—agar
+        Anda bisa menghindari trial-and-error yang mahal.
+      </p>
+      <div class="rounded-3xl border border-slate-100 bg-slate-50/60 p-8 dark:border-slate-800/70 dark:bg-slate-900">
+        <p class="text-sm font-semibold uppercase tracking-widest text-slate-500">Highlight Insight</p>
+        <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
+          <li class="flex items-start gap-3">
+            <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
+            Mengukur dampak automasi terhadap kepuasan pelanggan dan SLA.
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
+            Menyatukan stakeholder bisnis dan teknologi dengan governance ringkas.
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
+            Kerangka prioritas backlog AI berdasarkan value vs. kompleksitas.
+          </li>
+        </ul>
+      </div>
+      <a
+        href={href}
+        class="inline-flex w-fit items-center gap-3 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-widest text-white transition-colors duration-300 hover:bg-sky-600"
+      >
+        Baca studi lengkap
+        <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
