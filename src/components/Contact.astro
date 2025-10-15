@@ -3,35 +3,37 @@ import { withBase } from '../utils/paths';
 
 const contactHref = withBase('contact/');
 ---
-<section class="bg-white dark:bg-gray-900">
-    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-lg">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Butuh Diskusi Lebih Lanjut?</h2>
-        <p class="mb-12 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Tim kami siap membantu Anda memilih solusi AI yang tepat. Pilih metode komunikasi favorit Anda.</p>
-        <div class="grid gap-8 md:grid-cols-3">
-            <div class="flex flex-col items-center text-center p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-100 text-green-600">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3H4a1 1 0 00-1 1v16l4-4h13a1 1 0 001-1V4a1 1 0 00-1-1z" /></svg>
-                </span>
-                <h3 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Chat WhatsApp</h3>
-                <p class="mt-2 text-gray-500 dark:text-gray-400">Respons tercepat untuk pertanyaan singkat dan konsultasi awal.</p>
-                <a href="https://wa.me/6281234567890" target="_blank" class="mt-6 inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700">Mulai Chat</a>
-            </div>
-            <div class="flex flex-col items-center text-center p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-blue-100 text-blue-600">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2l-8 5-8-5V4zm0 4l8 5 8-5v10H4V8z" /></svg>
-                </span>
-                <h3 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Email Tim Ahli</h3>
-                <p class="mt-2 text-gray-500 dark:text-gray-400">Kirimkan kebutuhan proyek atau proposal kerjasama Anda.</p>
-                <a href="mailto:info@my-aicustom.com" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Kirim Email</a>
-            </div>
-            <div class="flex flex-col items-center text-center p-8 rounded-2xl border border-gray-100 dark:border-gray-700 shadow-sm">
-                <span class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-purple-100 text-purple-600">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 015 5v1h1a1 1 0 010 2h-1v2h-2v-2H9v2H7v-2H6a1 1 0 010-2h1v-1a5 5 0 015-5zm0 2a3 3 0 00-3 3v1h6v-1a3 3 0 00-3-3z" /></svg>
-                </span>
-                <h3 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Form Konsultasi</h3>
-                <p class="mt-2 text-gray-500 dark:text-gray-400">Isi kebutuhan Anda dan kami akan menghubungi dalam 1x24 jam.</p>
-                <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700">Isi Formulir</a>
-            </div>
-        </div>
+<section class="bg-gray-50 py-24">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Butuh Diskusi Lebih Lanjut?</h2>
+      <p class="mt-4 text-gray-600">Tim kami siap berdiskusi untuk memilih solusi AI terbaik. Pilih kanal yang paling nyaman untuk Anda.</p>
     </div>
+    <div class="mt-16 grid gap-8 md:grid-cols-3">
+      <article class="flex flex-col items-center gap-4 rounded-3xl border border-gray-100 bg-white p-10 text-center shadow-sm shadow-blue-100">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-100 text-green-600">
+          <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 3H4a1 1 0 00-1 1v16l4-4h13a1 1 0 001-1V4a1 1 0 00-1-1z" /></svg>
+        </span>
+        <h3 class="text-xl font-semibold text-gray-900">Chat WhatsApp</h3>
+        <p class="text-gray-600">Fast response untuk pertanyaan singkat dan koordinasi real-time.</p>
+        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-green-600 transition hover:text-green-700">Mulai Chat</a>
+      </article>
+      <article class="flex flex-col items-center gap-4 rounded-3xl border border-gray-100 bg-white p-10 text-center shadow-sm shadow-blue-100">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+          <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2l-8 5-8-5V4zm0 4l8 5 8-5v10H4V8z" /></svg>
+        </span>
+        <h3 class="text-xl font-semibold text-gray-900">Email Tim Ahli</h3>
+        <p class="text-gray-600">Submit proposal atau kebutuhan proyek secara detail.</p>
+        <a href="mailto:info@my-aicustom.com" class="inline-flex items-center text-sm font-semibold text-blue-600 transition hover:text-blue-700">Kirim Email</a>
+      </article>
+      <article class="flex flex-col items-center gap-4 rounded-3xl border border-gray-100 bg-white p-10 text-center shadow-sm shadow-blue-100">
+        <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-purple-100 text-purple-600">
+          <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 015 5v1h1a1 1 0 010 2h-1v2h-2v-2H9v2H7v-2H6a1 1 0 010-2h1v-1a5 5 0 015-5zm0 2a3 3 0 00-3 3v1h6v-1a3 3 0 00-3-3z" /></svg>
+        </span>
+        <h3 class="text-xl font-semibold text-gray-900">Form Konsultasi</h3>
+        <p class="text-gray-600">Isi kebutuhan Anda, tim kami akan follow up maksimal 1x24 jam.</p>
+        <a href={contactHref} class="inline-flex items-center text-sm font-semibold text-purple-600 transition hover:text-purple-700">Isi Formulir</a>
+      </article>
+    </div>
+  </div>
 </section>
