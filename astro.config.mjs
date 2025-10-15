@@ -3,6 +3,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  site: 'https://ddos-spec.github.io',
   base: '/my-aicustom.com/',
+  integrations: [tailwind()],
 });

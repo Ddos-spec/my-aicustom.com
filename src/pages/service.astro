@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/paths';
+
+const contactHref = withBase('contact/');
 ---
 
 <Layout title="Layanan AI Automation - my-aicustom.com">
@@ -13,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
         <span class="inline-flex items-center px-4 py-1 text-sm font-semibold uppercase tracking-wide bg-white/10 rounded-full">Solusi End-to-End</span>
         <h1 class="mt-6 text-4xl lg:text-5xl font-extrabold">Layanan AI untuk Skalakan Operasional Bisnis Anda</h1>
         <p class="mt-4 text-lg text-slate-200">Mulai dari otomasi proses hingga analitik prediktif, kami membantu mengimplementasikan AI yang memberikan dampak nyata.</p>
-        <a href="/contact" class="mt-8 inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100">Jadwalkan Konsultasi Gratis</a>
+        <a href={contactHref} class="mt-8 inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-slate-900 bg-white rounded-lg hover:bg-slate-100">Jadwalkan Konsultasi Gratis</a>
       </div>
     </div>
   </section>
@@ -35,7 +38,7 @@ import Layout from '../layouts/Layout.astro';
             <li>• Knowledge base dinamis</li>
             <li>• Dashboard monitoring percakapan</li>
           </ul>
-          <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Diskusikan Solusi</a>
+          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Diskusikan Solusi</a>
         </article>
 
         <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
@@ -47,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
             <li>• Integrasi dengan ERP/CRM</li>
             <li>• Dashboard performa real-time</li>
           </ul>
-          <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Pelajari Implementasi</a>
+          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Pelajari Implementasi</a>
         </article>
 
         <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
@@ -59,7 +62,7 @@ import Layout from '../layouts/Layout.astro';
             <li>• Model prediksi custom</li>
             <li>• Visualisasi interaktif</li>
           </ul>
-          <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Minta Demo Insight</a>
+          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Minta Demo Insight</a>
         </article>
 
         <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
@@ -71,7 +74,7 @@ import Layout from '../layouts/Layout.astro';
             <li>• Integrasi kamera industrial</li>
             <li>• Pelaporan otomatis</li>
           </ul>
-          <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Bahas Kebutuhan Anda</a>
+          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Bahas Kebutuhan Anda</a>
         </article>
 
         <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
@@ -83,7 +86,7 @@ import Layout from '../layouts/Layout.astro';
             <li>• Playbook adopsi AI</li>
             <li>• Support pasca implementasi</li>
           </ul>
-          <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Rancang Program</a>
+          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Rancang Program</a>
         </article>
 
         <article class="flex flex-col h-full p-8 bg-gray-50 dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-sm">
@@ -95,7 +98,7 @@ import Layout from '../layouts/Layout.astro';
             <li>• Business case & KPI</li>
             <li>• Blueprint implementasi</li>
           </ul>
-          <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Mulai Konsultasi</a>
+          <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">Mulai Konsultasi</a>
         </article>
       </div>
     </div>
@@ -127,7 +130,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
       <div class="mt-16 text-center">
-        <a href="/contact" class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">Mulai Diskusi Proyek</a>
+        <a href={contactHref} class="inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700">Mulai Diskusi Proyek</a>
       </div>
     </div>
   </section>

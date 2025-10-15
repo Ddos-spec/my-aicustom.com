@@ -1,5 +1,7 @@
 ---
-// src/components/Contact.astro
+import { withBase } from '../utils/paths';
+
+const contactHref = withBase('contact/');
 ---
 <section class="bg-white dark:bg-gray-900">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-lg">
@@ -28,7 +30,7 @@
                 </span>
                 <h3 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Form Konsultasi</h3>
                 <p class="mt-2 text-gray-500 dark:text-gray-400">Isi kebutuhan Anda dan kami akan menghubungi dalam 1x24 jam.</p>
-                <a href="/contact" class="mt-6 inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700">Isi Formulir</a>
+                <a href={contactHref} class="mt-6 inline-flex items-center text-sm font-medium text-purple-600 hover:text-purple-700">Isi Formulir</a>
             </div>
         </div>
     </div>

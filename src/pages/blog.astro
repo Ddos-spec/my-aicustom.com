@@ -1,5 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { withBase } from '../utils/paths';
+
+const contactHref = withBase('contact/');
 ---
 
 <Layout title="Blog & Insight AI - my-aicustom.com">
@@ -51,7 +54,7 @@ import Layout from '../layouts/Layout.astro';
           <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Artikel Terbaru</h2>
           <p class="mt-3 text-lg text-gray-600 dark:text-gray-400">Insight praktis seputar penerapan AI di berbagai industri, disusun oleh praktisi kami.</p>
         </div>
-        <a href="/contact" class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">Butuh saran implementasi? Konsultasi Gratis</a>
+        <a href={contactHref} class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700">Butuh saran implementasi? Konsultasi Gratis</a>
       </div>
 
       <div class="mt-12 grid gap-12 md:grid-cols-2 xl:grid-cols-3">
