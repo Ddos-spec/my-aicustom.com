@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Jadwalkan Konsultasi - my-aicustom.com">
+  <section class="py-20 lg:py-32">
+    <div class="container mx-auto px-6 max-w-screen-md text-center">
+      <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-800 dark:text-white">
+        Pilih Metode Konsultasi
+      </h1>
+      <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+        Kami siap membantu Anda. Silakan pilih metode konsultasi yang paling nyaman untuk Anda.
+      </p>
+
+      <div class="mt-12 grid sm:grid-cols-2 gap-8">
+        <!-- WhatsApp Card -->
+        <a href="https://wa.me/6281234567890" target="_blank" class="block p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=500" alt="WhatsApp" class="w-24 h-24 mx-auto mb-4 rounded-full">
+          <h3 class="text-2xl font-bold text-center text-green-500">Chat via WhatsApp</h3>
+          <p class="text-center text-gray-600 dark:text-gray-400 mt-2">
+            Ideal untuk pertanyaan cepat dan diskusi langsung dengan tim kami.
+          </p>
+        </a>
+
+        <!-- Google Meet / Scheduling Card -->
+        <a href="https://calendly.com/your-link" target="_blank" class="block p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+          <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=500" alt="Schedule a meeting" class="w-24 h-24 mx-auto mb-4 rounded-full">
+          <h3 class="text-2xl font-bold text-center text-blue-600">Atur Jadwal Meeting</h3>
+          <p class="text-center text-gray-600 dark:text-gray-400 mt-2">
+            Jadwalkan sesi konsultasi mendalam melalui Google Meet atau Zoom (menggunakan link Calendly/sejenisnya).
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
