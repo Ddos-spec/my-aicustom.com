@@ -1,131 +1,182 @@
 ---
 import { withBase } from '../utils/paths';
-import TestimonialSlider from './TestimonialSlider.astro';
 
-const serviceHref = withBase('service/');
+const productTourHref = withBase('service/');
 const contactHref = withBase('contact/');
 const blogHref = withBase('blog/');
+
+const logos = ['Sagara Technology', 'Ekrut', 'Lifepack', 'Datasintesa'];
 
 const solutions = [
   {
     title: 'Customer Service Automation',
     description:
-      'Chatbot multi-channel (WhatsApp, Instagram, dan Website) yang siap membantu pelanggan Anda 24 jam.',
+      'Deploy AI agents on WhatsApp, Instagram, and Web to deliver instant answers 24/7.',
     features: [
-      'Respon otomatis berbasis FAQ',
-      'Analytics & integrasi CRM',
-      'Workflow pesan follow-up',
-      'Dukungan multi-channel',
+      'AI FAQ routing with live agent handover',
+      'CRM and ticketing integration',
+      'Follow-up workflows and escalations',
+      'Analytics dashboard for CS leaders',
     ],
-    price: 'Mulai dari: Rp2.500.000 / bulan',
-    ctaLabel: 'Minta Demo Sekarang',
+    price: 'Starts from Rp2.500.000 / month',
+    ctaLabel: 'Request Live Demo',
     ctaHref: contactHref,
   },
   {
-    title: 'Automasi SEO Artikel',
-    description: 'AI copywriter yang membuat dan mempublikasikan artikel SEO setiap bulan.',
+    title: 'AI Article Engine',
+    description: 'Publish SEO articles every month with writers tuned to your brand voice.',
     features: [
-      '25 artikel/bulan',
-      'Optimasi keyword otomatis',
-      'Auto-post ke blog & platform',
-      'Clustering dan backlink optional',
+      '25 long-form articles delivered monthly',
+      'Automated keyword clustering',
+      'Auto-publish to blog and partner platforms',
+      'Optional backlink and repurposing workflows',
     ],
-    price: 'Mulai dari: Rp1.000.000 / bulan',
-    ctaLabel: 'Lihat Contoh Artikel AI',
+    price: 'Starts from Rp1.000.000 / month',
+    ctaLabel: 'See AI Article Samples',
     ctaHref: blogHref,
   },
   {
     title: 'Marketing Automation',
-    description: 'Blast promosi multi-channel dengan laporan performa lengkap.',
+    description: 'Orchestrate multi-channel campaigns with performance analytics built in.',
     features: [
-      'Kirim pesan ke ribuan kontak',
-      'Integrasi CRM & segmentasi',
-      'AI lead scoring untuk follow-up otomatis',
-      'Analisis engagement',
+      'Send personalised campaigns to thousands',
+      'CRM integration with smart segmentation',
+      'AI lead scoring and nurture sequencing',
+      'Engagement analytics and reporting',
     ],
-    price: 'Mulai dari: Rp2.500.000 / bulan',
-    ctaLabel: 'Lihat Dashboard Marketing',
-    ctaHref: serviceHref,
+    price: 'Starts from Rp2.500.000 / month',
+    ctaLabel: 'View Marketing Dashboard',
+    ctaHref: productTourHref,
   },
   {
     title: 'Custom AI Agent',
-    description: 'Solusi AI yang sepenuhnya dibuat khusus untuk bisnis Anda.',
+    description: 'Design enterprise AI workflows tailored to your business processes.',
     features: [
-      'Integrasi CRM / ERP',
-      'Multi-agent workflow',
-      'SLA & support premium',
-      'Fitur dan scope fleksibel',
+      'Integrations across CRM and ERP',
+      'Multi-agent orchestration',
+      'Premium SLA and dedicated support',
+      'Flexible scope with co-innovation',
     ],
-    price: 'Harga: Mulai Rp3–5 juta',
-    ctaLabel: 'Konsultasikan Project Anda',
+    price: 'Pricing: Rp3–5 million to start',
+    ctaLabel: 'Consult Your Project',
     ctaHref: contactHref,
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      '“Within six weeks we replaced manual routing with AI and cut wait times in half. The team guided us through every sprint.”',
+    name: 'Ayu Rahman',
+    role: 'Head of Customer Experience, Lifepack',
+    avatar: 'https://i.pravatar.cc/150?img=11',
+  },
+  {
+    quote:
+      '“Campaigns that used to take ten people now run with two. Reporting, follow-up, and experimentation happen automatically.”',
+    name: 'Hadi Prakoso',
+    role: 'VP Growth, Ekrut',
+    avatar: 'https://i.pravatar.cc/150?img=22',
+  },
+  {
+    quote:
+      '“Governance templates and change management support made our compliance team confident to scale AI to new regions.”',
+    name: 'Nadya Santoso',
+    role: 'Director of Operations, Datasintesa',
+    avatar: 'https://i.pravatar.cc/150?img=36',
   },
 ];
 
 const pricingTiers = [
   {
     name: 'Basic',
-    description: '1 modul AI, 1 integrasi standar, laporan mingguan — Mulai Rp1.000.000 / bulan',
+    description: '1 AI module, 1 standard integration, weekly reporting — Starts Rp1.000.000 / month',
     highlight: false,
   },
   {
     name: 'Pro',
-    description: '2 modul + CRM + analytics otomatis — Mulai Rp2.500.000 / bulan',
+    description: '2 modules + CRM + automated analytics — Starts Rp2.500.000 / month',
     highlight: true,
   },
   {
     name: 'Enterprise',
-    description: 'Semua modul, multi-agent, SLA, pelatihan tim — Custom pricing',
+    description: 'All modules, multi-agent orchestration, SLA, team enablement — Custom pricing',
     highlight: false,
   },
 ];
 ---
-<section class="relative overflow-hidden bg-white dark:bg-gray-950">
-  <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-blue-100/40 via-white to-transparent dark:from-blue-500/10"></div>
-  <div class="relative mx-auto flex max-w-screen-xl flex-col gap-16 px-4 pb-24 pt-32 sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:pt-40">
+<section class="relative overflow-hidden bg-slate-950 text-white">
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/90 to-sky-900/60"></div>
+    <div class="absolute -left-40 top-10 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl"></div>
+    <div class="absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl"></div>
+  </div>
+  <div class="relative mx-auto flex max-w-screen-xl flex-col gap-16 px-4 pb-28 pt-32 sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:pt-40">
     <div class="max-w-2xl space-y-8 lg:flex-1">
-      <span class="inline-flex items-center rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700 dark:bg-blue-500/20 dark:text-blue-100">Platform Otomatisasi AI Terintegrasi</span>
-      <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl dark:text-white">
-        Upgrade Customer Journey &amp; Pertumbuhan Bisnis dengan AI
+      <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-widest">
+        <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+        AI platform for ops &amp; growth teams
+      </span>
+      <h1 class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+        AI Automation that Understands Your Business DNA
       </h1>
-      <p class="text-lg text-gray-600 dark:text-gray-300">
-        my-aicustom.com membantu tim Anda mengotomatiskan layanan pelanggan, produksi konten, hingga kampanye pemasaran dengan workflow yang mudah diatur dan siap scale.
+      <p class="text-lg text-slate-200">
+        Solve repetitive work, scale customer support, and unlock new revenue with automation blueprints engineered for your workflows.
       </p>
       <div class="flex flex-wrap gap-4">
         <a
-          href={serviceHref}
-          class="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-blue-600/40 transition hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 dark:shadow-blue-900/40"
+          href={productTourHref}
+          class="inline-flex items-center justify-center rounded-full bg-sky-500 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-sky-900/40 transition hover:bg-sky-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
         >
-          Jelajahi Solusi
+          Get Product Tour
         </a>
         <a
           href={contactHref}
-          class="inline-flex items-center justify-center rounded-full border border-blue-200 px-6 py-3 text-base font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-blue-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:border-blue-500/60 dark:text-blue-100 dark:hover:bg-blue-500/10"
+          class="inline-flex items-center justify-center rounded-full border border-white/40 px-7 py-3 text-base font-semibold text-white transition hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
         >
-          Jadwalkan Konsultasi
+          Schedule Strategy Call
         </a>
       </div>
-      <ul class="flex flex-wrap gap-6 text-sm text-gray-500 dark:text-gray-400">
+      <ul class="flex flex-wrap gap-6 text-sm text-slate-200/80">
         <li class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-blue-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0110 10v1a5 5 0 01-5 5h-1a3 3 0 11-6 0H9a5 5 0 01-5-5v-1A10 10 0 0112 2zm0 2a8 8 0 00-8 8v1a3 3 0 003 3h1a1 1 0 011 1 1 1 0 002 0 1 1 0 011-1h1a3 3 0 003-3v-1a8 8 0 00-8-8z" /></svg>
-          Dukungan implementasi end-to-end
+          <svg class="h-5 w-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0110 10v1a5 5 0 01-5 5h-1a3 3 0 11-6 0H9a5 5 0 01-5-5v-1A10 10 0 0112 2zm0 2a8 8 0 00-8 8v1a3 3 0 003 3h1a1 1 0 011 1 1 1 0 002 0 1 1 0 011-1h1a3 3 0 003-3v-1a8 8 0 00-8-8z" /></svg>
+          Strategy, implementation, and change enablement in one team
         </li>
         <li class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-blue-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4a2 2 0 012-2h4.5a2 2 0 011.414.586l7.5 7.5A2 2 0 0120 11.5V20a2 2 0 01-2 2h-5a1 1 0 01-1-1v-5a3 3 0 00-3-3H6a2 2 0 01-2-2V4z" /></svg>
-          Integrasi CRM, ERP, dan channel populer
+          <svg class="h-5 w-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4a2 2 0 012-2h4.5a2 2 0 011.414.586l7.5 7.5A2 2 0 0120 11.5V20a2 2 0 01-2 2h-5a1 1 0 01-1-1v-5a3 3 0 00-3-3H6a2 2 0 01-2-2V4z" /></svg>
+          Integrations across CRM, ERP, and the channels you already use
         </li>
       </ul>
     </div>
     <div class="relative flex-1">
-      <div class="relative mx-auto max-w-xl overflow-hidden rounded-3xl border border-blue-100 bg-white shadow-2xl shadow-blue-500/20 dark:border-blue-500/40 dark:bg-gray-900">
-        <div class="absolute inset-0 bg-gradient-to-tr from-blue-500/15 via-transparent to-purple-500/20"></div>
-        <img
-          src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
-          alt="Dashboard otomatisasi AI"
-          class="relative h-full w-full object-cover"
-          loading="lazy"
-        />
+      <div class="relative mx-auto max-w-xl overflow-hidden rounded-[2.75rem] border border-white/10 bg-slate-900/60 p-3 shadow-[0_45px_120px_-50px_rgba(14,165,233,0.75)] backdrop-blur">
+        <div class="relative overflow-hidden rounded-[2.25rem]">
+          <img
+            src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
+            alt="AI automation dashboard"
+            class="h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/10 to-transparent"></div>
+        </div>
+        <div class="absolute -bottom-6 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur md:block">
+          <p class="text-sm font-semibold text-white">Real-time agent analytics &amp; SLA guardrails</p>
+          <p class="mt-1 text-xs text-slate-200/80">Monitor CSAT, backlog, and automation coverage from one dashboard.</p>
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-b border-slate-100 bg-white py-10 dark:border-slate-800 dark:bg-gray-950">
+  <div class="mx-auto flex max-w-screen-xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
+    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Trusted by marketing, customer service, and growth teams at</p>
+    <div class="flex flex-wrap items-center justify-center gap-8 text-base font-semibold text-slate-400 dark:text-slate-500">
+      {logos.map((logo) => (
+        <span class="flex items-center gap-2 text-slate-500 dark:text-slate-300">
+          {logo}
+        </span>
+      ))}
     </div>
   </div>
 </section>
@@ -133,9 +184,9 @@ const pricingTiers = [
 <section id="solutions" class="bg-white py-24 dark:bg-gray-950">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center justify-center rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700 dark:bg-blue-500/20 dark:text-blue-100">Solusi Unggulan</span>
-      <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Automasi yang Dibangun untuk Customer Journey Modern</h2>
-      <p class="mt-4 text-gray-600 dark:text-gray-300">Pilih modul yang paling relevan dengan tujuan tim Anda. Semua solusi dapat berjalan mandiri atau terhubung satu sama lain.</p>
+      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">AI Solutions</span>
+      <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">AI solutions built with your workflows in mind</h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">Choose the automation that matches your priority and get measurable results in weeks—not months.</p>
     </div>
     <div class="mt-16 grid gap-8 lg:grid-cols-2">
       {solutions.map((solution) => (
@@ -169,45 +220,45 @@ const pricingTiers = [
   </div>
 </section>
 
-<section id="why" class="bg-gray-50 py-24 dark:bg-gray-900">
+<section id="why" class="bg-slate-50 py-24 dark:bg-slate-900">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
       <div class="space-y-6">
-        <span class="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700 dark:bg-blue-500/20 dark:text-blue-100">Mengapa my-aicustom.com?</span>
-        <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">Skala Automasi dengan Governance yang Aman</h2>
-        <p class="text-gray-600 dark:text-gray-300">
-          Dari discovery hingga maintenance, kami bantu tim Anda membangun fondasi AI yang solid, terukur, dan ramah stakeholder. Metodologi kami menggabungkan konsultasi bisnis dan engineering terbaik.
+        <span class="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Why teams choose my-aicustom</span>
+        <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Automation with governance, delivered end-to-end</h2>
+        <p class="text-slate-600 dark:text-slate-300">
+          From discovery to steady-state operations, we pair automation architects with your operators so every sprint drives measurable business outcomes and stays compliant.
         </p>
         <div class="grid gap-6 sm:grid-cols-2">
-          <div class="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm shadow-blue-200/50 dark:border-blue-500/40 dark:bg-gray-950">
-            <p class="text-sm font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-200">Produktivitas</p>
-            <p class="mt-3 text-4xl font-extrabold text-gray-900 dark:text-white">45%+</p>
-            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Penghematan waktu kerja tim setelah 3 bulan implementasi.</p>
+          <div class="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm shadow-sky-200/60 dark:border-sky-500/40 dark:bg-slate-950">
+            <p class="text-sm font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-200">Productivity</p>
+            <p class="mt-3 text-4xl font-extrabold text-slate-900 dark:text-white">45% faster</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Average reduction in handling time after the first 3 months.</p>
           </div>
-          <div class="rounded-3xl border border-blue-100 bg-white p-8 shadow-sm shadow-blue-200/50 dark:border-blue-500/40 dark:bg-gray-950">
-            <p class="text-sm font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-200">Availability</p>
-            <p class="mt-3 text-4xl font-extrabold text-gray-900 dark:text-white">24/7</p>
-            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Sistem aktif memantau pesan masuk dan peluang follow-up secara otomatis.</p>
+          <div class="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm shadow-sky-200/60 dark:border-sky-500/40 dark:bg-slate-950">
+            <p class="text-sm font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-200">Availability</p>
+            <p class="mt-3 text-4xl font-extrabold text-slate-900 dark:text-white">24/7 coverage</p>
+            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">AI agents monitor inbound conversations and escalate automatically.</p>
           </div>
         </div>
       </div>
-      <div class="rounded-3xl border border-gray-100 bg-white p-10 shadow-sm shadow-blue-100 dark:border-gray-800 dark:bg-gray-950">
-        <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">Partner Strategis, Bukan Sekadar Vendor</h3>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">
-          Kami menyelaraskan roadmap AI dengan prioritas bisnis, menyediakan pelatihan tim, dokumentasi lengkap, serta dukungan proaktif untuk menjaga setiap inisiatif tetap deliver value.
+      <div class="rounded-3xl border border-slate-100 bg-white p-10 shadow-sm shadow-sky-100 dark:border-slate-800 dark:bg-slate-950">
+        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">A strategic partner, not just another vendor</h3>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">
+          We align AI roadmaps with your revenue priorities, provide playbooks, documentation, and enablement, and stay on-call with proactive optimisation support.
         </p>
-        <div class="mt-6 space-y-3 text-sm text-gray-600 dark:text-gray-400">
+        <div class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
           <p class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
-            Discovery &amp; proof-of-concept cepat (1–2 pekan)
+            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
+            1–2 week discovery and proof-of-concept sprints
           </p>
           <p class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
-            SOP operasional &amp; guardrail etika AI yang jelas
+            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
+            Clear SOPs, risk guardrails, and governance rituals
           </p>
           <p class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-blue-500"></span>
-            Monitoring kesehatan model + insight mingguan otomatis
+            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
+            Weekly model health monitoring with executive-ready insights
           </p>
         </div>
       </div>
@@ -215,27 +266,105 @@ const pricingTiers = [
   </div>
 </section>
 
-<TestimonialSlider />
-
-<section id="pricing" class="bg-gray-50 py-24 dark:bg-gray-900">
+<section id="testimonials" class="bg-white py-24 dark:bg-slate-950">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center justify-center rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700 dark:bg-blue-500/20 dark:text-blue-100">Pricing</span>
-      <h2 class="mt-6 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">Pilih paket yang sesuai dengan kebutuhan dan tahap bisnis Anda.</h2>
-      <p class="mt-4 text-gray-600 dark:text-gray-300">Semua paket mencakup dashboard &amp; laporan mingguan. Integrasi tambahan tersedia sesuai permintaan.</p>
+      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Customer stories</span>
+      <h2 class="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Operations teams ship faster with my-aicustom</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">Playbooks, change management, and analytics combine so every stakeholder can see value from day one.</p>
+    </div>
+    <div
+      class="relative mt-16"
+      data-testimonial-slider
+      data-autoplay-interval="6500"
+      role="region"
+      aria-label="Customer testimonials"
+      tabindex="0"
+    >
+      <button
+        type="button"
+        class="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-sky-100 bg-white p-3 text-sky-600 shadow-md transition hover:border-sky-200 hover:bg-sky-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-700 dark:bg-slate-800 dark:text-sky-200 dark:hover:bg-slate-700"
+        data-prev
+        aria-label="Show previous testimonial"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.707 5.293a1 1 0 010 1.414L11.414 11l4.293 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" /></svg>
+      </button>
+      <button
+        type="button"
+        class="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-sky-100 bg-white p-3 text-sky-600 shadow-md transition hover:border-sky-200 hover:bg-sky-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-700 dark:bg-slate-800 dark:text-sky-200 dark:hover:bg-slate-700"
+        data-next
+        aria-label="Show next testimonial"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.293 5.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L12.586 12 8.293 7.707a1 1 0 010-1.414z" /></svg>
+      </button>
+      <div class="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_32px_90px_-45px_rgba(15,23,42,0.4)] dark:border-slate-800 dark:bg-slate-900">
+        <div
+          class="flex touch-pan-y select-none transition-transform duration-700 ease-out"
+          data-track
+          role="list"
+          aria-live="polite"
+        >
+          {testimonials.map((testimonial, index) => (
+            <figure
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`Testimonial ${index + 1} of ${testimonials.length}`}
+              class="flex w-full shrink-0 flex-col gap-6 px-6 py-10 sm:px-10"
+              data-slide={index}
+              aria-hidden={index === 0 ? 'false' : 'true'}
+            >
+              <svg class="h-10 w-10 text-sky-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 3A5.5 5.5 0 004 8.5v1A3.5 3.5 0 007.5 13H9v1A4 4 0 015 18a1 1 0 102 0 2 2 0 012-2 2 2 0 002-2V8.5A5.5 5.5 0 009.5 3zM18.5 3A5.5 5.5 0 0013 8.5v1A3.5 3.5 0 0016.5 13H18v1a4 4 0 01-4 4 1 1 0 100 2 6 6 0 006-6V8.5A5.5 5.5 0 0018.5 3z" /></svg>
+              <blockquote class="text-lg text-slate-700 dark:text-slate-200">{testimonial.quote}</blockquote>
+              <figcaption class="flex items-center gap-4 pt-4">
+                <img
+                  src={testimonial.avatar}
+                  alt={`Photo of ${testimonial.name}`}
+                  class="h-14 w-14 rounded-full object-cover"
+                  loading="lazy"
+                />
+                <div>
+                  <p class="font-semibold text-slate-900 dark:text-white">{testimonial.name}</p>
+                  <p class="text-sm text-slate-500 dark:text-slate-300">{testimonial.role}</p>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        {testimonials.map((testimonial, index) => (
+          <button
+            type="button"
+            class="h-2 w-10 rounded-full bg-sky-100 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 data-[active='true']:bg-sky-500"
+            data-dot={index}
+            aria-label={`Show testimonial ${testimonial.name}`}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="bg-slate-50 py-24 dark:bg-slate-900">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Pricing</span>
+      <h2 class="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Choose the plan that fits your growth stage.</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">Every plan includes dashboards and weekly insight reports. Additional integrations are available on request.</p>
     </div>
     <div class="mt-16 grid gap-8 lg:grid-cols-3">
       {pricingTiers.map((tier) => (
         <article
           class={`flex h-full flex-col justify-between gap-6 rounded-3xl border bg-white/80 p-8 shadow-sm transition hover:-translate-y-1 dark:bg-gray-900/80 ${
             tier.highlight
-              ? 'border-blue-500 shadow-blue-200/70 dark:border-blue-400 dark:shadow-blue-900/30'
-              : 'border-gray-100 shadow-blue-100 dark:border-gray-800 dark:shadow-blue-900/20'
+              ? 'border-sky-500 shadow-sky-200/70 dark:border-sky-400 dark:shadow-sky-900/30'
+              : 'border-slate-100 shadow-slate-200 dark:border-slate-800 dark:shadow-slate-900/20'
           }`}
         >
           <div class="space-y-4">
             {tier.highlight && (
-              <span class="inline-flex items-center rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700 dark:bg-blue-500/20 dark:text-blue-100">Paling Diminati</span>
+              <span class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Most popular</span>
             )}
             <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">{tier.name}</h3>
             <p class="text-gray-600 dark:text-gray-300">{tier.description}</p>
@@ -244,11 +373,11 @@ const pricingTiers = [
             href={contactHref}
             class={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 ${
               tier.highlight
-                ? 'bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400'
-                : 'border border-blue-200 text-blue-700 hover:border-blue-300 hover:bg-blue-50 dark:border-blue-500/60 dark:text-blue-100 dark:hover:bg-blue-500/10'
+                ? 'bg-sky-500 text-white hover:bg-sky-400 dark:bg-sky-500 dark:hover:bg-sky-400'
+                : 'border border-sky-200 text-sky-700 hover:border-sky-300 hover:bg-sky-50 dark:border-sky-500/60 dark:text-sky-100 dark:hover:bg-sky-500/10'
             }`}
           >
-            Konsultasikan Paket Anda
+            Consult Your Plan
           </a>
         </article>
       ))}
@@ -256,51 +385,51 @@ const pricingTiers = [
   </div>
 </section>
 
-<section id="faq" class="bg-white py-24 dark:bg-gray-950">
+<section id="faq" class="bg-white py-24 dark:bg-slate-950">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center justify-center rounded-full bg-blue-100 px-4 py-1 text-sm font-semibold text-blue-700 dark:bg-blue-500/20 dark:text-blue-100">FAQ</span>
-      <h2 class="mt-6 text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">Pertanyaan umum sebelum kick-off project</h2>
-      <p class="mt-4 text-gray-600 dark:text-gray-300">Kami bantu Anda memahami proses implementasi AI dari awal hingga sukses operasional.</p>
+      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">FAQ</span>
+      <h2 class="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Frequently asked before we start a sprint</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-300">We make sure every initiative begins with clear milestones, success metrics, and governance rituals.</p>
     </div>
     <div class="mt-12 space-y-4">
       <details class="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition dark:border-gray-800 dark:bg-gray-900">
         <summary class="flex cursor-pointer items-center justify-between text-left text-lg font-semibold text-gray-900 dark:text-white">
-          Berapa lama proses implementasinya?
+          How long does implementation take?
           <span class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-gray-950">+</span>
         </summary>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">Discovery &amp; setup inti biasanya selesai dalam 1–2 pekan, disesuaikan dengan kompleksitas integrasi dan workflow yang dipilih.</p>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">Discovery and core setup usually wrap in 1–2 weeks depending on integration depth and the automation modules you activate.</p>
       </details>
       <details class="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition dark:border-gray-800 dark:bg-gray-900">
         <summary class="flex cursor-pointer items-center justify-between text-left text-lg font-semibold text-gray-900 dark:text-white">
-          Bisakah modul diintegrasikan dengan sistem eksisting?
+          Can we plug the modules into our existing systems?
           <span class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-gray-950">+</span>
         </summary>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">Ya, kami mendukung integrasi ke CRM, ERP, marketing tools, hingga data warehouse menggunakan API atau konektor khusus.</p>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">Yes. We integrate with CRM, ERP, marketing tools, and data warehouses via API or bespoke connectors designed during discovery.</p>
       </details>
       <details class="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition dark:border-gray-800 dark:bg-gray-900">
         <summary class="flex cursor-pointer items-center justify-between text-left text-lg font-semibold text-gray-900 dark:text-white">
-          Bagaimana dukungan setelah go-live?
+          What support is included after go-live?
           <span class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-gray-950">+</span>
         </summary>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">Semua paket mencakup pendampingan mingguan, pemantauan performa, dan akses ke tim support premium untuk iterasi lanjutan.</p>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">Every plan includes weekly steering calls, performance monitoring, and access to our enablement team for ongoing optimisation.</p>
       </details>
     </div>
   </div>
 </section>
 
-<section class="bg-blue-600 py-24 dark:bg-blue-700">
+<section class="bg-sky-600 py-24 dark:bg-sky-700">
   <div class="mx-auto max-w-screen-xl px-4 text-center text-white sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold sm:text-4xl">Siap meluncurkan automasi AI yang berdampak?</h2>
-    <p class="mx-auto mt-4 max-w-2xl text-blue-100">
-      Konsultasikan kebutuhan bisnis Anda dan temukan kombinasi solusi AI terbaik dari my-aicustom.com. Kami pastikan implementasi berjalan aman, cepat, dan terukur.
+    <h2 class="text-3xl font-bold sm:text-4xl">Ready to launch AI automation that scales with you?</h2>
+    <p class="mx-auto mt-4 max-w-2xl text-sky-100">
+      Share your priorities and we will design the automation playbook, governance guardrails, and enablement plan tailored for your team.
     </p>
     <div class="mt-8 flex flex-wrap justify-center gap-4">
       <a
         href={contactHref}
-        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-blue-700 shadow-lg shadow-blue-900/30 transition hover:bg-blue-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-sky-700 shadow-lg shadow-sky-900/30 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
       >
-        Konsultasi Gratis
+        Talk to an AI Strategist
       </a>
       <a
         href="https://wa.me/6281234567890"
@@ -308,8 +437,143 @@ const pricingTiers = [
         rel="noopener"
         class="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
       >
-        Chat dengan Tim Ahli
+        Chat with our team
       </a>
     </div>
   </div>
 </section>
+
+<script is:inline>
+  (() => {
+    const sliderRoot = document.querySelector('[data-testimonial-slider]');
+    if (!(sliderRoot instanceof HTMLElement)) {
+      return;
+    }
+    const track = sliderRoot.querySelector('[data-track]');
+    if (!(track instanceof HTMLElement)) {
+      return;
+    }
+    const slides = Array.from(track.children);
+    const dots = Array.from(sliderRoot.querySelectorAll('[data-dot]'));
+    const prevButton = sliderRoot.querySelector('[data-prev]');
+    const nextButton = sliderRoot.querySelector('[data-next]');
+    if (slides.length <= 1) {
+      return;
+    }
+    let index = 0;
+    let intervalId;
+    let isDragging = false;
+    let startX = 0;
+    let currentDelta = 0;
+    let activePointerId = null;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const autoplayInterval = Number(sliderRoot.dataset.autoplayInterval) || 6000;
+
+    const setTransition = (value) => {
+      track.style.transitionDuration = value;
+    };
+
+    const update = () => {
+      track.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((slide, slideIndex) => {
+        slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+      });
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === index;
+        dot.dataset.active = isActive ? 'true' : 'false';
+        dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    };
+
+    const setIndex = (nextIndex, withAnimation = true) => {
+      index = (nextIndex + slides.length) % slides.length;
+      if (withAnimation) {
+        setTransition('700ms');
+      }
+      update();
+    };
+
+    const stop = () => {
+      if (intervalId) {
+        window.clearInterval(intervalId);
+        intervalId = undefined;
+      }
+    };
+
+    const start = () => {
+      if (prefersReducedMotion) {
+        return;
+      }
+      stop();
+      intervalId = window.setInterval(() => setIndex(index + 1), autoplayInterval);
+    };
+
+    const handlePointerDown = (event) => {
+      if (event.target instanceof HTMLElement && event.target.closest('button')) {
+        return;
+      }
+      isDragging = true;
+      startX = event.clientX ?? 0;
+      currentDelta = 0;
+      activePointerId = event.pointerId ?? null;
+      setTransition('0ms');
+      stop();
+      track.setPointerCapture?.(event.pointerId);
+    };
+
+    const handlePointerMove = (event) => {
+      if (!isDragging || (activePointerId !== null && event.pointerId !== activePointerId)) {
+        return;
+      }
+      currentDelta = (event.clientX ?? 0) - startX;
+      const percentage = (currentDelta / sliderRoot.clientWidth) * 100;
+      track.style.transform = `translateX(calc(-${index * 100}% + ${percentage}%))`;
+    };
+
+    const handlePointerUp = (event) => {
+      if (!isDragging || (activePointerId !== null && event.pointerId !== activePointerId)) {
+        return;
+      }
+      isDragging = false;
+      setTransition('700ms');
+      const threshold = sliderRoot.clientWidth * 0.2;
+      if (currentDelta > threshold) {
+        setIndex(index - 1, true);
+      } else if (currentDelta < -threshold) {
+        setIndex(index + 1, true);
+      } else {
+        update();
+      }
+      track.releasePointerCapture?.(event.pointerId);
+      start();
+    };
+
+    track.addEventListener('pointerdown', handlePointerDown);
+    track.addEventListener('pointermove', handlePointerMove);
+    track.addEventListener('pointerup', handlePointerUp);
+    track.addEventListener('pointercancel', handlePointerUp);
+
+    prevButton?.addEventListener('click', () => {
+      setIndex(index - 1);
+      start();
+    });
+
+    nextButton?.addEventListener('click', () => {
+      setIndex(index + 1);
+      start();
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      dot.addEventListener('click', () => {
+        setIndex(dotIndex);
+        start();
+      });
+    });
+
+    sliderRoot.addEventListener('pointerenter', stop);
+    sliderRoot.addEventListener('pointerleave', start);
+
+    update();
+    start();
+  })();
+</script>
