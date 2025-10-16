@@ -1,0 +1,168 @@
+---
+const testimonials = [
+  {
+    quote: '“AI dari my-aicustom.com mengotomatisasi proses dan mengirit waktu tim.”',
+    name: 'John Doe',
+    role: 'CEO ABC Company',
+    avatar: 'https://i.pravatar.cc/150?img=1',
+  },
+  {
+    quote: '“Layanan supportnya responsif, setup cepat.”',
+    name: 'Jane Smith',
+    role: 'Marketing Manager XYZ Corp',
+    avatar: 'https://i.pravatar.cc/150?img=2',
+  },
+  {
+    quote: '“Integrasi WhatsApp chatbot mempercepat pelayanan customer kami secara nyata.”',
+    name: 'David Johnson',
+    role: 'IT Director 123 Industries',
+    avatar: 'https://i.pravatar.cc/150?img=3',
+  },
+];
+---
+<section id="testimonials" class="bg-white py-24 dark:bg-gray-900">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">Testimoni Sukses</h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">
+        Tim lintas industri mempercayakan akselerasi otomatisasi pada my-aicustom.com.
+      </p>
+    </div>
+    <div
+      class="relative mt-16"
+      data-testimonial-slider
+      role="region"
+      aria-label="Slider testimoni pelanggan"
+      tabindex="0"
+    >
+      <div class="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm shadow-blue-100 dark:border-gray-800 dark:bg-gray-800">
+        <div
+          class="flex transition-transform duration-700 ease-out"
+          data-track
+          role="list"
+          aria-live="polite"
+        >
+          {testimonials.map((testimonial, index) => (
+            <figure
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`Testimoni ${index + 1} dari ${testimonials.length}`}
+              class="flex w-full shrink-0 flex-col gap-6 px-6 py-10 sm:px-10"
+              data-slide={index}
+              aria-hidden={index === 0 ? 'false' : 'true'}
+            >
+              <svg
+                class="h-10 w-10 text-blue-200"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d="M9.5 3A5.5 5.5 0 004 8.5v1A3.5 3.5 0 007.5 13H9v1A4 4 0 015 18a1 1 0 102 0 2 2 0 012-2 2 2 0 002-2V8.5A5.5 5.5 0 009.5 3zM18.5 3A5.5 5.5 0 0013 8.5v1A3.5 3.5 0 0016.5 13H18v1a4 4 0 01-4 4 1 1 0 100 2 6 6 0 006-6V8.5A5.5 5.5 0 0018.5 3z" />
+              </svg>
+              <blockquote class="text-lg text-gray-700 dark:text-gray-200">{testimonial.quote}</blockquote>
+              <figcaption class="flex items-center gap-4 pt-4">
+                <img
+                  src={testimonial.avatar}
+                  alt={`Foto ${testimonial.name}`}
+                  class="h-14 w-14 rounded-full object-cover"
+                  loading="lazy"
+                />
+                <div>
+                  <p class="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
+                  <p class="text-sm text-gray-500 dark:text-gray-300">{testimonial.role}</p>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+      <div class="mt-8 flex items-center justify-center gap-3">
+        {testimonials.map((testimonial, index) => (
+          <button
+            type="button"
+            class="h-2 w-10 rounded-full bg-blue-100 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 data-[active='true']:bg-blue-600"
+            data-dot={index}
+            aria-label={`Tampilkan testimoni ${testimonial.name}`}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  const script = document.currentScript;
+  const section = script?.previousElementSibling;
+  if (!(section instanceof HTMLElement)) {
+    return;
+  }
+  const sliderRoot = section.querySelector('[data-testimonial-slider]');
+  if (!(sliderRoot instanceof HTMLElement)) {
+    return;
+  }
+  const track = sliderRoot.querySelector('[data-track]');
+  if (!(track instanceof HTMLElement)) {
+    return;
+  }
+  const slides = Array.from(track.children);
+  const dots = Array.from(sliderRoot.querySelectorAll('[data-dot]'));
+  if (slides.length <= 1) {
+    return;
+  }
+  let index = 0;
+  let intervalId;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReducedMotion) {
+    track.style.transitionDuration = '0ms';
+  }
+  const update = () => {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    slides.forEach((slide, slideIndex) => {
+      slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
+    });
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === index;
+      dot.dataset.active = isActive ? 'true' : 'false';
+      dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    });
+  };
+  const setIndex = (nextIndex) => {
+    index = (nextIndex + slides.length) % slides.length;
+    update();
+  };
+  const stop = () => {
+    if (intervalId) {
+      window.clearInterval(intervalId);
+      intervalId = undefined;
+    }
+  };
+  const start = () => {
+    if (prefersReducedMotion) {
+      return;
+    }
+    stop();
+    intervalId = window.setInterval(() => setIndex(index + 1), 6000);
+  };
+  dots.forEach((dot, dotIndex) => {
+    dot.addEventListener('click', () => {
+      setIndex(dotIndex);
+      start();
+    });
+  });
+  sliderRoot.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      setIndex(index + 1);
+      start();
+    }
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      setIndex(index - 1);
+      start();
+    }
+  });
+  sliderRoot.addEventListener('mouseenter', stop);
+  sliderRoot.addEventListener('mouseleave', start);
+  update();
+  start();
+</script>

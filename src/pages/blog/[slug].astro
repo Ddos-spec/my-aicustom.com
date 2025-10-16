@@ -1,0 +1,229 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CategoryPill from '../../components/blog/CategoryPill.astro';
+import ArticleSidebar from '../../components/blog/ArticleSidebar.astro';
+import NewsletterCTA from '../../components/blog/NewsletterCTA.astro';
+import RelatedArticles from '../../components/blog/RelatedArticles.astro';
+import {
+  blogPosts,
+  sidebarArticles,
+  getRelatedArticles,
+  findPostBySlug,
+  type BlogPostMeta,
+} from '../../data/blogPosts';
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = findPostBySlug(slug ?? '');
+
+if (!post) {
+  throw Astro.error(404, 'Artikel tidak ditemukan');
+}
+
+const formattedDate = new Date(post.publishDate).toLocaleDateString('id-ID', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+});
+
+const sidebarItems = sidebarArticles.filter((item) => item.slug !== post.slug).slice(0, 4);
+const relatedPosts: BlogPostMeta[] = getRelatedArticles(post.slug, 3);
+---
+<Layout title={`${post.title} - my-aicustom.com`}>
+  <!-- Article Hero Section -->
+  <section class="bg-white py-16 dark:bg-slate-950">
+    <div class="mx-auto max-w-5xl px-6">
+      <CategoryPill label={post.categoryLabel} variant={post.category} />
+      <h1 class="mt-6 text-4xl font-semibold leading-tight text-slate-900 dark:text-white sm:text-5xl">{post.title}</h1>
+      <div class="mt-6 flex flex-wrap items-center gap-4 text-sm font-semibold uppercase tracking-widest text-slate-500">
+        <span>{formattedDate}</span>
+        <span class="hidden h-1 w-1 rounded-full bg-slate-400 sm:inline"></span>
+        <span>{post.readTime}</span>
+        <span class="hidden h-1 w-1 rounded-full bg-slate-400 sm:inline"></span>
+        <span>Oleh {post.author}</span>
+      </div>
+    </div>
+    <div class="mx-auto mt-10 max-w-6xl px-6">
+      <img
+        src={post.heroImage}
+        alt={post.title}
+        class="h-full w-full rounded-[2.75rem] object-cover shadow-[0_35px_120px_-50px_rgba(15,23,42,0.65)]"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <!-- Article Content Section -->
+  <section class="bg-white py-16 dark:bg-slate-950">
+    <div class="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[minmax(0,1fr)_22rem]">
+      <article class="flex flex-col gap-12 text-base leading-relaxed text-slate-700 dark:text-slate-300">
+        <!-- Introduction -->
+        <div class="space-y-5 text-lg">
+          <p>
+            Transformasi operasional berbasis AI bukan hanya tentang mengganti proses manual dengan bot otomatis. Tanpa desain
+            ulang journey pelanggan dan governance yang presisi, investasi AI akan memunculkan silo baru dan memperburuk pengalaman
+            pelanggan. Artikel ini memetakan blueprint operasional yang kami gunakan bersama klien enterprise untuk menyatukan
+            automasi, insight real time, dan tim frontline.
+          </p>
+
+          <p>
+            Dalam 8 minggu, tim lintas fungsi dapat mengaktifkan orkestrasi AI yang terukur apabila mereka mengikuti kerangka kerja
+            yang kami sebut sebagai <span class="font-semibold text-slate-900 dark:text-white">Operational AI Spine</span>.
+            Spine ini menyoroti lima keputusan penting: prioritas use case, data signal, desain kontrol, pengalaman agen, dan ritme
+            evaluasi.
+          </p>
+        </div>
+
+        <!-- Section: Prioritization -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">1. Prioritaskan use case berbasis nilai pelanggan</h2>
+          <p>
+            Mulai dengan blueprint journey pelanggan. Identifikasi titik friksi bernilai tinggi yang menunda SLA atau meningkatkan
+            biaya layanan. Peta peluang tersebut terhadap dua dimensi: nilai finansial dan sensitivitas pengalaman pelanggan.
+            Matrix sederhana ini membantu steering committee menentukan backlog yang seimbang antara efisiensi dan kepuasan.
+          </p>
+          <ul class="ml-6 list-disc space-y-3 text-base">
+            <li>Gunakan data historis untuk menghitung potensi pengurangan waktu siklus.</li>
+            <li>Validasi asumsi dengan frontline melalui design sprint berdurasi 3 hari.</li>
+            <li>Setiap use case harus memiliki indikator leading dan lagging untuk memonitor value.</li>
+          </ul>
+        </div>
+
+        <!-- Highlight Block -->
+        <div class="rounded-3xl border border-sky-100 bg-sky-50/60 p-8 dark:border-sky-500/30 dark:bg-sky-500/10">
+          <p class="text-xs font-semibold uppercase tracking-[0.35em] text-sky-500">Playbook Tip</p>
+          <p class="mt-3 text-lg font-medium text-slate-900 dark:text-white">
+            Kombinasikan data volume tiket, nilai transaksi, dan NPS untuk menentukan prioritas automasi. Ketika ketiganya tinggi,
+            jadikan use case tersebut kandidat pertama untuk AI co-pilot.
+          </p>
+        </div>
+
+        <!-- Section: Operating Spine -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">2. Bangun Operational AI Spine yang modular</h2>
+          <p>
+            Spine bertindak sebagai layer orkestrasi yang menghubungkan berbagai layanan AI dengan sistem legacy. Kami membaginya
+            menjadi empat modul inti: ingestion, orchestration, human-in-the-loop, dan feedback analytics. Setiap modul memiliki
+            penanggung jawab dan OKR yang jelas.
+          </p>
+
+          <figure class="rounded-3xl border border-slate-100 bg-white p-6 shadow-[0_24px_80px_-45px_rgba(15,23,42,0.35)] dark:border-slate-800/80 dark:bg-slate-900">
+            <img
+              src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1400&q=80"
+              alt="Diagram orkestrasi AI"
+              class="w-full rounded-2xl object-cover"
+              loading="lazy"
+            />
+            <figcaption class="mt-4 text-sm text-slate-500 dark:text-slate-300">
+              Kerangka modul Operational AI Spine yang menyeimbangkan manusia dan automasi.
+            </figcaption>
+          </figure>
+
+          <p>
+            Setiap modul memiliki service level yang terhubung: ingestion memastikan kualitas data real time, orchestration
+            menjalankan keputusan, human-in-the-loop memverifikasi kasus kritikal, sementara feedback analytics mengukur outcome.
+            Tim kami menyusun berikut sebagai panduan awal.
+          </p>
+
+          <div class="overflow-hidden rounded-2xl border border-slate-100 shadow-[0_20px_70px_-45px_rgba(15,23,42,0.4)] dark:border-slate-800/80">
+            <table class="w-full table-auto text-left text-sm">
+              <thead class="bg-slate-900 text-white">
+                <tr>
+                  <th class="px-5 py-4 text-sm font-semibold uppercase tracking-widest">Modul</th>
+                  <th class="px-5 py-4 text-sm font-semibold uppercase tracking-widest">Owner</th>
+                  <th class="px-5 py-4 text-sm font-semibold uppercase tracking-widest">Outcome</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white text-slate-600 dark:bg-slate-900 dark:text-slate-300">
+                <tr class="border-b border-slate-100 dark:border-slate-800/80">
+                  <td class="px-5 py-4 font-semibold text-slate-900 dark:text-white">Ingestion</td>
+                  <td class="px-5 py-4">Lead Data Engineer</td>
+                  <td class="px-5 py-4">Data bersih &lt; 5 menit dari sumber transaksi</td>
+                </tr>
+                <tr class="border-b border-slate-100 dark:border-slate-800/80">
+                  <td class="px-5 py-4 font-semibold text-slate-900 dark:text-white">Orchestration</td>
+                  <td class="px-5 py-4">Product Owner AI</td>
+                  <td class="px-5 py-4">Rasio automatisasi mencapai 65% dalam 3 bulan</td>
+                </tr>
+                <tr>
+                  <td class="px-5 py-4 font-semibold text-slate-900 dark:text-white">Human-in-the-loop</td>
+                  <td class="px-5 py-4">Lead Operations</td>
+                  <td class="px-5 py-4">Quality check manual pada kasus kritikal &lt; 30 menit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Section: Governance -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">3. Desain governance yang ringan namun akuntabel</h2>
+          <p>
+            Governance bukan berarti memperlambat inovasi. Fokuskan pada ritme evaluasi mingguan dengan dashboard yang menyatukan
+            indikator risiko, outcome pelanggan, dan efisiensi operasional. Steering committee hanya perlu memastikan adanya guard
+            rail untuk bias dan kepatuhan data.
+          </p>
+
+          <blockquote class="rounded-3xl border border-sky-100 bg-sky-50/60 p-8 text-base font-medium text-slate-900 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-white">
+            "Tim terbaik memandang governance sebagai alat enabling, bukan gatekeeping. Mereka menyelaraskan standar kontrol dengan
+            kecepatan eksperimen menggunakan data real time."
+          </blockquote>
+
+          <p>
+            Setiap sesi steering mingguan harus menghasilkan keputusan tegas: lanjutkan, optimalkan, atau hentikan. Dokumentasikan
+            keputusan tersebut di playbook sehingga seluruh unit bisnis memahami alasan di baliknya.
+          </p>
+        </div>
+
+        <!-- Section: Change Enablement -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">4. Orkestrasikan change enablement untuk frontline</h2>
+          <p>
+            Automasi hanya sukses jika frontline memahami bagaimana AI mendukung pekerjaan mereka. Kami selalu menjalankan program
+            enablement 2 minggu sebelum go-live: simulasi use case, sesi Q&amp;A, dan refresh SOP. Bantu agen mengetahui kapan harus
+            mengintervensi dan bagaimana melaporkan feedback ke tim product.
+          </p>
+
+          <p>
+            Gunakan library video pendek dan kartu panduan visual untuk memastikan materi mudah dikonsumsi. Pastikan juga ada
+            saluran feedback dua arah agar perbaikan model AI bisa berjalan cepat.
+          </p>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="space-y-5">
+          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">5. Ukur outcome dan iterasi setiap 30 hari</h2>
+          <p>
+            Tutup loop implementasi dengan evaluasi bulanan. Bandingkan SLA, CSAT, dan efisiensi biaya sebelum dan sesudah automasi.
+            Data ini menentukan apakah Anda perlu memperluas scope atau mengoptimalkan modul yang ada. Jangan lupa mengukur dampak
+            terhadap pengalaman karyawan karena mereka adalah penggerak utama kesuksesan AI.
+          </p>
+
+          <p>
+            Dengan mengikuti blueprint ini, organisasi Anda dapat mengeksekusi program AI secara disiplin sekaligus menjaga
+            pengalaman pelanggan yang premium. Gunakan template ini sebagai titik awal sebelum disesuaikan dengan konteks industri
+            Anda.
+          </p>
+        </div>
+      </article>
+
+      <div class="lg:sticky lg:top-28 lg:h-fit">
+        <ArticleSidebar latestPosts={sidebarItems} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Articles Section -->
+  <RelatedArticles posts={relatedPosts} />
+
+  <!-- Newsletter CTA Section -->
+  <NewsletterCTA
+    title="Langganan insight eksklusif setiap bulan"
+    description="Satu email setiap bulan berisi rangkuman strategi dan playbook implementasi AI pilihan tim konsultan kami."
+  />
+</Layout>

@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!-- Newsletter CTA Section -->
+<section class="bg-slate-900 py-24 text-white">
+  <div class="mx-auto grid max-w-4xl gap-10 px-6 text-center">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sky-400">Newsletter</p>
+      <h2 class="mt-6 text-4xl font-semibold sm:text-5xl">{title}</h2>
+      <p class="mt-4 text-lg text-slate-200">{description}</p>
+    </div>
+    <form class="mx-auto flex w-full max-w-2xl flex-col gap-4 sm:flex-row">
+      <input
+        type="email"
+        required
+        placeholder="Email perusahaan"
+        class="w-full rounded-full border border-white/20 bg-white/10 px-6 py-4 text-base text-white placeholder:text-slate-300 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
+      />
+      <button
+        type="submit"
+        class="inline-flex items-center justify-center rounded-full bg-sky-500 px-8 py-4 text-sm font-semibold uppercase tracking-widest text-white transition-colors duration-300 hover:bg-sky-400"
+      >
+        Langganan
+      </button>
+    </form>
+    <p class="text-xs uppercase tracking-widest text-slate-400">
+      Kami hanya mengirimkan 1 email setiap bulan. Tidak ada spam.
+    </p>
+  </div>
+</section>
