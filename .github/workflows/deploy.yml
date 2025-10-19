@@ -33,9 +33,8 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftps
-          server-dir: public_html/
+          server-dir: public_html/my-aicustom.com/
           local-dir: ./dist/
           exclude: |
             **/.git*
             **/node_modules/**
-          dangerous-clean-slate: true
