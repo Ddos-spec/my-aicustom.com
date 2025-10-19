@@ -1,5 +1,4 @@
 ---
-import { withBase } from '../../utils/paths';
 import type { BlogPostMeta } from '../../data/blogPosts';
 import CategoryPill from './CategoryPill.astro';
 
@@ -9,7 +8,7 @@ interface Props {
 }
 
 const { post, variant = 'default' } = Astro.props;
-const href = withBase(`blog/${post.slug}/`);
+const href = `/blog/${post.slug}/`;
 const isCompact = variant === 'compact';
 ---
 <!-- Blog Card -->

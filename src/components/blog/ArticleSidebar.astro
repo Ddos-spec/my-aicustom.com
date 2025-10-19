@@ -2,14 +2,14 @@
 import type { BlogPostMeta } from '../../data/blogPosts';
 import { allCategories } from '../../data/blogPosts';
 import CategoryPill from './CategoryPill.astro';
-import { withBase } from '../../utils/paths';
 
 interface Props {
   latestPosts: BlogPostMeta[];
 }
 
 const { latestPosts } = Astro.props;
-const contactHref = withBase('contact/');
+const contactHref = '/contact/';
+const toPostHref = (slug: string) => `/blog/${slug}/`;
 ---
 <!-- Article Sidebar Component -->
 <aside class="space-y-10 lg:space-y-12">
@@ -18,7 +18,7 @@ const contactHref = withBase('contact/');
     <ul class="mt-6 space-y-6">
       {latestPosts.map((post) => (
         <li class="border-b border-slate-100 pb-5 last:border-b-0 last:pb-0 dark:border-slate-800/80">
-          <a href={withBase(`blog/${post.slug}/`)} class="group grid grid-cols-[4.5rem_1fr] gap-4">
+          <a href={toPostHref(post.slug)} class="group grid grid-cols-[4.5rem_1fr] gap-4">
             <img
               src={post.thumbnailImage}
               alt={post.title}

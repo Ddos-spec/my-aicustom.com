@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { withBase } from '../../utils/paths';
 
 export const posts = [
   {
@@ -103,7 +102,7 @@ const formattedDate = new Date(post.publishDate).toLocaleDateString('en-US', {
 
 const relatedPosts = posts.filter((entry) => entry.slug !== post.slug).slice(0, 3);
 
-const blogHref = (entrySlug) => withBase(`blog/${entrySlug}/`);
+const blogHref = (entrySlug: string) => `/blog/${entrySlug}/`;
 ---
 <Layout title={`${post.title} - my-aicustom.com`}>
   <section class="bg-white py-16 dark:bg-slate-950">
@@ -198,96 +197,3 @@ const blogHref = (entrySlug) => withBase(`blog/${entrySlug}/`);
                   <td class="px-5 py-4">AI Product Owner</td>
                   <td class="px-5 py-4">Automation ratio reaches 65% within 3 months</td>
                 </tr>
-                <tr>
-                  <td class="px-5 py-4 font-semibold text-slate-900 dark:text-white">Human-in-the-loop</td>
-                  <td class="px-5 py-4">Operations Lead</td>
-                  <td class="px-5 py-4">Critical cases reviewed manually in under 30 minutes</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="space-y-5">
-          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">3. Design lightweight yet accountable governance</h2>
-          <p>
-            Governance should not slow innovation. Focus on weekly review rhythms with dashboards that combine risk indicators, customer outcomes, and operational efficiency. The steering committee only needs clear guardrails for bias and data compliance.
-          </p>
-          <blockquote class="rounded-3xl border border-sky-100 bg-sky-50/60 p-8 text-base font-medium text-slate-900 dark:border-sky-500/30 dark:bg-sky-500/10 dark:text-white">
-            “High-performing teams treat governance as an enabler. They align control standards with experimentation speed using real-time data.”
-          </blockquote>
-          <p>
-            Every steering session should end with a clear decision: continue, optimise, or pause. Document each decision in the playbook so all business units understand the reasoning.
-          </p>
-        </div>
-
-        <div class="space-y-5">
-          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">4. Orchestrate change enablement for frontline teams</h2>
-          <p>
-            Automation succeeds only when frontline teams understand how AI supports their work. We run a two-week enablement program before go-live: scenario simulations, Q&amp;A sessions, and SOP refreshers. Help agents know when to intervene and how to share feedback with product teams.
-          </p>
-          <p>
-            Use short-form videos and visual job aids to keep material easy to digest. Set up two-way feedback channels so AI model improvements happen quickly.
-          </p>
-        </div>
-
-        <div class="space-y-5">
-          <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">5. Measure outcomes and iterate every 30 days</h2>
-          <p>
-            Close the implementation loop with monthly reviews. Compare SLA, CSAT, and cost efficiency before and after automation. This data signals whether to expand scope or optimise existing modules. Don’t forget to measure employee experience—your teams power AI success.
-          </p>
-          <p>
-            By following this blueprint, your organisation can execute AI programs with discipline while preserving premium customer experiences. Use this template as a starting point before tailoring it to your industry context.
-          </p>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section class="bg-slate-50 py-20 dark:bg-slate-900">
-    <div class="mx-auto max-w-6xl px-6">
-      <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Related reading</h2>
-      <div class="mt-8 grid gap-8 md:grid-cols-3">
-        {relatedPosts.map((entry) => (
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-[0_20px_60px_-40px_rgba(15,23,42,0.4)] transition hover:-translate-y-1 hover:shadow-[0_30px_80px_-45px_rgba(15,23,42,0.5)] dark:border-slate-800/80 dark:bg-slate-900">
-            <a href={blogHref(entry.slug)} class="block overflow-hidden rounded-2xl">
-              <img src={entry.thumbnailImage} alt={entry.title} loading="lazy" class="h-44 w-full object-cover" />
-            </a>
-            <div class="mt-5 space-y-3">
-              <span class="inline-flex items-center rounded-full border border-slate-200 px-3 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500 dark:border-slate-700 dark:text-slate-300">{entry.category}</span>
-              <a href={blogHref(entry.slug)} class="text-lg font-semibold text-slate-900 transition-colors duration-300 hover:text-sky-600 dark:text-white">
-                {entry.title}
-              </a>
-              <p class="text-sm text-slate-600 dark:text-slate-300">{entry.excerpt}</p>
-            </div>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-slate-900 py-24 text-white">
-    <div class="mx-auto grid max-w-4xl gap-10 px-6 text-center">
-      <div>
-        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-sky-400">Newsletter</p>
-        <h2 class="mt-6 text-4xl font-semibold sm:text-5xl">Get monthly automation blueprints in your inbox</h2>
-        <p class="mt-4 text-lg text-slate-200">One email per month summarising strategies, operating models, and templates from our consulting engagements.</p>
-      </div>
-      <form class="mx-auto flex w-full max-w-2xl flex-col gap-4 sm:flex-row">
-        <input
-          type="email"
-          required
-          placeholder="Work email"
-          class="w-full rounded-full border border-white/20 bg-white/10 px-6 py-4 text-base text-white placeholder:text-slate-300 focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-500/60"
-        />
-        <button
-          type="submit"
-          class="inline-flex items-center justify-center rounded-full bg-sky-500 px-8 py-4 text-sm font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-300 hover:bg-sky-400"
-        >
-          Subscribe
-        </button>
-      </form>
-      <p class="text-xs uppercase tracking-[0.35em] text-slate-400">We send one curated email each month—no spam.</p>
-    </div>
-  </section>
-</Layout>

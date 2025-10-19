@@ -1,23 +1,24 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { withBase } from '../utils/paths';
 
 interface Props {
-	title: string;
+        title: string;
 }
 
 const { title } = Astro.props;
+const siteOrigin = 'https://my-aicustom.com';
+const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const description = "my-aicustom.com adalah solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.";
-const faviconHref = withBase('favicon.svg');
-const siteRoot = new URL(import.meta.env.BASE_URL, 'https://ddos-spec.github.io').toString();
+const faviconHref = '/favicon.svg';
+const socialImage = `${siteOrigin}/assets/og-default.svg`;
 const orgJsonLd = JSON.stringify(
         {
                 "@context": "http://schema.org",
                 "@type": "Organization",
                 name: "my-aicustom.com",
-                url: siteRoot,
-                logo: "https://via.placeholder.com/200x200.png?text=Logo",
+                url: siteOrigin,
+                logo: `${siteOrigin}/assets/og-default.svg`,
                 description:
                         "Solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.",
                 contactPoint: {
@@ -33,42 +34,43 @@ const orgJsonLd = JSON.stringify(
 
 <!doctype html>
 <html lang="id" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
+        <head>
+                <meta charset="UTF-8" />
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta name="viewport" content="width=device-width" />
                 <link rel="icon" type="image/svg+xml" href={faviconHref} />
-		<meta name="generator" content={Astro.generator} />
+                <link rel="canonical" href={canonicalUrl} />
+                <meta name="generator" content={Astro.generator} />
 
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-                <meta property="og:url" content={siteRoot} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content="https://via.placeholder.com/1200x630.png?text=my-aicustom.com" />
+                <!-- Open Graph / Facebook -->
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={canonicalUrl} />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={socialImage} />
 
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content={siteRoot} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="https://via.placeholder.com/1200x630.png?text=my-aicustom.com" />
+                <!-- Twitter -->
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content={canonicalUrl} />
+                <meta property="twitter:title" content={title} />
+                <meta property="twitter:description" content={description} />
+                <meta property="twitter:image" content={socialImage} />
 
-		<!-- Schema.org markup for Google+ -->
+                <!-- Schema.org markup for Google+ -->
                 <script type="application/ld+json">{orgJsonLd}</script>
-		<style>
-			/* Simple style for smooth scrolling */
-			html {
-				scroll-behavior: smooth;
-			}
-		</style>
-	</head>
-	<body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 pt-16">
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+                <style>
+                        /* Simple style for smooth scrolling */
+                        html {
+                                scroll-behavior: smooth;
+                        }
+                </style>
+        </head>
+        <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 pt-16">
+                <Header />
+                <main>
+                        <slot />
+                </main>
+                <Footer />
+        </body>
 </html>

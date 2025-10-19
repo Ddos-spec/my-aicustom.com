@@ -1,14 +1,13 @@
 ---
 import type { BlogPostMeta } from '../../data/blogPosts';
 import CategoryPill from './CategoryPill.astro';
-import { withBase } from '../../utils/paths';
 
 interface Props {
   post: BlogPostMeta;
 }
 
 const { post } = Astro.props;
-const href = withBase(`blog/${post.slug}/`);
+const href = `/blog/${post.slug}/`;
 ---
 <!-- Featured Article Section -->
 <section class="bg-white py-16 dark:bg-slate-950">

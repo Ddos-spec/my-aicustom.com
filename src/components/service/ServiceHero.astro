@@ -1,6 +1,4 @@
 ---
-import { withBase } from '../../utils/paths';
-
 interface Props {
   heading: string;
   subheading: string;
@@ -11,7 +9,7 @@ interface Props {
 }
 
 const { heading, subheading, ctaLabel, ctaHref, imageSrc, imageAlt } = Astro.props;
-const contactHref = withBase('contact/');
+const contactHref = '/contact/';
 ---
 
 <!-- Image assets used:

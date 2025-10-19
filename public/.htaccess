@@ -1,0 +1,54 @@
+# Enable rewriting and force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Allow robots.txt and sitemap.xml direct access
+<FilesMatch "^(robots\.txt|sitemap\.xml)$">
+  Require all granted
+</FilesMatch>
+
+# Block access to hidden and sensitive files
+<FilesMatch "(\.env|\.git|\.htaccess|\.htpasswd|composer\.json|package\.json|package-lock\.json|yarn\.lock|pnpm-lock\.yaml|\.log|\.ini|\.sh|\.sql|\.bak|\.config)$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Hotlink protection for images (allow same domain and known bots)
+RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png|gif|webp|svg)$ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://([^/]+\.)?my-aicustom\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !google\. [NC]
+RewriteCond %{HTTP_REFERER} !bing\. [NC]
+RewriteCond %{HTTP_REFERER} !yahoo\. [NC]
+RewriteRule \.(jpe?g|png|gif|webp|svg)$ - [F,L]
+
+# Brotli and Gzip compression
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/javascript application/javascript application/json application/xml image/svg+xml
+</IfModule>
+
+# Browser caching for static assets
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 1 hour"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# SPA fallback to index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]

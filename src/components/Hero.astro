@@ -1,9 +1,7 @@
 ---
-import { withBase } from '../utils/paths';
-
-const productTourHref = withBase('service/');
-const contactHref = withBase('contact/');
-const blogHref = withBase('blog/');
+const productTourHref = '/service/';
+const contactHref = '/contact/';
+const blogHref = '/blog/';
 
 const logos = ['Sagara Technology', 'Ekrut', 'Lifepack', 'Datasintesa'];
 
@@ -198,7 +196,7 @@ const pricingTiers = [
               {solution.features.map((feature) => (
                 <li class="flex items-start gap-3">
                   <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-500/20 dark:text-blue-100">
-                    <svg class="h-3 w-3" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.707 16.707a1 1 0 01-1.414 0l-3-3a1 1 0 011.414-1.414L9 14.586l8.293-8.293a1 1 0 111.414 1.414l-9 9z" /></svg>
+                    <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 5.29a1 1 0 010 1.415l-6.708 6.706a1 1 0 01-1.414 0L3.296 7.124a1 1 0 011.414-1.414l4.167 4.166 5.999-5.999a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
                   </span>
                   <span>{feature}</span>
                 </li>
@@ -206,12 +204,15 @@ const pricingTiers = [
             </ul>
           </div>
           <div class="space-y-3">
-            <p class="text-sm font-semibold uppercase tracking-wide text-blue-700 dark:text-blue-200">{solution.price}</p>
+            <p class="text-sm font-semibold uppercase tracking-[0.3em] text-gray-500 dark:text-gray-400">{solution.price}</p>
             <a
               href={solution.ctaHref}
-              class="inline-flex items-center justify-center rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow shadow-blue-600/30 transition hover:bg-blue-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-400"
+              class="inline-flex w-fit items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 transition hover:text-blue-700 dark:text-blue-300 dark:hover:text-blue-200"
             >
               {solution.ctaLabel}
+              <svg class="h-4 w-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M3.75 8a.75.75 0 0 1 .75-.75h5.69L8.72 5.78a.75.75 0 0 1 1.06-1.06l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 0 1-1.06-1.06l1.47-1.47H4.5A.75.75 0 0 1 3.75 8z" />
+              </svg>
             </a>
           </div>
         </article>
@@ -220,360 +221,85 @@ const pricingTiers = [
   </div>
 </section>
 
-<section id="why" class="bg-slate-50 py-24 dark:bg-slate-900">
+<section class="bg-slate-950 py-24 text-white">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
+    <div class="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
       <div class="space-y-6">
-        <span class="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Why teams choose my-aicustom</span>
-        <h2 class="text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Automation with governance, delivered end-to-end</h2>
-        <p class="text-slate-600 dark:text-slate-300">
-          From discovery to steady-state operations, we pair automation architects with your operators so every sprint drives measurable business outcomes and stays compliant.
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-widest">
+          <span class="h-2 w-2 rounded-full bg-sky-400"></span>
+          Client Stories
+        </span>
+        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Automation wins from cross-functional teams we support</h2>
+        <p class="text-slate-200">
+          Real feedback from marketing, operations, and product leaders who build with us. Each story highlights the metrics they track and the rituals that keep adoption high.
         </p>
-        <div class="grid gap-6 sm:grid-cols-2">
-          <div class="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm shadow-sky-200/60 dark:border-sky-500/40 dark:bg-slate-950">
-            <p class="text-sm font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-200">Productivity</p>
-            <p class="mt-3 text-4xl font-extrabold text-slate-900 dark:text-white">45% faster</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Average reduction in handling time after the first 3 months.</p>
-          </div>
-          <div class="rounded-3xl border border-sky-100 bg-white p-8 shadow-sm shadow-sky-200/60 dark:border-sky-500/40 dark:bg-slate-950">
-            <p class="text-sm font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-200">Availability</p>
-            <p class="mt-3 text-4xl font-extrabold text-slate-900 dark:text-white">24/7 coverage</p>
-            <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">AI agents monitor inbound conversations and escalate automatically.</p>
-          </div>
-        </div>
-      </div>
-      <div class="rounded-3xl border border-slate-100 bg-white p-10 shadow-sm shadow-sky-100 dark:border-slate-800 dark:bg-slate-950">
-        <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">A strategic partner, not just another vendor</h3>
-        <p class="mt-4 text-slate-600 dark:text-slate-300">
-          We align AI roadmaps with your revenue priorities, provide playbooks, documentation, and enablement, and stay on-call with proactive optimisation support.
-        </p>
-        <div class="mt-6 space-y-3 text-sm text-slate-600 dark:text-slate-400">
-          <p class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
-            1–2 week discovery and proof-of-concept sprints
-          </p>
-          <p class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
-            Clear SOPs, risk guardrails, and governance rituals
-          </p>
-          <p class="flex items-start gap-2">
-            <span class="mt-1 h-2 w-2 rounded-full bg-sky-500"></span>
-            Weekly model health monitoring with executive-ready insights
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials" class="bg-white py-24 dark:bg-slate-950">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Customer stories</span>
-      <h2 class="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Operations teams ship faster with my-aicustom</h2>
-      <p class="mt-4 text-slate-600 dark:text-slate-300">Playbooks, change management, and analytics combine so every stakeholder can see value from day one.</p>
-    </div>
-    <div
-      class="relative mt-16"
-      data-testimonial-slider
-      data-autoplay-interval="6500"
-      role="region"
-      aria-label="Customer testimonials"
-      tabindex="0"
-    >
-      <button
-        type="button"
-        class="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-sky-100 bg-white p-3 text-sky-600 shadow-md transition hover:border-sky-200 hover:bg-sky-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-700 dark:bg-slate-800 dark:text-sky-200 dark:hover:bg-slate-700"
-        data-prev
-        aria-label="Show previous testimonial"
-      >
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.707 5.293a1 1 0 010 1.414L11.414 11l4.293 4.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 011.414 0z" /></svg>
-      </button>
-      <button
-        type="button"
-        class="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-sky-100 bg-white p-3 text-sky-600 shadow-md transition hover:border-sky-200 hover:bg-sky-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 disabled:cursor-not-allowed disabled:opacity-40 dark:border-slate-700 dark:bg-slate-800 dark:text-sky-200 dark:hover:bg-slate-700"
-        data-next
-        aria-label="Show next testimonial"
-      >
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.293 5.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L12.586 12 8.293 7.707a1 1 0 010-1.414z" /></svg>
-      </button>
-      <div class="overflow-hidden rounded-3xl border border-slate-100 bg-white shadow-[0_32px_90px_-45px_rgba(15,23,42,0.4)] dark:border-slate-800 dark:bg-slate-900">
-        <div
-          class="flex touch-pan-y select-none transition-transform duration-700 ease-out"
-          data-track
-          role="list"
-          aria-live="polite"
+        <a
+          href={contactHref}
+          class="inline-flex w-fit items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-slate-900 transition hover:bg-slate-100"
         >
-          {testimonials.map((testimonial, index) => (
-            <figure
-              role="group"
-              aria-roledescription="slide"
-              aria-label={`Testimonial ${index + 1} of ${testimonials.length}`}
-              class="flex w-full shrink-0 flex-col gap-6 px-6 py-10 sm:px-10"
-              data-slide={index}
-              aria-hidden={index === 0 ? 'false' : 'true'}
-            >
-              <svg class="h-10 w-10 text-sky-200" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 3A5.5 5.5 0 004 8.5v1A3.5 3.5 0 007.5 13H9v1A4 4 0 015 18a1 1 0 102 0 2 2 0 012-2 2 2 0 002-2V8.5A5.5 5.5 0 009.5 3zM18.5 3A5.5 5.5 0 0013 8.5v1A3.5 3.5 0 0016.5 13H18v1a4 4 0 01-4 4 1 1 0 100 2 6 6 0 006-6V8.5A5.5 5.5 0 0018.5 3z" /></svg>
-              <blockquote class="text-lg text-slate-700 dark:text-slate-200">{testimonial.quote}</blockquote>
-              <figcaption class="flex items-center gap-4 pt-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={`Photo of ${testimonial.name}`}
-                  class="h-14 w-14 rounded-full object-cover"
-                  loading="lazy"
-                />
-                <div>
-                  <p class="font-semibold text-slate-900 dark:text-white">{testimonial.name}</p>
-                  <p class="text-sm text-slate-500 dark:text-slate-300">{testimonial.role}</p>
-                </div>
-              </figcaption>
-            </figure>
-          ))}
-        </div>
+          Book a discovery call
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"></path>
+          </svg>
+        </a>
       </div>
-      <div class="mt-8 flex items-center justify-center gap-3">
-        {testimonials.map((testimonial, index) => (
-          <button
-            type="button"
-            class="h-2 w-10 rounded-full bg-sky-100 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 data-[active='true']:bg-sky-500"
-            data-dot={index}
-            aria-label={`Show testimonial ${testimonial.name}`}
-            aria-pressed={index === 0 ? 'true' : 'false'}
-          />
+      <div class="space-y-6">
+        {testimonials.map((testimonial) => (
+          <blockquote class="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-[0_24px_80px_-50px_rgba(56,189,248,0.65)]">
+            <p class="text-lg text-slate-100">{testimonial.quote}</p>
+            <footer class="mt-4 flex items-center gap-3">
+              <img src={testimonial.avatar} alt={testimonial.name} loading="lazy" class="h-12 w-12 rounded-full object-cover" />
+              <div class="text-sm text-slate-300">
+                <p class="font-semibold text-white">{testimonial.name}</p>
+                <p>{testimonial.role}</p>
+              </div>
+            </footer>
+          </blockquote>
         ))}
       </div>
     </div>
   </div>
 </section>
 
-<section id="pricing" class="bg-slate-50 py-24 dark:bg-slate-900">
+<section class="bg-white py-24 dark:bg-gray-950">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Pricing</span>
-      <h2 class="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Choose the plan that fits your growth stage.</h2>
-      <p class="mt-4 text-slate-600 dark:text-slate-300">Every plan includes dashboards and weekly insight reports. Additional integrations are available on request.</p>
+      <span class="inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-1 text-sm font-semibold uppercase tracking-[0.35em] text-white dark:bg-sky-500">
+        Pricing Snapshot
+      </span>
+      <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Start small, iterate fast, and scale with confidence</h2>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">
+        Choose the coverage that fits your team. Every engagement includes co-design workshops, automation readiness scoring, and a dedicated success partner.
+      </p>
     </div>
-    <div class="mt-16 grid gap-8 lg:grid-cols-3">
+    <div class="mt-16 grid gap-8 md:grid-cols-3">
       {pricingTiers.map((tier) => (
-        <article
-          class={`flex h-full flex-col justify-between gap-6 rounded-3xl border bg-white/80 p-8 shadow-sm transition hover:-translate-y-1 dark:bg-gray-900/80 ${
+        <div
+          class={`flex h-full flex-col rounded-3xl border p-8 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-2xl dark:border-slate-800/60 dark:bg-slate-900 ${
             tier.highlight
-              ? 'border-sky-500 shadow-sky-200/70 dark:border-sky-400 dark:shadow-sky-900/30'
-              : 'border-slate-100 shadow-slate-200 dark:border-slate-800 dark:shadow-slate-900/20'
+              ? 'border-sky-200 bg-sky-50/80 shadow-sky-100/60 dark:border-sky-500/30 dark:bg-sky-500/10'
+              : 'border-slate-100 bg-white dark:bg-slate-900'
           }`}
         >
-          <div class="space-y-4">
-            {tier.highlight && (
-              <span class="inline-flex items-center rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Most popular</span>
-            )}
-            <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">{tier.name}</h3>
-            <p class="text-gray-600 dark:text-gray-300">{tier.description}</p>
+          <h3 class="text-2xl font-semibold text-slate-900 dark:text-white">{tier.name}</h3>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">{tier.description}</p>
+          <div class="mt-8">
+            <a
+              href={contactHref}
+              class={`inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] transition ${
+                tier.highlight
+                  ? 'bg-slate-900 text-white hover:bg-slate-700 dark:bg-slate-900'
+                  : 'border border-slate-200 text-slate-700 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800'
+              }`}
+            >
+              Talk to specialist
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
-          <a
-            href={contactHref}
-            class={`inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-300 ${
-              tier.highlight
-                ? 'bg-sky-500 text-white hover:bg-sky-400 dark:bg-sky-500 dark:hover:bg-sky-400'
-                : 'border border-sky-200 text-sky-700 hover:border-sky-300 hover:bg-sky-50 dark:border-sky-500/60 dark:text-sky-100 dark:hover:bg-sky-500/10'
-            }`}
-          >
-            Consult Your Plan
-          </a>
-        </article>
+        </div>
       ))}
     </div>
   </div>
 </section>
-
-<section id="faq" class="bg-white py-24 dark:bg-slate-950">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-3xl text-center">
-      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">FAQ</span>
-      <h2 class="mt-6 text-3xl font-bold text-slate-900 sm:text-4xl dark:text-white">Frequently asked before we start a sprint</h2>
-      <p class="mt-4 text-slate-600 dark:text-slate-300">We make sure every initiative begins with clear milestones, success metrics, and governance rituals.</p>
-    </div>
-    <div class="mt-12 space-y-4">
-      <details class="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition dark:border-gray-800 dark:bg-gray-900">
-        <summary class="flex cursor-pointer items-center justify-between text-left text-lg font-semibold text-gray-900 dark:text-white">
-          How long does implementation take?
-          <span class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-gray-950">+</span>
-        </summary>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">Discovery and core setup usually wrap in 1–2 weeks depending on integration depth and the automation modules you activate.</p>
-      </details>
-      <details class="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition dark:border-gray-800 dark:bg-gray-900">
-        <summary class="flex cursor-pointer items-center justify-between text-left text-lg font-semibold text-gray-900 dark:text-white">
-          Can we plug the modules into our existing systems?
-          <span class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-gray-950">+</span>
-        </summary>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">Yes. We integrate with CRM, ERP, marketing tools, and data warehouses via API or bespoke connectors designed during discovery.</p>
-      </details>
-      <details class="group rounded-2xl border border-gray-100 bg-gray-50 p-6 transition dark:border-gray-800 dark:bg-gray-900">
-        <summary class="flex cursor-pointer items-center justify-between text-left text-lg font-semibold text-gray-900 dark:text-white">
-          What support is included after go-live?
-          <span class="ml-4 flex h-8 w-8 items-center justify-center rounded-full bg-white text-blue-600 transition group-open:rotate-45 dark:bg-gray-950">+</span>
-        </summary>
-        <p class="mt-4 text-gray-600 dark:text-gray-300">Every plan includes weekly steering calls, performance monitoring, and access to our enablement team for ongoing optimisation.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="bg-sky-600 py-24 dark:bg-sky-700">
-  <div class="mx-auto max-w-screen-xl px-4 text-center text-white sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold sm:text-4xl">Ready to launch AI automation that scales with you?</h2>
-    <p class="mx-auto mt-4 max-w-2xl text-sky-100">
-      Share your priorities and we will design the automation playbook, governance guardrails, and enablement plan tailored for your team.
-    </p>
-    <div class="mt-8 flex flex-wrap justify-center gap-4">
-      <a
-        href={contactHref}
-        class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-base font-semibold text-sky-700 shadow-lg shadow-sky-900/30 transition hover:bg-sky-50 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
-      >
-        Talk to an AI Strategist
-      </a>
-      <a
-        href="https://wa.me/6281234567890"
-        target="_blank"
-        rel="noopener"
-        class="inline-flex items-center justify-center rounded-full border border-white/60 px-6 py-3 text-base font-semibold text-white transition hover:bg-white/10 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
-      >
-        Chat with our team
-      </a>
-    </div>
-  </div>
-</section>
-
-<script is:inline>
-  (() => {
-    const sliderRoot = document.querySelector('[data-testimonial-slider]');
-    if (!(sliderRoot instanceof HTMLElement)) {
-      return;
-    }
-    const track = sliderRoot.querySelector('[data-track]');
-    if (!(track instanceof HTMLElement)) {
-      return;
-    }
-    const slides = Array.from(track.children);
-    const dots = Array.from(sliderRoot.querySelectorAll('[data-dot]'));
-    const prevButton = sliderRoot.querySelector('[data-prev]');
-    const nextButton = sliderRoot.querySelector('[data-next]');
-    if (slides.length <= 1) {
-      return;
-    }
-    let index = 0;
-    let intervalId;
-    let isDragging = false;
-    let startX = 0;
-    let currentDelta = 0;
-    let activePointerId = null;
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const autoplayInterval = Number(sliderRoot.dataset.autoplayInterval) || 6000;
-
-    const setTransition = (value) => {
-      track.style.transitionDuration = value;
-    };
-
-    const update = () => {
-      track.style.transform = `translateX(-${index * 100}%)`;
-      slides.forEach((slide, slideIndex) => {
-        slide.setAttribute('aria-hidden', slideIndex === index ? 'false' : 'true');
-      });
-      dots.forEach((dot, dotIndex) => {
-        const isActive = dotIndex === index;
-        dot.dataset.active = isActive ? 'true' : 'false';
-        dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-      });
-    };
-
-    const setIndex = (nextIndex, withAnimation = true) => {
-      index = (nextIndex + slides.length) % slides.length;
-      if (withAnimation) {
-        setTransition('700ms');
-      }
-      update();
-    };
-
-    const stop = () => {
-      if (intervalId) {
-        window.clearInterval(intervalId);
-        intervalId = undefined;
-      }
-    };
-
-    const start = () => {
-      if (prefersReducedMotion) {
-        return;
-      }
-      stop();
-      intervalId = window.setInterval(() => setIndex(index + 1), autoplayInterval);
-    };
-
-    const handlePointerDown = (event) => {
-      if (event.target instanceof HTMLElement && event.target.closest('button')) {
-        return;
-      }
-      isDragging = true;
-      startX = event.clientX ?? 0;
-      currentDelta = 0;
-      activePointerId = event.pointerId ?? null;
-      setTransition('0ms');
-      stop();
-      track.setPointerCapture?.(event.pointerId);
-    };
-
-    const handlePointerMove = (event) => {
-      if (!isDragging || (activePointerId !== null && event.pointerId !== activePointerId)) {
-        return;
-      }
-      currentDelta = (event.clientX ?? 0) - startX;
-      const percentage = (currentDelta / sliderRoot.clientWidth) * 100;
-      track.style.transform = `translateX(calc(-${index * 100}% + ${percentage}%))`;
-    };
-
-    const handlePointerUp = (event) => {
-      if (!isDragging || (activePointerId !== null && event.pointerId !== activePointerId)) {
-        return;
-      }
-      isDragging = false;
-      setTransition('700ms');
-      const threshold = sliderRoot.clientWidth * 0.2;
-      if (currentDelta > threshold) {
-        setIndex(index - 1, true);
-      } else if (currentDelta < -threshold) {
-        setIndex(index + 1, true);
-      } else {
-        update();
-      }
-      track.releasePointerCapture?.(event.pointerId);
-      start();
-    };
-
-    track.addEventListener('pointerdown', handlePointerDown);
-    track.addEventListener('pointermove', handlePointerMove);
-    track.addEventListener('pointerup', handlePointerUp);
-    track.addEventListener('pointercancel', handlePointerUp);
-
-    prevButton?.addEventListener('click', () => {
-      setIndex(index - 1);
-      start();
-    });
-
-    nextButton?.addEventListener('click', () => {
-      setIndex(index + 1);
-      start();
-    });
-
-    dots.forEach((dot, dotIndex) => {
-      dot.addEventListener('click', () => {
-        setIndex(dotIndex);
-        start();
-      });
-    });
-
-    sliderRoot.addEventListener('pointerenter', stop);
-    sliderRoot.addEventListener('pointerleave', start);
-
-    update();
-    start();
-  })();
-</script>
