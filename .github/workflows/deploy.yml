@@ -33,7 +33,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
           protocol: ftps
-          server-dir: public_html/my-aicustom.com/
+          server-dir: /my-aicustom.com/
           local-dir: ./dist/
           exclude: |
             **/.git*
