@@ -32,6 +32,11 @@ jobs:
           username: tepatlas
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
+          protocol: ftps
           server-dir: /home/tepatlas/my-aicustom.com/
-          local-dir: dist
+          local-dir: ./dist/
+          exclude: |
+            **/.git*
+            **/node_modules/**
+          dangerous-clean-slate: true
 
