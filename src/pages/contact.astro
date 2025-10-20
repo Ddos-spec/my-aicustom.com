@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">WhatsApp Business</h3>
               <p class="mt-1 text-gray-600 dark:text-gray-400">Respons tercepat untuk konsultasi singkat dan koordinasi teknis.</p>
-              <a href="https://wa.me/6281234567890" target="_blank" class="mt-3 inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700">Chat Sekarang</a>
+              <a href="https://wa.me/6281296361446" target="_blank" class="mt-3 inline-flex items-center text-sm font-medium text-green-600 hover:text-green-700">Chat Sekarang</a>
             </div>
           </div>
           <div class="flex items-start gap-4 p-6 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-sm">
@@ -42,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
             <div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Email Tim AI</h3>
               <p class="mt-1 text-gray-600 dark:text-gray-400">Ideal untuk mengirimkan dokumen pendukung atau kebutuhan proyek detail.</p>
-              <a href="mailto:info@my-aicustom.com" class="mt-3 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">info@my-aicustom.com</a>
+              <a href="mailto:setof2288@gmail.com" class="mt-3 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700">setof2288@gmail.com</a>
             </div>
           </div>
           <div class="flex items-start gap-4 p-6 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-sm">
@@ -67,7 +67,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="bg-gray-50 dark:bg-gray-800 rounded-3xl shadow-xl p-8 lg:p-10">
         <h2 class="text-2xl font-semibold text-gray-900 dark:text-white">Formulir Konsultasi</h2>
         <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Ceritakan konteks bisnis Anda dan kami akan menghubungi dalam 1x24 jam kerja.</p>
-        <form class="mt-8 space-y-6">
+        <form id="consultation-form" class="mt-8 space-y-6">
           <div>
             <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Nama Lengkap</label>
             <input id="name" name="name" type="text" required class="mt-2 block w-full rounded-lg border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 focus:border-blue-500 focus:ring-blue-500" placeholder="Contoh: Putra Wijaya" />
@@ -101,4 +101,39 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    const whatsappNumber = '6281296361446';
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('consultation-form');
+      if (!form) {
+        return;
+      }
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const name = (formData.get('name') || '').toString().trim();
+        const email = (formData.get('email') || '').toString().trim();
+        const phone = (formData.get('phone') || '').toString().trim();
+        const service = (formData.get('service') || '').toString().trim();
+        const message = (formData.get('message') || '').toString().trim();
+
+        const structuredMessage = [
+          'Halo tim my-aicustom.com,',
+          '',
+          `Nama: ${name || '-'}`,
+          `Email: ${email || '-'}`,
+          `Nomor WhatsApp: ${phone || '-'}`,
+          `Layanan: ${service || '-'}`,
+          '',
+          'Detail Kebutuhan:',
+          message || '-'
+        ].join('\n');
+
+        const encodedMessage = encodeURIComponent(structuredMessage);
+        const targetUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+        window.open(targetUrl, '_blank');
+      });
+    });
+  </script>
 </Layout>
