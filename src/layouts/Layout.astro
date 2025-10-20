@@ -35,6 +35,16 @@ const orgJsonLd = JSON.stringify(
 <!doctype html>
 <html lang="id" class="scroll-smooth">
         <head>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP63BXMY1R"></script>
+                <script is:inline>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag() {
+                                window.dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', 'G-YP63BXMY1R');
+                </script>
                 <meta charset="UTF-8" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
