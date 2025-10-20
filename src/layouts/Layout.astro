@@ -35,6 +35,16 @@ const orgJsonLd = JSON.stringify(
 <!doctype html>
 <html lang="id" class="scroll-smooth">
         <head>
+                <!-- Google tag (gtag.js) -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-YP63BXMY1R"></script>
+                <script is:inline>
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag() {
+                                window.dataLayer.push(arguments);
+                        }
+                        gtag('js', new Date());
+                        gtag('config', 'G-YP63BXMY1R');
+                </script>
                 <meta charset="UTF-8" />
                 <title>{title}</title>
                 <meta name="description" content={description} />
@@ -72,5 +82,15 @@ const orgJsonLd = JSON.stringify(
                         <slot />
                 </main>
                 <Footer />
+                <a
+                        href="https://wa.me/6281296361446"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-green-500"
+                        aria-label="Hubungi kami via WhatsApp"
+                >
+                        <span aria-hidden="true">💬</span>
+                        <span>WhatsApp</span>
+                </a>
         </body>
 </html>
