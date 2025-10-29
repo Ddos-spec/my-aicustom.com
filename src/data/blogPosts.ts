@@ -153,6 +153,57 @@ export const blogPosts: BlogPostMeta[] = [
       'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
     tags: ['Operating Model', 'Playbook'],
   },
+  {
+    slug: 'ai-custom-implementation-best-practices',
+    title: 'Best Practices Implementasi AI Custom untuk Bisnis Indonesia',
+    excerpt:
+      'Panduan lengkap untuk mengimplementasikan solusi AI custom yang sesuai dengan kebutuhan bisnis lokal dan meningkatkan ROI secara signifikan.',
+    category: 'strategy',
+    categoryLabel: 'Strategy',
+    publishDate: '2024-03-15',
+    readTime: '7 menit baca',
+    author: 'Nadia Pramesti',
+    heroImage:
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80',
+    thumbnailImage:
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80',
+    tags: ['AI Custom', 'Implementation', 'Best Practices'],
+    isFeatured: false,
+  },
+  {
+    slug: 'personalisasi-ai-chatbot-indonesia',
+    title: 'Personalisasi AI Chatbot untuk Pasar Indonesia: Strategi dan Teknik',
+    excerpt:
+      'Cara menyesuaikan AI chatbot dengan karakteristik unik pasar Indonesia, termasuk bahasa, budaya, dan preferensi komunikasi lokal.',
+    category: 'experience',
+    categoryLabel: 'Customer Experience',
+    publishDate: '2024-03-08',
+    readTime: '6 menit baca',
+    author: 'Bayu Lazuardi',
+    heroImage:
+      'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1600&q=80',
+    thumbnailImage:
+      'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=900&q=80',
+    tags: ['AI Chatbot', 'Personalisasi', 'Indonesia'],
+    isFeatured: false,
+  },
+  {
+    slug: 'roi-ai-custom-solution',
+    title: 'Mengukur ROI dari Solusi AI Custom: Metrik yang Benar-Benar Penting',
+    excerpt:
+      'Framework praktis untuk mengukur return on investment dari implementasi AI custom, dengan fokus pada metrik bisnis yang dapat ditindaklanjuti.',
+    category: 'analytics',
+    categoryLabel: 'Data & Analytics',
+    publishDate: '2024-02-28',
+    readTime: '8 menit baca',
+    author: 'Dion Hartono',
+    heroImage:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80',
+    thumbnailImage:
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
+    tags: ['ROI', 'AI Metrics', 'Analytics'],
+    isFeatured: false,
+  },
 ];
 
 export const featuredPost = blogPosts.find((post) => post.isFeatured) ?? blogPosts[0];
