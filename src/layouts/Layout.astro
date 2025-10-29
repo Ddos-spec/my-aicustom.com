@@ -12,6 +12,8 @@ const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
 const description = "my-aicustom.com adalah solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.";
 const faviconHref = '/favicon.svg';
 const socialImage = `${siteOrigin}/assets/og-default.svg`;
+const whatsappNumber = '6285165693179';
+const whatsappMessage = encodeURIComponent('Halo kak saya mau coba konsultasi ai custom nih');
 const orgJsonLd = JSON.stringify(
         {
                 "@context": "http://schema.org",
@@ -23,7 +25,7 @@ const orgJsonLd = JSON.stringify(
                         "Solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.",
                 contactPoint: {
                         "@type": "ContactPoint",
-                        email: "setof2288@gmail.com",
+                        email: "myaicustom@gmail.com",
                         contactType: "Customer Service",
                 },
         },
@@ -83,7 +85,7 @@ const orgJsonLd = JSON.stringify(
                 </main>
                 <Footer />
                 <a
-                        href="https://wa.me/6281296361446"
+                        href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         class="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-green-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-green-500"

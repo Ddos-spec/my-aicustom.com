@@ -1,5 +1,7 @@
 ---
 const contactHref = '/contact/';
+const whatsappNumber = '6285165693179';
+const whatsappMessage = encodeURIComponent('Halo kak saya mau coba konsultasi ai custom nih');
 ---
 <section class="bg-gray-50 py-24">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -14,7 +16,7 @@ const contactHref = '/contact/';
         </span>
         <h3 class="text-xl font-semibold text-gray-900">Chat WhatsApp</h3>
         <p class="text-gray-600">Fast response untuk pertanyaan singkat dan koordinasi real-time.</p>
-        <a href="https://wa.me/6281296361446" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-green-600 transition hover:text-green-700">Mulai Chat</a>
+        <a href={`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`} target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-green-600 transition hover:text-green-700">Mulai Chat</a>
       </article>
       <article class="flex flex-col items-center gap-4 rounded-3xl border border-gray-100 bg-white p-10 text-center shadow-sm shadow-blue-100">
         <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-blue-600">
@@ -22,7 +24,7 @@ const contactHref = '/contact/';
         </span>
         <h3 class="text-xl font-semibold text-gray-900">Email Tim Ahli</h3>
         <p class="text-gray-600">Submit proposal atau kebutuhan proyek secara detail.</p>
-        <a href="mailto:setof2288@gmail.com" class="inline-flex items-center text-sm font-semibold text-blue-600 transition hover:text-blue-700">Kirim Email</a>
+        <a href="mailto:myaicustom@gmail.com" class="inline-flex items-center text-sm font-semibold text-blue-600 transition hover:text-blue-700">Kirim Email</a>
       </article>
       <article class="flex flex-col items-center gap-4 rounded-3xl border border-gray-100 bg-white p-10 text-center shadow-sm shadow-blue-100">
         <span class="inline-flex h-14 w-14 items-center justify-center rounded-full bg-purple-100 text-purple-600">
