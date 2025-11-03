@@ -1,82 +1,82 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const categories = ['Strategy', 'Automation', 'Data & Analytics', 'Customer Experience', 'Governance', 'Talent'];
+const categories = ['Strategi', 'Otomatisasi', 'Data & Analitik', 'Pengalaman Pelanggan', 'Tata Kelola', 'Bakat'];
 
 const posts = [
   {
-    slug: 'operational-ai-strategy',
-    title: 'Operational AI Strategy: Uniting Automation and Customer Experience',
-    excerpt: 'A practical blueprint to orchestrate AI across operations without sacrificing customer experience or compliance.',
-    category: 'Strategy',
-    publishDate: 'Feb 12, 2024',
-    readTime: '8 min read',
+    slug: 'strategi-operasional-ai',
+    title: 'Strategi Operasional AI: Menyatukan Otomatisasi dan Pengalaman Pelanggan',
+    excerpt: 'Cetak biru praktis untuk mengatur AI di seluruh operasi tanpa mengorbankan pengalaman atau kepatuhan pelanggan.',
+    category: 'Strategi',
+    publishDate: '12 Feb 2024',
+    readTime: '8 menit baca',
     author: 'Nadia Pramesti',
     heroImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80',
   },
   {
-    slug: 'finance-automation-playbook',
-    title: 'Finance Automation Playbook: Doubling SLA Speed with AI Co-pilots',
-    excerpt: 'How finance teams automate reconciliation, document workflows, and approvals while keeping full governance.',
-    category: 'Automation',
-    publishDate: 'Jan 22, 2024',
-    readTime: '6 min read',
+    slug: 'playbook-automasi-keuangan',
+    title: 'Playbook Otomatisasi Keuangan: Menggandakan Kecepatan SLA dengan Co-pilot AI',
+    excerpt: 'Bagaimana tim keuangan mengotomatiskan rekonsiliasi, alur kerja dokumen, dan persetujuan sambil menjaga tata kelola penuh.',
+    category: 'Otomatisasi',
+    publishDate: '22 Jan 2024',
+    readTime: '6 menit baca',
     author: 'Nadia Pramesti',
     heroImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80',
   },
   {
-    slug: 'cxo-ai-analytics-dashboards',
-    title: '5 CXO Dashboards to Monitor AI Initiatives in Real Time',
-    excerpt: 'Executive metrics that accelerate strategic decision-making for enterprise AI investments.',
-    category: 'Data & Analytics',
-    publishDate: 'Dec 18, 2023',
-    readTime: '5 min read',
+    slug: 'dasbor-analitik-ai-cxo',
+    title: '5 Dasbor CXO untuk Memantau Inisiatif AI secara Real Time',
+    excerpt: 'Metrik eksekutif yang mempercepat pengambilan keputusan strategis untuk investasi AI perusahaan.',
+    category: 'Data & Analitik',
+    publishDate: '18 Des 2023',
+    readTime: '5 menit baca',
     author: 'Bayu Lazuardi',
     heroImage: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=900&q=80',
   },
   {
-    slug: 'scalable-chatbot-blueprint',
-    title: 'Scalable Chatbot Blueprint for Premium Customer Journeys',
-    excerpt: 'Frameworks for multilingual, multi-channel AI agents that keep responses consistent and on-brand.',
-    category: 'Customer Experience',
-    publishDate: 'Nov 5, 2023',
-    readTime: '7 min read',
+    slug: 'cetak-biru-chatbot-skalabel',
+    title: 'Cetak Biru Chatbot Skalabel untuk Perjalanan Pelanggan Premium',
+    excerpt: 'Kerangka kerja untuk agen AI multibahasa dan multisaluran yang menjaga respons tetap konsisten dan sesuai merek.',
+    category: 'Pengalaman Pelanggan',
+    publishDate: '5 Nov 2023',
+    readTime: '7 menit baca',
     author: 'Bayu Lazuardi',
     heroImage: 'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=900&q=80',
   },
   {
-    slug: 'ai-governance-checklist',
-    title: 'AI Governance Checklist for Boards and Compliance Leaders',
-    excerpt: 'A control list to keep AI programs transparent, auditable, and aligned with evolving regulations.',
-    category: 'Governance',
-    publishDate: 'Oct 17, 2023',
-    readTime: '4 min read',
+    slug: 'daftar-periksa-tata-kelola-ai',
+    title: 'Daftar Periksa Tata Kelola AI untuk Dewan dan Pemimpin Kepatuhan',
+    excerpt: 'Daftar kontrol untuk menjaga program AI tetap transparan, dapat diaudit, dan selaras dengan peraturan yang berkembang.',
+    category: 'Tata Kelola',
+    publishDate: '17 Okt 2023',
+    readTime: '4 menit baca',
     author: 'Dion Hartono',
     heroImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=900&q=80',
   },
   {
-    slug: 'ai-talent-lab',
-    title: 'AI Talent Lab: Building Multidisciplinary Teams Without the Drama',
-    excerpt: 'Collaboration models across HR, product, and data so AI talent onboards within the first 30 days.',
-    category: 'Talent',
-    publishDate: 'Sep 26, 2023',
-    readTime: '6 min read',
+    slug: 'lab-bakat-ai',
+    title: 'Lab Bakat AI: Membangun Tim Multidisiplin Tanpa Drama',
+    excerpt: 'Model kolaborasi di seluruh SDM, produk, dan data sehingga talenta AI dapat bergabung dalam 30 hari pertama.',
+    category: 'Bakat',
+    publishDate: '26 Sep 2023',
+    readTime: '6 menit baca',
     author: 'Nadia Pramesti',
     heroImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
   },
   {
-    slug: 'ai-operating-model',
-    title: 'AI Operating Model that Connects Business and Technology',
-    excerpt: 'A modular approach to align business units, technology teams, and centers of excellence around AI.',
-    category: 'Strategy',
-    publishDate: 'Aug 14, 2023',
-    readTime: '5 min read',
+    slug: 'model-operasi-ai',
+    title: 'Model Operasi AI yang Menghubungkan Bisnis dan Teknologi',
+    excerpt: 'Pendekatan modular untuk menyelaraskan unit bisnis, tim teknologi, dan pusat keunggulan di sekitar AI.',
+    category: 'Strategi',
+    publishDate: '14 Agu 2023',
+    readTime: '5 menit baca',
     author: 'Dion Hartono',
     heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
@@ -88,7 +88,7 @@ const latestPosts = posts.slice(1, 7);
 
 const blogHref = (slug) => `/blog/${slug}/`;
 ---
-<Layout title="AI Automation Insights & Playbooks - my-aicustom.com">
+<Layout title="Wawasan & Playbook Otomatisasi AI - my-aicustom.com">
   <section class="relative overflow-hidden bg-slate-950 text-white">
     <div class="absolute inset-0">
       <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/80 to-slate-900/60"></div>
@@ -98,38 +98,38 @@ const blogHref = (slug) => `/blog/${slug}/`;
       <div class="max-w-2xl space-y-6">
         <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-[0.35em]">
           <span class="h-2 w-2 rounded-full bg-sky-400"></span>
-          AI Strategy Playbooks
+          Playbook Strategi AI
         </span>
         <h1 class="text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          AI automation, strategy, and governance for teams scaling with confidence
+          Otomatisasi, strategi, dan tata kelola AI untuk tim yang berkembang dengan percaya diri
         </h1>
         <p class="text-lg text-slate-200">
-          Field notes from enterprise engagements across Southeast Asia—covering operational design, governance, and the playbooks that move KPIs.
+          Catatan lapangan dari keterlibatan perusahaan di seluruh Asia Tenggara—mencakup desain operasional, tata kelola, dan playbook yang menggerakkan KPI.
         </p>
       </div>
       <div class="grid w-full max-w-md gap-6 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
         <div>
-          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">What we cover</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-300">Apa yang kami bahas</p>
           <ul class="mt-4 space-y-3 text-sm text-slate-200">
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
-              Automation blueprints, governance rituals, and change enablement.
+              Cetak biru otomatisasi, ritual tata kelola, dan pemberdayaan perubahan.
             </li>
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
-              Insights distilled from multi-market enterprise programs.
+              Wawasan yang disaring dari program perusahaan multinasional.
             </li>
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-400"></span>
-              Templates and metrics to accelerate experiments and scale.
+              Templat dan metrik untuk mempercepat eksperimen dan skala.
             </li>
           </ul>
         </div>
         <div class="rounded-2xl bg-white/10 p-5">
           <p class="text-sm text-slate-100">
-            “The my-aicustom team helped us transform customer support in eight weeks. Their content turns that playbook into repeatable steps.”
+            “Tim my-aicustom membantu kami mengubah dukungan pelanggan dalam delapan minggu. Konten mereka mengubah playbook itu menjadi langkah-langkah yang dapat diulang.”
           </p>
-          <p class="mt-4 text-sm font-semibold text-white">— VP Operations, Enterprise Client</p>
+          <p class="mt-4 text-sm font-semibold text-white">— VP Operasi, Klien Perusahaan</p>
         </div>
       </div>
     </div>
@@ -166,25 +166,25 @@ const blogHref = (slug) => `/blog/${slug}/`;
         </div>
       </div>
       <div class="space-y-6">
-        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Featured Story</p>
-        <h3 class="text-3xl font-semibold text-slate-900 dark:text-white">Implementation blueprints you can plug into your next sprint.</h3>
+        <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Cerita Unggulan</p>
+        <h3 class="text-3xl font-semibold text-slate-900 dark:text-white">Cetak biru implementasi yang dapat Anda hubungkan ke sprint berikutnya.</h3>
         <p class="text-lg text-slate-600 dark:text-slate-300">
-          We document the most effective lessons from enterprise programs—from architecture decisions to change enablement—so you can skip costly trial and error.
+          Kami mendokumentasikan pelajaran paling efektif dari program perusahaan—mulai dari keputusan arsitektur hingga pemberdayaan perubahan—sehingga Anda dapat melewati trial and error yang mahal.
         </p>
         <div class="rounded-3xl border border-slate-100 bg-slate-50/60 p-8 dark:border-slate-800/70 dark:bg-slate-900">
-          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Highlights</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Sorotan</p>
           <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
-              Measuring automation impact on customer satisfaction and SLA.
+              Mengukur dampak otomatisasi pada kepuasan pelanggan dan SLA.
             </li>
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
-              Aligning business and technology stakeholders with crisp governance.
+              Menyelaraskan pemangku kepentingan bisnis dan teknologi dengan tata kelola yang tajam.
             </li>
             <li class="flex items-start gap-3">
               <span class="mt-1 inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
-              Prioritising the AI backlog using value-versus-complexity lenses.
+              Memprioritaskan backlog AI menggunakan lensa nilai-versus-kompleksitas.
             </li>
           </ul>
         </div>
@@ -192,7 +192,7 @@ const blogHref = (slug) => `/blog/${slug}/`;
           href={blogHref(featuredPost.slug)}
           class="inline-flex w-fit items-center gap-3 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-white transition-colors duration-300 hover:bg-sky-600"
         >
-          Read the full blueprint
+          Baca cetak biru lengkap
           <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"></path>
           </svg>
