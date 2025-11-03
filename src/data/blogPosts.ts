@@ -46,7 +46,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Blueprint komprehensif untuk mengintegrasikan orkestrasi AI ke dalam proses operasional tanpa mengorbankan pengalaman pelanggan.',
     category: 'strategy',
-    categoryLabel: 'Strategy',
+    categoryLabel: 'Strategi',
     publishDate: '2024-02-12',
     readTime: '8 menit baca',
     author: 'Nadia Pramesti',
@@ -63,7 +63,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Cara mengatur orkestrasi dokumen dan rekonsiliasi agar tim finance dapat menutup buku lebih cepat tanpa kehilangan kontrol.',
     category: 'automation',
-    categoryLabel: 'Automation',
+    categoryLabel: 'Otomatisasi',
     publishDate: '2024-01-22',
     readTime: '6 menit baca',
     author: 'Nadia Pramesti',
@@ -79,7 +79,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Standar metrik lintas fungsi yang mempercepat pengambilan keputusan strategis terkait investasi AI.',
     category: 'analytics',
-    categoryLabel: 'Data & Analytics',
+    categoryLabel: 'Data & Analitik',
     publishDate: '2023-12-18',
     readTime: '5 menit baca',
     author: 'Bayu Lazuardi',
@@ -95,7 +95,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Framework operasional untuk merancang chatbot multi-bahasa yang konsisten dan bernilai tinggi.',
     category: 'experience',
-    categoryLabel: 'Customer Experience',
+    categoryLabel: 'Pengalaman Pelanggan',
     publishDate: '2023-11-05',
     readTime: '7 menit baca',
     author: 'Bayu Lazuardi',
@@ -111,7 +111,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Daftar kontrol minimal agar tata kelola AI tetap patuh regulasi dan transparan untuk seluruh stakeholder.',
     category: 'governance',
-    categoryLabel: 'Governance',
+    categoryLabel: 'Tata Kelola',
     publishDate: '2023-10-17',
     readTime: '4 menit baca',
     author: 'Dion Hartono',
@@ -127,7 +127,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Model kolaborasi lintas HR, product, dan data agar onboarding talenta AI terjadi dalam 30 hari pertama.',
     category: 'talent',
-    categoryLabel: 'Talent',
+    categoryLabel: 'Bakat',
     publishDate: '2023-09-26',
     readTime: '6 menit baca',
     author: 'Nadia Pramesti',
@@ -143,7 +143,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Pendekatan modular untuk menyelaraskan unit bisnis, tim teknologi, dan center of excellence.',
     category: 'strategy',
-    categoryLabel: 'Strategy',
+    categoryLabel: 'Strategi',
     publishDate: '2023-08-14',
     readTime: '5 menit baca',
     author: 'Dion Hartono',
@@ -159,7 +159,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Panduan lengkap untuk mengimplementasikan solusi AI custom yang sesuai dengan kebutuhan bisnis lokal dan meningkatkan ROI secara signifikan.',
     category: 'strategy',
-    categoryLabel: 'Strategy',
+    categoryLabel: 'Strategi',
     publishDate: '2024-03-15',
     readTime: '7 menit baca',
     author: 'Nadia Pramesti',
@@ -176,7 +176,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Cara menyesuaikan AI chatbot dengan karakteristik unik pasar Indonesia, termasuk bahasa, budaya, dan preferensi komunikasi lokal.',
     category: 'experience',
-    categoryLabel: 'Customer Experience',
+    categoryLabel: 'Pengalaman Pelanggan',
     publishDate: '2024-03-08',
     readTime: '6 menit baca',
     author: 'Bayu Lazuardi',
@@ -193,7 +193,7 @@ export const blogPosts: BlogPostMeta[] = [
     excerpt:
       'Framework praktis untuk mengukur return on investment dari implementasi AI custom, dengan fokus pada metrik bisnis yang dapat ditindaklanjuti.',
     category: 'analytics',
-    categoryLabel: 'Data & Analytics',
+    categoryLabel: 'Data & Analitik',
     publishDate: '2024-02-28',
     readTime: '8 menit baca',
     author: 'Dion Hartono',
