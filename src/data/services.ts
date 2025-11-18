@@ -6,22 +6,22 @@ export const aiAnalytics: ServicePage = {
   title: 'AI Analytics & Insights',
   seo: {
     title: 'AI Analytics & Business Intelligence Indonesia | my-aicustom.com',
-    description: 'Ubah data mentah menjadi keputusan strategis dengan dashboard prediktif, machine learning, dan solusi business intelligence kami.',
+    description: 'Tingkatkan pengambilan keputusan dengan layanan AI Analytics & Business Intelligence kami di Indonesia. Kami mengubah data mentah Anda menjadi insight strategis melalui dashboard prediktif, machine learning, dan visualisasi data canggih. Dapatkan keunggulan kompetitif dengan analisis mendalam.',
     keywords: ['AI analytics Indonesia', 'business intelligence', 'predictive analytics', 'data dashboard', 'machine learning prediction'],
   },
   hero: {
     tagline: 'Data Anda Berbicara - Dari Raw Data ke Keputusan Strategis',
-    subheading: 'Dashboard prediktif untuk eksekutif & operasional yang berbasis insight real-time',
+    subheading: 'Kami membangun dashboard prediktif yang intuitif untuk eksekutif dan tim operasional, memberikan insight real-time yang mendorong aksi dan pertumbuhan bisnis.',
     cta: 'Buat Dashboard Analytics Custom Anda',
-    visual: '/images/services/analytics-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=AI+Analytics', // Placeholder
   },
   problem: {
     title: 'Problem: Data → Information Gap',
     points: [
-      'Data berlimpah tapi insight jarang',
-      'Excel report manual, lambat, error-prone',
-      'Business leader butuh insight cepat tapi analyst lama deliver',
-      'Predictive capability masih manual forecast',
+      'Data perusahaan Anda melimpah, namun sulit mendapatkan insight yang actionable.',
+      'Laporan Excel manual memakan waktu, rentan terhadap human error, dan seringkali terlambat.',
+      'Pemimpin bisnis membutuhkan insight cepat untuk keputusan strategis, namun tim analis terbebani.',
+      'Kemampuan prediktif masih terbatas pada forecast manual yang kurang akurat.',
     ],
   },
   solution: {
@@ -29,15 +29,15 @@ export const aiAnalytics: ServicePage = {
     features: [
       {
         name: 'Data Pipeline Design',
-        description: 'ETL yang robust, data quality check, governance framework',
+        description: 'Kami merancang arsitektur data end-to-end, mulai dari proses ETL (Extract, Transform, Load) yang robust, implementasi data quality check, hingga penyusunan governance framework untuk memastikan integritas data.',
       },
       {
         name: 'Predictive Modeling',
-        description: 'Churn prediction, demand forecast, risk scoring, anomaly detection',
+        description: 'Manfaatkan kekuatan machine learning untuk churn prediction, demand forecasting, credit risk scoring, dan anomaly detection untuk mengantisipasi masa depan.',
       },
       {
         name: 'Dashboard Visual',
-        description: 'Eksekutif dashboard (high-level), operational dashboard (detail), mobile app',
+        description: 'Kami menyediakan berbagai jenis dashboard: eksekutif dashboard untuk gambaran high-level, operational dashboard untuk monitoring detail, hingga custom mobile app untuk akses data di mana saja.',
       },
     ],
   },
@@ -93,8 +93,8 @@ export const aiAnalytics: ServicePage = {
     cta: 'Konsultasi Data Strategy - Temukan Hidden Opportunity',
   },
   visualAssets: {
-    chatMockup: '/images/services/dashboard-mockup.png', // Placeholder
-    architectureDiagram: '/images/services/data-pipeline.png', // Placeholder
+    chatMockup: 'https://placehold.co/600x400/png?text=Dashboard+Mockup', // Placeholder
+    architectureDiagram: 'https://placehold.co/600x400/png?text=Data+Pipeline', // Placeholder
   },
 };
 
@@ -103,22 +103,22 @@ export const aiStrategy: ServicePage = {
   title: 'AI Strategy & Advisory',
   seo: {
     title: 'AI Strategy & Digital Transformation Consulting | my-aicustom.com',
-    description: 'Susun roadmap AI yang align dengan bisnis Anda. Dari assessment, business case, hingga implementasi dengan ROI terukur.',
+    description: 'Susun roadmap transformasi digital dan AI yang selaras dengan tujuan bisnis Anda. Layanan konsultasi AI Strategy kami membantu dari assessment, penyusunan business case, hingga panduan implementasi dengan ROI yang terukur.',
     keywords: ['AI strategy', 'digital transformation', 'business consulting', 'AI roadmap', 'strategic planning'],
   },
   hero: {
     tagline: 'Strategi AI yang Align dengan Bisnis - Bukan Sekedar Teknologi',
-    subheading: 'Dari assessment kematangan hingga roadmap implementasi lengkap dengan business case terukur',
+    subheading: 'Kami membantu Anda mulai dari assessment kematangan AI, merumuskan business case yang solid, hingga menyusun roadmap implementasi yang detail dan terukur untuk kesuksesan jangka panjang.',
     cta: 'Mulai AI Transformation Assessment Anda',
-    visual: '/images/services/strategy-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=AI+Strategy', // Placeholder
   },
   problem: {
     title: 'The Challenge',
     points: [
-      'Banyak perusahaan bingung mulai AI dari mana?',
-      'Investasi AI besar tapi ROI tidak jelas',
-      'Tech-driven approach → banyak project gagal karena tidak align business objective',
-      'Kompetitor sudah move, tapi kamu belum tahu prioritas',
+      'Banyak perusahaan bingung harus memulai inisiatif AI dari mana agar memberikan dampak maksimal.',
+      'Investasi AI yang signifikan tidak diimbangi dengan ROI yang jelas dan terukur.',
+      'Pendekatan yang terlalu teknis seringkali gagal karena tidak selaras dengan objektif bisnis utama.',
+      'Kompetitor sudah bergerak cepat, sementara Anda masih kesulitan menentukan prioritas strategis.',
     ],
   },
   solution: {
@@ -126,15 +126,15 @@ export const aiStrategy: ServicePage = {
     features: [
       {
         name: 'AI Maturity Assessment',
-        description: 'Current state analysis, gap analysis, benchmark',
+        description: 'Analisis mendalam terhadap kondisi perusahaan Anda saat ini (current state), identifikasi kesenjangan (gap analysis), dan perbandingan dengan standar industri (benchmark).',
       },
       {
         name: 'Business Case & KPI Definition',
-        description: 'Opportunity identification, ROI modeling, risk assessment',
+        description: 'Kami membantu mengidentifikasi peluang AI dengan nilai tertinggi, membangun model ROI, serta melakukan penilaian risiko untuk setiap inisiatif.',
       },
       {
         name: 'AI Strategy & Roadmap',
-        description: 'Prioritization framework, phased implementation plan, tech stack recommendation',
+        description: 'Dapatkan kerangka kerja prioritas yang jelas, rencana implementasi bertahap (phased implementation plan), dan rekomendasi tech stack yang paling sesuai.',
       },
     ],
   },
@@ -182,7 +182,7 @@ export const aiStrategy: ServicePage = {
     cta: 'Jadwalkan Strategi Advisory Session - Gratis 1 Jam Konsultasi',
   },
   visualAssets: {
-    architectureDiagram: '/images/services/roadmap-timeline.png', // Placeholder
+    architectureDiagram: 'https://placehold.co/600x400/png?text=Roadmap+Timeline', // Placeholder
   },
 };
 
@@ -191,22 +191,22 @@ export const businessProcessAutomation: ServicePage = {
   title: 'Business Process Automation',
   seo: {
     title: 'Business Process Automation (BPA) Indonesia | my-aicustom.com',
-    description: 'Otomatisasi proses bisnis manual seperti invoice, HR, dan approval dengan solusi RPA dan workflow automation kami.',
+    description: 'Otomatiskan proses bisnis manual yang memakan waktu seperti pemrosesan invoice, administrasi HR, dan alur kerja approval dengan solusi RPA dan workflow automation kami di Indonesia.',
     keywords: ['business process automation Indonesia', 'workflow automation', 'RPA (Robotic Process Automation)', 'invoice automation', 'HR automation'],
   },
   hero: {
     tagline: 'Otomasi Proses Manual - Hemat Waktu, Tingkatkan Akurasi, Scale Bisnis',
-    subheading: 'Dari invoice approval hingga HR onboarding, semua bisa di-automate',
+    subheading: 'Dari proses approval invoice yang rumit hingga onboarding karyawan baru, kami dapat mengotomatisasi alur kerja Anda untuk efisiensi maksimal.',
     cta: 'Audit Proses Bisnis Anda Gratis',
-    visual: '/images/services/bpa-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=BPA', // Placeholder
   },
   problem: {
     title: 'Problem Statement',
     points: [
-      'Employee menghabiskan 30% waktu untuk task repetitif',
-      'Proses approval lintas departemen butuh 5+ hari',
-      'Error data entry turun ROI hingga 15%',
-      'Manual process = bottleneck untuk scale',
+      'Karyawan Anda menghabiskan lebih dari 30% waktu mereka untuk tugas-tugas administratif yang repetitif.',
+      'Proses approval yang melibatkan banyak departemen seringkali memakan waktu lebih dari 5 hari kerja.',
+      'Human error dalam data entry dapat menurunkan akurasi dan menyebabkan kerugian hingga 15%.',
+      'Proses manual menjadi hambatan utama (bottleneck) saat bisnis Anda perlu untuk scale-up.',
     ],
   },
   solution: {
@@ -214,15 +214,15 @@ export const businessProcessAutomation: ServicePage = {
     features: [
       {
         name: 'Finance',
-        description: 'Invoice approval → OCR + routing + auto-payment',
+        description: 'Otomatisasi alur kerja invoice: mulai dari ekstraksi data dengan OCR, routing approval otomatis, hingga penjadwalan pembayaran tanpa sentuhan manual.',
       },
       {
         name: 'HR',
-        description: 'Job application → Resume screening → Background check → Offer generation',
+        description: 'Otomatisasi proses rekrutmen: resume screening otomatis, penjadwalan interview, background check, hingga pembuatan surat penawaran (offer generation).',
       },
       {
         name: 'Sales',
-        description: 'Lead entry → CRM sync → Email nurturing → Meeting schedule',
+        description: 'Optimalkan alur kerja penjualan: lead entry otomatis, sinkronisasi data ke CRM, email nurturing campaign, hingga penjadwalan meeting dengan prospek.',
       },
     ],
   },
@@ -278,7 +278,7 @@ export const businessProcessAutomation: ServicePage = {
     cta: 'Jadwalkan Audit Process Gratis - Identifikasi Opportunity',
   },
   visualAssets: {
-    architectureDiagram: '/images/services/bpa-flow.png', // Placeholder
+    architectureDiagram: 'https://placehold.co/600x400/png?text=BPA+Flow', // Placeholder
   },
 };
 
@@ -287,22 +287,22 @@ export const chatbot: ServicePage = {
   title: 'Chatbot AI Custom',
   seo: {
     title: 'Chatbot AI Indonesia & WhatsApp Business | my-aicustom.com',
-    description: 'Bangun Chatbot AI custom untuk bisnis Indonesia. Terintegrasi WhatsApp, NLP bilingual, dan 24/7 customer service automation.',
+    description: 'Bangun Chatbot AI custom yang dirancang khusus untuk pasar Indonesia. Terintegrasi dengan WhatsApp, didukung NLP bilingual (Indonesia-Inggris), untuk automasi customer service 24/7.',
     keywords: ['chatbot AI Indonesia', 'chatbot WhatsApp bisnis', 'NLP chatbot', 'customer service automation', 'conversational AI Indonesia'],
   },
   hero: {
     tagline: 'Asisten Virtual AI yang Memahami Bisnis Indonesia Anda 24/7',
-    subheading: 'Response time instan, bahasa lokal, terintegrasi WhatsApp',
+    subheading: 'Dapatkan response time instan, layani pelanggan dalam bahasa lokal yang natural, dan terintegrasi penuh dengan platform WhatsApp yang mereka gunakan setiap hari.',
     cta: 'Buat Chatbot AI Anda Sekarang',
-    visual: '/images/services/chatbot-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=AI+Chatbot', // Placeholder
   },
   problem: {
     title: 'Mengapa Perlu Chatbot AI?',
     points: [
-      'Manual response → Lambat, inkonsisten, cost tinggi',
-      'AI chatbot → 24/7, response konsisten, hemat biaya 60%',
-      'Customer menunggu lama untuk respons',
-      'Kualitas respons tidak konsisten antar agen',
+      'Layanan pelanggan manual seringkali lambat, tidak konsisten, dan memakan biaya operasional yang tinggi.',
+      'Dengan AI chatbot, Anda bisa menyediakan layanan 24/7, memberikan respons yang konsisten, dan menghemat biaya hingga 60%.',
+      'Pelanggan seringkali harus menunggu lama untuk mendapatkan respons, yang dapat menurunkan kepuasan.',
+      'Kualitas jawaban dari agen manusia bisa tidak konsisten, tergantung pada individu dan waktu.',
     ],
   },
   solution: {
@@ -310,19 +310,19 @@ export const chatbot: ServicePage = {
     features: [
       {
         name: 'NLP Bilingual',
-        description: 'Pahami Bahasa Indonesia & Inggris secara natural',
+        description: 'Chatbot kami mampu memahami percakapan dalam Bahasa Indonesia dan Inggris secara natural, termasuk bahasa gaul dan singkatan.',
       },
       {
         name: 'Integrasi WhatsApp',
-        description: 'Chatbot langsung di WhatsApp customer',
+        description: 'Hadir di platform yang paling banyak digunakan pelanggan Anda. Terima pesanan, jawab pertanyaan, dan berikan dukungan langsung di WhatsApp.',
       },
       {
         name: 'Knowledge Base Dinamis',
-        description: 'Update FAQ tanpa coding',
+        description: 'Anda dapat mengupdate database pengetahuan atau FAQ chatbot dengan mudah melalui dashboard, tanpa perlu keahlian coding.',
       },
       {
         name: 'Dashboard Real-time',
-        description: 'Monitor percakapan & sentiment',
+        description: 'Pantau percakapan secara real-time, analisis sentimen pelanggan, dan dapatkan insight berharga untuk meningkatkan layanan Anda.',
       },
     ],
   },
@@ -383,8 +383,8 @@ export const chatbot: ServicePage = {
     cta: 'Konsultasi Gratis - Buat Strategi Chatbot Anda',
   },
   visualAssets: {
-    chatMockup: '/images/services/chatbot-mockup.png', // Placeholder
-    architectureDiagram: '/images/services/chatbot-flow.png', // Placeholder
+    chatMockup: 'https://placehold.co/600x400/png?text=Chatbot+Mockup', // Placeholder
+    architectureDiagram: 'https://placehold.co/600x400/png?text=Chatbot+Flow', // Placeholder
   },
 };
 
@@ -393,22 +393,22 @@ export const computerVision: ServicePage = {
   title: 'Computer Vision & OCR',
   seo: {
     title: 'Computer Vision & OCR Solutions for Indonesian Businesses',
-    description: 'Automate document processing, quality inspection, and e-KYC with our advanced Computer Vision and OCR solutions. Achieve 99%+ accuracy.',
+    description: 'Otomatiskan pemrosesan dokumen, inspeksi kualitas visual, dan proses e-KYC dengan solusi Computer Vision dan OCR canggih kami untuk bisnis di Indonesia. Dapatkan akurasi hingga 99%+',
     keywords: ['OCR Indonesia', 'document recognition', 'computer vision', 'e-KYC', 'automatic document processing', 'invoice OCR'],
   },
   hero: {
     tagline: 'Mata AI untuk Bisnis Anda - Dari Dokumen hingga Inspeksi Visual',
-    subheading: 'Otomasi document processing & quality inspection dengan akurasi 99%+',
+    subheading: 'Kami menyediakan solusi otomasi untuk pemrosesan dokumen dan inspeksi kualitas visual dengan tingkat akurasi yang sangat tinggi, mencapai 99%+',
     cta: 'Lihat Demo Computer Vision',
-    visual: '/images/services/computer-vision-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=Computer+Vision', // Placeholder
   },
   problem: {
     title: 'Why Manual Processing Holds You Back',
     points: [
-      'Manual document processing: lambat, inconsistent, error-prone',
-      'Inspeksi produk manual: fatigue, miss defects, biaya tinggi',
-      'Document verification: bottleneck untuk compliance',
-      'KYC/onboarding: proses lama, friction tinggi',
+      'Pemrosesan dokumen manual sangat lambat, tidak konsisten, dan rentan terhadap kesalahan manusia yang merugikan.',
+      'Inspeksi produk secara manual seringkali terkendala oleh kelelahan operator, yang menyebabkan cacat produk terlewat dan biaya tinggi.',
+      'Proses verifikasi dokumen manual menjadi bottleneck utama dalam pemenuhan standar kepatuhan (compliance).',
+      'Proses KYC dan onboarding pelanggan yang panjang menciptakan friksi dan pengalaman pengguna yang buruk.',
     ],
   },
   solution: {
@@ -416,23 +416,23 @@ export const computerVision: ServicePage = {
     features: [
       {
         name: 'OCR (Optical Character Recognition)',
-        description: 'Extract text dari dokumen, receipt, invoice, KTP, passport',
+        description: 'Ekstraksi teks dari berbagai jenis dokumen secara otomatis, termasuk invoice, kuitansi, KTP, paspor, dan laporan keuangan.',
       },
       {
         name: 'Document Detection',
-        description: 'Identifikasi jenis dokumen otomatis',
+        description: 'Sistem kami dapat mengidentifikasi dan mengklasifikasikan jenis dokumen secara otomatis, mempercepat proses triase.',
       },
       {
         name: 'Handwriting Recognition',
-        description: 'Baca tulisan tangan dengan AI',
+        description: 'Teknologi AI kami mampu membaca dan mengubah tulisan tangan menjadi data digital dengan akurasi tinggi.',
       },
       {
         name: 'Quality Inspection',
-        description: 'Deteksi cacat produk, anomali, kualitas real-time',
+        description: 'Deteksi cacat produk, anomali manufaktur, dan pemantauan kualitas secara real-time di lini produksi Anda.',
       },
       {
         name: 'Face Recognition & Biometric',
-        description: 'e-KYC, attendance, security',
+        description: 'Implementasi solusi canggih untuk e-KYC, sistem absensi, dan kontrol akses keamanan.',
       },
     ],
   },
@@ -492,7 +492,7 @@ export const computerVision: ServicePage = {
     cta: 'Coba Demo OCR Gratis - Upload Dokumen Sekarang',
   },
   visualAssets: {
-    architectureDiagram: '/images/services/ocr-flow.png', // Placeholder
+    architectureDiagram: 'https://placehold.co/600x400/png?text=OCR+Flow', // Placeholder
   },
 };
 
@@ -501,22 +501,22 @@ export const posRental: ServicePage = {
   title: 'Sewa & Kustomisasi POS',
   seo: {
     title: 'Sewa Sistem POS Rental Fleksibel | my-aicustom.com',
-    description: 'Sewa sistem POS lengkap dengan hardware dan software. Solusi fleksibel untuk F&B, ritel, dan event tanpa modal besar.',
+    description: 'Sewa sistem POS (Point of Sale) lengkap dengan hardware dan software melalui layanan rental kami yang fleksibel. Solusi ideal untuk F&B, ritel, dan event tanpa perlu investasi modal besar di awal.',
     keywords: ['sewa pos', 'sistem kasir', 'pos rental', 'point of sale', 'pos f&b', 'pos retail'],
   },
   hero: {
     tagline: 'Sistem POS Sewa Flexible - Mulai Jualan Tanpa Modal Besar',
-    subheading: 'Lengkap hardware & software, tanpa commitment jangka panjang, bisa upgrade kapan saja',
+    subheading: 'Dapatkan paket lengkap hardware & software, tanpa komitmen jangka panjang yang mengikat. Anda bisa meng-upgrade sistem kapan saja seiring pertumbuhan bisnis Anda.',
     cta: 'Cek Paket POS Rental Kami',
-    visual: '/images/services/pos-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=POS+Rental', // Placeholder
   },
   problem: {
     title: 'Why POS Rental (vs Buying)',
     points: [
-      'Beli POS: Modal Rp 5-15 juta + setup + maintenance',
-      'Sewa POS: Mulai Rp 500K/bulan, all-inclusive, upgrade mudah',
-      'Bisnis berkembang? Upgrade sistem tanpa ganti hardware',
-      'Teknologi outdated? Ganti dengan yang terbaru',
+      'Membeli sistem POS membutuhkan investasi modal awal yang besar, antara Rp 5-15 juta, ditambah biaya setup dan maintenance.',
+      'Dengan sewa, Anda bisa mulai dari Rp 500 ribu per bulan, sudah termasuk semua layanan (all-inclusive) dan kemudahan upgrade.',
+      'Saat bisnis berkembang, Anda bisa meng-upgrade sistem tanpa perlu membeli hardware baru.',
+      'Teknologi POS cepat usang. Dengan menyewa, Anda bisa dengan mudah beralih ke teknologi terbaru tanpa kerugian.',
     ],
   },
   solution: {
@@ -524,15 +524,15 @@ export const posRental: ServicePage = {
     features: [
       {
         name: 'Paket Starter',
-        description: 'Untuk bisnis baru/kecil. Termasuk printer, scanner, cash drawer.',
+        description: 'Sangat cocok untuk bisnis baru atau skala kecil. Paket ini sudah termasuk printer, scanner, dan cash drawer.',
       },
       {
         name: 'Paket Professional',
-        description: 'Untuk retail/F&B established. Termasuk 2x terminal, advanced software.',
+        description: 'Dirancang untuk bisnis ritel atau F&B yang sudah mapan. Termasuk dua terminal kasir dan software dengan fitur canggih.',
       },
       {
         name: 'Paket Enterprise',
-        description: 'Untuk chain/franchise. Scalable, central dashboard, custom integration.',
+        description: 'Solusi untuk bisnis dengan banyak cabang atau franchise. Sistem yang scalable, dashboard terpusat, dan opsi integrasi custom.',
       },
     ],
   },
@@ -587,7 +587,7 @@ export const posRental: ServicePage = {
     cta: 'Pilih Paket Anda',
   },
   visualAssets: {
-    chatMockup: '/images/services/pos-terminal.png', // Placeholder
+    chatMockup: 'https://placehold.co/600x400/png?text=POS+Terminal', // Placeholder
   },
 };
 
@@ -596,22 +596,22 @@ export const trainingChangeManagement: ServicePage = {
   title: 'Training & Change Management',
   seo: {
     title: 'AI Adoption & Change Management Training | my-aicustom.com',
-    description: 'Pastikan implementasi AI Anda sukses dengan program training dan change management kami. Siapkan tim Anda untuk transformasi digital.',
+    description: 'Pastikan implementasi teknologi AI Anda diadopsi dengan sukses oleh tim. Kami menyediakan program training dan change management untuk menyiapkan organisasi Anda menghadapi transformasi digital.',
     keywords: ['change management', 'training & development', 'AI adoption', 'digital transformation', 'employee training program'],
   },
   hero: {
     tagline: 'Implementasi AI Tidak Hanya Soal Teknologi - Adopsi Tim adalah Kunci',
-    subheading: 'Workshop praktis, playbook change management, & pendampingan hands-on',
+    subheading: 'Kami menawarkan workshop praktis yang disesuaikan dengan kebutuhan, playbook change management yang teruji, serta pendampingan hands-on untuk memastikan kelancaran transisi.',
     cta: 'Rencanakan Program Pelatihan Anda',
-    visual: '/images/services/training-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=Training', // Placeholder
   },
   problem: {
     title: 'The Problem: Tech ≠ Success',
     points: [
-      '90% implementasi AI gagal karena adoption, bukan teknologi',
-      'Team resist karena tidak paham value atau takut job displacement',
-      'Gap antara implementasi & actual usage sangat besar',
-      'Knowledge gap: pilot project success tapi scaling gagal',
+      'Hingga 90% implementasi teknologi baru, termasuk AI, gagal bukan karena teknologinya, tetapi karena rendahnya tingkat adopsi oleh pengguna.',
+      'Tim seringkali resisten terhadap perubahan karena tidak memahami nilai dari teknologi baru atau takut akan kehilangan pekerjaan (job displacement).',
+      'Terdapat kesenjangan besar antara implementasi teknis sebuah sistem dengan penggunaan aktualnya dalam alur kerja sehari-hari.',
+      'Proyek pilot mungkin berhasil, tetapi seringkali gagal saat di-scale up ke seluruh organisasi karena kurangnya pengetahuan dan persiapan.',
     ],
   },
   solution: {
@@ -619,15 +619,15 @@ export const trainingChangeManagement: ServicePage = {
     features: [
       {
         name: 'Workshop Onsite & Virtual',
-        description: 'Disesuaikan ke role (eksekutif, manager, user)',
+        description: 'Sesi pelatihan yang dirancang khusus dan disesuaikan untuk berbagai peran, mulai dari C-level eksekutif, manajer, hingga end-user.',
       },
       {
         name: 'Hands-on Practice',
-        description: 'Use real data, real scenario, real pain points',
+        description: 'Peserta akan berlatih menggunakan data riil, skenario yang relevan, dan mengatasi pain points yang sesungguhnya untuk pengalaman belajar yang efektif.',
       },
       {
         name: 'Change Playbook',
-        description: 'Step-by-step guide untuk organization change',
+        description: 'Kami menyediakan panduan langkah-demi-langkah yang komprehensif untuk mengelola perubahan organisasi secara efektif dan meminimalkan resistensi.',
       },
     ],
   },
@@ -682,7 +682,7 @@ export const trainingChangeManagement: ServicePage = {
     cta: 'Konsultasi Change Management - Siapkan Organisasi Anda',
   },
   visualAssets: {
-    architectureDiagram: '/images/services/change-management-timeline.png', // Placeholder
+    architectureDiagram: 'https://placehold.co/600x400/png?text=Change+Management+Timeline', // Placeholder
   },
 };
 
@@ -691,22 +691,22 @@ export const webDevelopment: ServicePage = {
   title: 'Web Development & SEO',
   seo: {
     title: 'Web Development & SEO Agency Indonesia | my-aicustom.com',
-    description: 'Jasa web development profesional untuk landing page, e-commerce, dan corporate website. SEO-friendly, cepat, dan mobile-first.',
+    description: 'Jasa web development profesional di Indonesia untuk landing page, e-commerce, dan corporate website. Kami membangun website yang SEO-friendly, cepat, dan mobile-first untuk mendorong pertumbuhan bisnis Anda.',
     keywords: ['web development Indonesia', 'website design', 'e-commerce website', 'responsive website', 'website builder', 'web agency'],
   },
   hero: {
     tagline: 'Website Profesional yang Convert - SEO-friendly & Fast',
-    subheading: 'Dari landing page hingga e-commerce, kami bangun website yang perform & grow bisnis Anda',
+    subheading: 'Baik Anda membutuhkan landing page, situs e-commerce, atau website korporat, kami membangun platform digital yang tidak hanya terlihat bagus, tetapi juga memiliki performa tinggi dan mendorong konversi.',
     cta: 'Lihat Portfolio Website Kami',
-    visual: '/images/services/web-dev-hero.png', // Placeholder
+    visual: 'https://placehold.co/600x400/png?text=Web+Development', // Placeholder
   },
   problem: {
     title: 'Why a Professional Website Matters',
     points: [
-      'Website adalah digital storefront bisnis Anda 24/7',
-      '75% customer beli dari brand yang punya professional website',
-      'Website lambat = bounce rate tinggi & SEO jelek',
-      'Mobile-friendly bukan optional lagi',
+      'Website adalah etalase digital bisnis Anda yang beroperasi 24/7. Kesan pertama sangatlah penting.',
+      'Sebanyak 75% pelanggan mengakui bahwa mereka menilai kredibilitas sebuah brand berdasarkan desain website-nya.',
+      'Website yang lambat akan menyebabkan bounce rate yang tinggi, merusak pengalaman pengguna, dan mendapatkan penalti dari mesin pencari seperti Google.',
+      'Memiliki website yang mobile-friendly bukan lagi sebuah pilihan, melainkan keharusan di era digital saat ini.',
     ],
   },
   solution: {
@@ -714,15 +714,15 @@ export const webDevelopment: ServicePage = {
     features: [
       {
         name: 'Landing Page',
-        description: 'High-converting, single purpose, optimization untuk lead/sales',
+        description: 'Kami merancang landing page dengan satu tujuan yang jelas: konversi. Dioptimalkan untuk mendapatkan leads atau penjualan dengan A/B testing.',
       },
       {
         name: 'Corporate Website',
-        description: 'Brand authority, company info, case study showcase',
+        description: 'Bangun otoritas brand Anda, sajikan informasi perusahaan secara profesional, dan tampilkan portofolio atau studi kasus Anda dengan meyakinkan.',
       },
       {
         name: 'E-commerce',
-        description: 'Product catalog, shopping cart, payment integration, inventory',
+        description: 'Solusi lengkap untuk toko online: manajemen katalog produk, keranjang belanja, integrasi payment gateway, dan sistem manajemen inventaris.',
       },
     ],
   },
@@ -770,7 +770,7 @@ export const webDevelopment: ServicePage = {
     cta: 'Konsultasi Web Project Gratis',
   },
   visualAssets: {
-    chatMockup: '/images/services/portfolio-showcase.png', // Placeholder
+    chatMockup: 'https://placehold.co/600x400/png?text=Portfolio+Showcase', // Placeholder
   },
 };
 
