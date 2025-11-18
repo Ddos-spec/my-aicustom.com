@@ -1,166 +1,18 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-export const posts = [
-  {
-    slug: 'strategi-operasional-ai',
-    title: 'Strategi Operasional AI: Menyatukan Otomatisasi dan Pengalaman Pelanggan',
-    excerpt: 'Cetak biru praktis untuk mengatur AI di seluruh operasi tanpa mengorbankan pengalaman atau kepatuhan pelanggan.',
-    category: 'Strategi',
-    publishDate: '2024-02-12',
-    readTime: '8 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'playbook-automasi-keuangan',
-    title: 'Playbook Otomatisasi Keuangan: Menggandakan Kecepatan SLA dengan Co-pilot AI',
-    excerpt: 'Bagaimana tim keuangan mengotomatiskan rekonsiliasi, alur kerja dokumen, dan persetujuan sambil menjaga tata kelola penuh.',
-    category: 'Otomatisasi',
-    publishDate: '2024-01-22',
-    readTime: '6 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'dasbor-analitik-ai-cxo',
-    title: '5 Dasbor CXO untuk Memantau Inisiatif AI secara Real Time',
-    excerpt: 'Metrik eksekutif yang mempercepat pengambilan keputusan strategis untuk investasi AI perusahaan.',
-    category: 'Data & Analitik',
-    publishDate: '2023-12-18',
-    readTime: '5 menit baca',
-    author: 'Bayu Lazuardi',
-    heroImage: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'cetak-biru-chatbot-skalabel',
-    title: 'Cetak Biru Chatbot Skalabel untuk Perjalanan Pelanggan Premium',
-    excerpt: 'Kerangka kerja untuk agen AI multibahasa dan multisaluran yang menjaga respons tetap konsisten dan sesuai merek.',
-    category: 'Pengalaman Pelanggan',
-    publishDate: '2023-11-05',
-    readTime: '7 menit baca',
-    author: 'Bayu Lazuardi',
-    heroImage: 'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'daftar-periksa-tata-kelola-ai',
-    title: 'Daftar Periksa Tata Kelola AI untuk Dewan dan Pemimpin Kepatuhan',
-    excerpt: 'Daftar kontrol untuk menjaga program AI tetap transparan, dapat diaudit, dan selaras dengan peraturan yang berkembang.',
-    category: 'Tata Kelola',
-    publishDate: '2023-10-17',
-    readTime: '4 menit baca',
-    author: 'Dion Hartono',
-    heroImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'lab-bakat-ai',
-    title: 'Lab Bakat AI: Membangun Tim Multidisiplin Tanpa Drama',
-    excerpt: 'Model kolaborasi di seluruh SDM, produk, dan data sehingga talenta AI dapat bergabung dalam 30 hari pertama.',
-    category: 'Bakat',
-    publishDate: '2023-09-26',
-    readTime: '6 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'model-operasi-ai',
-    title: 'Model Operasi AI yang Menghubungkan Bisnis dan Teknologi',
-    excerpt: 'Pendekatan modular untuk menyelaraskan unit bisnis, tim teknologi, dan pusat keunggulan di sekitar AI.',
-    category: 'Strategi',
-    publishDate: '2023-08-14',
-    readTime: '5 menit baca',
-    author: 'Dion Hartono',
-    heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'keunggulan-ai-untuk-bisnis',
-    title: '5 Keunggulan AI untuk Pertumbuhan Bisnis di Era Digital',
-    excerpt: 'Temukan bagaimana kecerdasan buatan (AI) dapat merevolusi bisnis Anda, mulai dari personalisasi pelanggan hingga efisiensi operasional.',
-    category: 'Teknologi',
-    publishDate: '2024-03-20',
-    readTime: '7 menit baca',
-    author: 'Jules',
-    heroImage: 'https://images.unsplash.com/photo-1620712943543-959692833b51?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1620712943543-959692833b51?auto=format&fit=crop&w=900&q=80',
-    imageAlt: 'Blog post unggulan AI untuk Bisnis oleh my-aicustom.com',
-  },
-  {
-    slug: 'pentingnya-seo-dalam-web-development',
-    title: 'Mengapa SEO Wajib Diintegrasikan Sejak Awal dalam Web Development?',
-    excerpt: 'Integrasi SEO sejak awal web development adalah kunci sukses online. Pelajari strategi SEO teknis dan on-page untuk peringkat #1 di Google.',
-    category: 'SEO',
-    publishDate: '2024-03-18',
-    readTime: '6 menit baca',
-    author: 'Jules',
-    heroImage: 'https://images.unsplash.com/photo-1560472354-b33ff08c84a4?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1560472354-b33ff08c84a4?auto=format&fit=crop&w=900&q=80',
-    imageAlt: 'Pentingnya SEO dalam Web Development - my-aicustom.com',
-  },
-  {
-    slug: 'panduan-memulai-automasi-bisnis',
-    title: 'Panduan Memulai Automasi Bisnis untuk Pemula',
-    excerpt: 'Mulai otomatisasi bisnis Anda dengan panduan praktis ini. Pelajari langkah-langkah mudah untuk efisiensi maksimal, cocok untuk pemula.',
-    category: 'Otomatisasi',
-    publishDate: '2024-03-16',
-    readTime: '5 menit baca',
-    author: 'Jules',
-    heroImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80',
-    imageAlt: 'Panduan Memulai Automasi Bisnis - my-aicustom.com',
-  },
-  {
-    slug: 'praktik-terbaik-implementasi-ai-kustom',
-    title: 'Praktik Terbaik Implementasi AI Kustom untuk Bisnis Indonesia',
-    excerpt: 'Panduan lengkap untuk mengimplementasikan solusi AI kustom yang sesuai dengan kebutuhan bisnis lokal dan meningkatkan ROI secara signifikan.',
-    category: 'Strategi',
-    publishDate: '2024-03-15',
-    readTime: '7 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80',
-  },
-  {
-    slug: 'personalisasi-chatbot-ai-indonesia',
-    title: 'Personalisasi Chatbot AI untuk Pasar Indonesia: Strategi dan Teknik',
-    excerpt: 'Cara menyesuaikan chatbot AI dengan karakteristik unik pasar Indonesia, termasuk bahasa, budaya, dan preferensi komunikasi lokal.',
-    category: 'Pengalaman Pelanggan',
-    publishDate: '2024-03-08',
-    readTime: '6 menit baca',
-    author: 'Bayu Lazuardi',
-    heroImage: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'roi-solusi-ai-kustom',
-    title: 'Mengukur ROI dari Solusi AI Kustom: Metrik yang Benar-Benar Penting',
-    excerpt: 'Kerangka kerja praktis untuk mengukur laba atas investasi dari implementasi AI kustom, dengan fokus pada metrik bisnis yang dapat ditindaklanjuti.',
-    category: 'Data & Analitik',
-    publishDate: '2024-02-28',
-    readTime: '8 menit baca',
-    author: 'Dion Hartono',
-    heroImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
-  },
-];
+import { blogPosts, getRelatedArticles, findPostBySlug } from '../../data/blogPosts';
 
 export function getStaticPaths() {
-  return posts.map((post) => ({
+  return blogPosts.map((post) => ({
     params: { slug: post.slug },
   }));
 }
 
 const { slug } = Astro.params;
-const post = posts.find((entry) => entry.slug === slug);
+const post = findPostBySlug(slug as string);
 
 if (!post) {
-  throw Astro.error(404, 'Artikel tidak ditemukan');
+  return Astro.redirect('/404');
 }
 
 const formattedDate = new Date(post.publishDate).toLocaleDateString('id-ID', {
@@ -169,14 +21,14 @@ const formattedDate = new Date(post.publishDate).toLocaleDateString('id-ID', {
   year: 'numeric',
 });
 
-const relatedPosts = posts.filter((entry) => entry.slug !== post.slug).slice(0, 3);
+const relatedPosts = getRelatedArticles(slug as string);
 
 const blogHref = (entrySlug: string) => `/blog/${entrySlug}/`;
 ---
 <Layout title={`${post.title} - my-aicustom.com`}>
   <section class="bg-white py-16 dark:bg-slate-950">
     <div class="mx-auto max-w-5xl px-6">
-      <span class="inline-flex items-center rounded-full border border-slate-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500 dark:border-slate-700 dark:text-slate-300">{post.category}</span>
+      <span class="inline-flex items-center rounded-full border border-slate-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-slate-500 dark:border-slate-700 dark:text-slate-300">{post.categoryLabel}</span>
       <h1 class="mt-6 text-4xl font-semibold leading-tight text-slate-900 dark:text-white sm:text-5xl">{post.title}</h1>
       <div class="mt-6 flex flex-wrap items-center gap-4 text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">
         <span>{formattedDate}</span>
