@@ -1,90 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
-const categories = ['Strategi', 'Otomatisasi', 'Data & Analitik', 'Pengalaman Pelanggan', 'Tata Kelola', 'Bakat'];
-
-const posts = [
-  {
-    slug: 'strategi-operasional-ai',
-    title: 'Strategi Operasional AI: Menyatukan Otomatisasi dan Pengalaman Pelanggan',
-    excerpt: 'Cetak biru praktis untuk mengatur AI di seluruh operasi tanpa mengorbankan pengalaman atau kepatuhan pelanggan.',
-    category: 'Strategi',
-    publishDate: '12 Feb 2024',
-    readTime: '8 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'playbook-automasi-keuangan',
-    title: 'Playbook Otomatisasi Keuangan: Menggandakan Kecepatan SLA dengan Co-pilot AI',
-    excerpt: 'Bagaimana tim keuangan mengotomatiskan rekonsiliasi, alur kerja dokumen, dan persetujuan sambil menjaga tata kelola penuh.',
-    category: 'Otomatisasi',
-    publishDate: '22 Jan 2024',
-    readTime: '6 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'dasbor-analitik-ai-cxo',
-    title: '5 Dasbor CXO untuk Memantau Inisiatif AI secara Real Time',
-    excerpt: 'Metrik eksekutif yang mempercepat pengambilan keputusan strategis untuk investasi AI perusahaan.',
-    category: 'Data & Analitik',
-    publishDate: '18 Des 2023',
-    readTime: '5 menit baca',
-    author: 'Bayu Lazuardi',
-    heroImage: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'cetak-biru-chatbot-skalabel',
-    title: 'Cetak Biru Chatbot Skalabel untuk Perjalanan Pelanggan Premium',
-    excerpt: 'Kerangka kerja untuk agen AI multibahasa dan multisaluran yang menjaga respons tetap konsisten dan sesuai merek.',
-    category: 'Pengalaman Pelanggan',
-    publishDate: '5 Nov 2023',
-    readTime: '7 menit baca',
-    author: 'Bayu Lazuardi',
-    heroImage: 'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1527430253228-e93688616381?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'daftar-periksa-tata-kelola-ai',
-    title: 'Daftar Periksa Tata Kelola AI untuk Dewan dan Pemimpin Kepatuhan',
-    excerpt: 'Daftar kontrol untuk menjaga program AI tetap transparan, dapat diaudit, dan selaras dengan peraturan yang berkembang.',
-    category: 'Tata Kelola',
-    publishDate: '17 Okt 2023',
-    readTime: '4 menit baca',
-    author: 'Dion Hartono',
-    heroImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'lab-bakat-ai',
-    title: 'Lab Bakat AI: Membangun Tim Multidisiplin Tanpa Drama',
-    excerpt: 'Model kolaborasi di seluruh SDM, produk, dan data sehingga talenta AI dapat bergabung dalam 30 hari pertama.',
-    category: 'Bakat',
-    publishDate: '26 Sep 2023',
-    readTime: '6 menit baca',
-    author: 'Nadia Pramesti',
-    heroImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=900&q=80',
-  },
-  {
-    slug: 'model-operasi-ai',
-    title: 'Model Operasi AI yang Menghubungkan Bisnis dan Teknologi',
-    excerpt: 'Pendekatan modular untuk menyelaraskan unit bisnis, tim teknologi, dan pusat keunggulan di sekitar AI.',
-    category: 'Strategi',
-    publishDate: '14 Agu 2023',
-    readTime: '5 menit baca',
-    author: 'Dion Hartono',
-    heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80',
-    thumbnailImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
-  },
-];
-
-const featuredPost = posts[0];
-const latestPosts = posts.slice(1, 7);
+import { featuredPost, latestArticles as latestPosts, allCategories } from '../../data/blogPosts';
 
 const blogHref = (slug) => `/blog/${slug}/`;
 ---
@@ -137,9 +53,9 @@ const blogHref = (slug) => `/blog/${slug}/`;
 
   <section class="bg-white py-14 dark:bg-slate-950">
     <div class="mx-auto flex max-w-5xl flex-wrap justify-center gap-3 px-6">
-      {categories.map((category) => (
+      {allCategories.map((category) => (
         <span class="rounded-full border border-slate-200 px-5 py-2 text-sm font-semibold text-slate-600 transition hover:border-sky-300 hover:text-sky-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-sky-500 dark:hover:text-sky-300">
-          {category}
+          {category.label}
         </span>
       ))}
     </div>

@@ -1436,6 +1436,193 @@ export const webDevelopment: ServicePage = {
   }
 };
 
+export const softwareHouse: ServicePage = {
+  slug: 'software-house-ai',
+  title: 'AI-Powered Software House',
+  seo: {
+    title: 'AI-Powered Software House & Web App Development | my-aicustom.com',
+    description: 'Jasa software house kami membangun aplikasi web custom berbasis AI yang scalable, aman, dan cerdas. Dari MVP hingga platform enterprise, kami wujudkan ide Anda menjadi solusi digital berperforma tinggi.',
+    keywords: ['software house Indonesia', 'web application development', 'custom software', 'AI-powered apps', 'jasa pembuatan aplikasi web'],
+  },
+  hero: {
+    tagline: 'Dari Ide Inovatif Menjadi Aplikasi Web Cerdas dan Scalable',
+    subheading: 'Kami bukan sekadar software house biasa. Kami adalah mitra arsitek, pengembangan, dan inovasi Anda, yang mengintegrasikan kecerdasan buatan (AI) ke dalam inti aplikasi web custom untuk memberikan keunggulan kompetitif yang nyata.',
+    cta: 'Diskusikan Proyek Aplikasi Web Anda',
+    visual: 'https://images.unsplash.com/photo-1558655146-d09347e92766?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c29mdHdhcmUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA==',
+  },
+  problem: {
+    title: 'Tantangan dalam Membangun Perangkat Lunak Modern',
+    points: [
+      'Banyak ide aplikasi yang hebat gagal di tahap eksekusi karena kurangnya keahlian teknis untuk membangun produk yang scalable, aman, dan mudah dipelihara. Tim seringkali terjebak dalam utang teknis (technical debt) sejak awal.',
+      'Proses pengembangan perangkat lunak tradisional seringkali lambat, kaku, dan tidak transparan. Klien frustrasi karena tidak melihat kemajuan nyata selama berbulan-bulan dan produk akhir tidak sesuai dengan visi awal.',
+      'Membangun tim engineering internal yang berkualitas membutuhkan waktu dan biaya yang sangat besar, menjadi penghalang signifikan bagi startup dan perusahaan yang ingin bergerak cepat.',
+      'Aplikasi standar "satu untuk semua" (off-the-shelf) seringkali tidak cukup fleksibel untuk memenuhi kebutuhan proses bisnis yang unik, memaksa Anda untuk mengubah bisnis agar sesuai dengan perangkat lunak, bukan sebaliknya.',
+    ],
+  },
+  solution: {
+    title: 'Layanan Pengembangan Perangkat Lunak End-to-End Kami',
+    features: [
+      {
+        name: 'Pengembangan Aplikasi Web Custom',
+        description: 'Kami merancang dan membangun aplikasi web dari nol, yang disesuaikan secara presisi dengan alur kerja dan tujuan bisnis Anda. Kami mengkhususkan diri dalam membangun dasbor analitik, portal pelanggan, platform SaaS, dan sistem manajemen internal yang kompleks.',
+      },
+      {
+        name: 'Integrasi AI & Machine Learning',
+        description: 'Kami menyematkan kecerdasan buatan ke dalam aplikasi Anda. Ini bisa berupa fitur rekomendasi yang dipersonalisasi, chatbot layanan pelanggan cerdas, analisis prediktif, atau otomatisasi proses berbasis AI untuk meningkatkan efisiensi.',
+      },
+      {
+        name: 'Pengembangan MVP (Minimum Viable Product)',
+        description: 'Untuk startup dan inisiatif baru, kami dapat membantu Anda meluncurkan MVP fungsional dalam waktu 8-12 minggu. Pendekatan lean kami fokus pada fitur-fitur inti yang memungkinkan Anda untuk memvalidasi ide Anda dengan pengguna nyata secepat mungkin.',
+      },
+      {
+        name: 'Modernisasi Aplikasi (Legacy Modernization)',
+        description: 'Kami membantu Anda memodernisasi aplikasi lama (legacy) yang menghambat pertumbuhan Anda. Kami dapat memigrasikan arsitektur monolitik ke microservices yang lebih fleksibel, atau membangun kembali antarmuka pengguna dengan teknologi web modern untuk pengalaman pengguna yang lebih baik.',
+      },
+    ],
+  },
+  useCases: {
+    title: 'Contoh Solusi yang Telah Kami Bangun',
+    cases: [
+      {
+        industry: 'Fintech',
+        benefit: 'Membangun platform credit scoring berbasis AI yang menganalisis ratusan titik data alternatif untuk memberikan penilaian risiko yang lebih akurat, mengurangi default rate sebesar 15%.',
+      },
+      {
+        industry: 'E-commerce',
+        benefit: 'Mengembangkan mesin personalisasi real-time yang meningkatkan nilai pesanan rata-rata (AOV) sebesar 25% dengan merekomendasikan produk yang sangat relevan kepada setiap pengunjung.',
+      },
+      {
+        industry: 'Logistik',
+        benefit: 'Menciptakan dasbor optimasi rute cerdas yang menggunakan algoritma AI untuk mengurangi biaya bahan bakar sebesar 18% dan meningkatkan utilisasi armada sebesar 30%.',
+      },
+       {
+        industry: 'Pendidikan (EdTech)',
+        benefit: 'Membangun platform pembelajaran adaptif yang menyesuaikan kurikulum secara dinamis berdasarkan kinerja siswa, meningkatkan tingkat kelulusan kursus sebesar 40%.',
+      },
+    ],
+  },
+  technical: {
+    title: 'Tumpukan Teknologi Pilihan Kami (Tech Stack)',
+    highlights: [
+      { name: 'Frontend', value: 'Next.js, React, TypeScript, Tailwind CSS (untuk aplikasi web yang cepat, interaktif, dan responsif).' },
+      { name: 'Backend', value: 'Node.js, Python, Go (dibangun di atas arsitektur microservices atau serverless untuk skalabilitas dan ketahanan).' },
+      { name: 'Database', value: 'PostgreSQL, MongoDB, Redis (dipilih berdasarkan kebutuhan spesifik aplikasi Anda, baik relasional maupun NoSQL).' },
+      { name: 'Infrastruktur & DevOps', value: 'Docker, Kubernetes, AWS, Google Cloud (otomatisasi CI/CD untuk deployment yang cepat dan andal).' },
+      { name: 'AI & Machine Learning', value: 'TensorFlow, PyTorch, Scikit-learn, OpenAI API (untuk membangun dan mengintegrasikan model AI canggih).' },
+    ],
+  },
+  faq: {
+    title: 'Pertanyaan yang Sering Diajukan',
+    questions: [
+      {
+        question: 'Bagaimana proses kerja dan komunikasi selama proyek berlangsung?',
+        answer: 'Kami menggunakan metodologi Agile (Scrum). Anda akan menjadi bagian integral dari proses. Kami mengadakan sprint planning, daily stand-up singkat, dan sprint review setiap 1-2 minggu di mana kami mendemonstrasikan kemajuan nyata. Anda akan memiliki akses penuh ke project management board (misalnya, Jira atau Trello) kami untuk transparansi total.',
+      },
+      {
+        question: 'Siapa yang akan memiliki kode sumber setelah proyek selesai?',
+        answer: 'Anda. Setelah pembayaran akhir diselesaikan, semua hak kekayaan intelektual dan kode sumber aplikasi menjadi milik Anda sepenuhnya. Kami tidak menggunakan model lisensi yang mengikat.',
+      },
+       {
+        question: 'Apakah Anda menyediakan layanan pemeliharaan dan dukungan setelah aplikasi diluncurkan?',
+        answer: 'Ya. Kami menawarkan paket dukungan dan pemeliharaan (Service Level Agreement - SLA) yang fleksibel. Ini mencakup pemantauan proaktif, perbaikan bug, pembaruan keamanan, dan dukungan teknis untuk memastikan aplikasi Anda berjalan lancar dan tetap aman seiring waktu.',
+      },
+    ],
+  },
+    successMetrics: {
+        title: 'Rekam Jejak Kami',
+        metrics: [
+            { value: '50+', label: 'Aplikasi Web Berhasil Diluncurkan' },
+            { value: '98%', label: 'Tingkat Kepuasan Klien' },
+            { value: '100%', label: 'Proyek Selesai Tepat Waktu' },
+        ],
+    },
+  pricing: {
+    title: 'Pricing',
+    price: 'Berdasarkan Ruang Lingkup Proyek',
+    cta: 'Dapatkan Estimasi Biaya Proyek Gratis',
+  },
+  visualAssets: {
+    chatMockup: 'https://images.unsplash.com/photo-1542393545-10f5cde2c810?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNvZnR3YXJlJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8fDA==',
+  },
+  howItWorks: {
+    title: 'Proses Pengembangan Agile & Transparan Kami',
+    steps: [
+      {
+        name: 'Fase 1: Product Discovery & Design Sprint (1-2 Minggu)',
+        description: 'Kami tidak langsung menulis kode. Kami memulai dengan lokakarya intensif untuk memahami visi Anda, memetakan alur pengguna, dan mendefinisikan ruang lingkup MVP. Kami membuat prototipe interaktif (clickable prototype) sehingga Anda dapat "merasakan" aplikasi Anda sebelum pengembangan dimulai. Ini mengurangi risiko dan memastikan keselarasan sejak awal.'
+      },
+      {
+        name: 'Fase 2: Agile Development Sprints (Berkelanjutan)',
+        description: 'Kami bekerja dalam siklus 2-mingguan yang disebut "sprint". Di akhir setiap sprint, kami memberikan bagian fungsional dari perangkat lunak Anda yang dapat Anda uji. Pendekatan berulang ini memungkinkan adanya fleksibilitas, umpan balik yang cepat, dan memastikan tidak ada kejutan di akhir. Anda akan selalu tahu persis apa yang sedang kami kerjakan.'
+      },
+      {
+        name: 'Fase 3: Quality Assurance & Testing (Terintegrasi)',
+        description: 'Kualitas bukanlah sebuah tahap, melainkan bagian dari DNA kami. Pengujian (baik otomatis maupun manual) dilakukan secara terus-menerus selama siklus pengembangan, bukan hanya di akhir. Ini termasuk unit testing, integration testing, dan end-to-end testing untuk memastikan perangkat lunak yang andal dan bebas bug.'
+      },
+      {
+        name: 'Fase 4: Deployment & DevOps (Berkelanjutan)',
+        description: 'Kami mengotomatiskan proses build, testing, dan deployment (CI/CD). Ini berarti kami dapat merilis fitur baru dan perbaikan ke lingkungan produksi dengan cepat dan andal, seringkali beberapa kali dalam seminggu. Kami juga menyiapkan infrastruktur cloud yang scalable dan aman untuk mendukung pertumbuhan aplikasi Anda.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Keunggulan Arsitektur & Praktik Rekayasa Perangkat Lunak Kami',
+    features: [
+      {
+        name: 'Arsitektur Berbasis Microservices',
+        description: 'Untuk aplikasi yang kompleks, kami lebih menyukai arsitektur microservices. Ini memecah aplikasi besar menjadi layanan-layanan kecil yang independen dan lebih mudah dikelola. Manfaatnya: skalabilitas yang lebih baik, kemudahan dalam pemeliharaan, dan kemampuan untuk mengadopsi teknologi baru secara bertahap tanpa harus menulis ulang seluruh aplikasi.'
+      },
+      {
+        name: 'Keamanan sebagai Prioritas Utama (Security by Design)',
+        description: 'Kami mengintegrasikan praktik keamanan terbaik di setiap tahap siklus pengembangan. Ini termasuk penulisan kode yang aman (secure coding), pemindaian kerentanan otomatis, manajemen rahasia (secret management) yang ketat, dan kepatuhan terhadap standar seperti OWASP Top 10 untuk melindungi aplikasi dan data Anda dari ancaman.',
+      },
+      {
+        name: 'Pengembangan Berbasis Tes (Test-Driven Development - TDD)',
+        description: 'Kami menulis tes otomatis sebelum kami menulis kode fungsional. Praktik ini mungkin terasa lebih lambat pada awalnya, tetapi dalam jangka panjang, ia menghasilkan kode yang jauh lebih andal, mudah dipelihara, dan mengurangi jumlah bug secara signifikan, menghemat waktu dan biaya Anda di masa depan.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Startup Teknologi yang membutuhkan mitra pengembangan untuk membangun MVP mereka dan meluncurkannya ke pasar dengan cepat.',
+      'Perusahaan Menengah & Besar (Enterprise) yang ingin membangun solusi perangkat lunak internal atau portal pelanggan custom yang tidak dapat dipenuhi oleh produk jadi.',
+      'Bisnis yang ingin mengintegrasikan AI atau machine learning ke dalam produk atau operasi mereka yang ada untuk menciptakan keunggulan kompetitif.',
+      'Organisasi yang terjebak dengan sistem lama (legacy system) yang rapuh dan perlu dimodernisasi untuk mendukung pertumbuhan bisnis digital.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Kami adalah Mitra Software House yang Tepat untuk Anda?',
+    advantages: [
+      {
+        name: 'Keahlian Ganda: Rekayasa Perangkat Lunak & Sains Data',
+        description: 'Tidak seperti software house tradisional, tim kami memiliki keahlian mendalam di dua bidang: rekayasa perangkat lunak (software engineering) yang kokoh dan ilmu data (data science) terapan. Kombinasi langka ini memungkinkan kami untuk membangun aplikasi yang tidak hanya berfungsi dengan baik, tetapi juga benar-benar cerdas.'
+      },
+      {
+        name: 'Fokus pada Kemitraan, Bukan Sekadar Vendor',
+        description: 'Kami tidak hanya mengambil spesifikasi dan menghilang selama tiga bulan. Kami bekerja sebagai perpanjangan dari tim Anda. Kami menantang asumsi, memberikan saran strategis, dan berkomitmen penuh pada kesuksesan bisnis Anda, bukan hanya pengiriman kode.'
+      },
+      {
+        name: 'Transparansi Radikal & Komunikasi Proaktif',
+        description: 'Anda akan selalu memiliki visibilitas penuh ke dalam proses kami melalui alat manajemen proyek, repositori kode, dan komunikasi harian. Kami percaya bahwa komunikasi yang jujur dan proaktif adalah kunci untuk membangun kepercayaan dan memastikan proyek berjalan di jalur yang benar.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Membangun Platform SaaS untuk Analisis Pemasaran',
+    client: 'Sebuah Startup MarTech (Marketing Technology)',
+    challenge: 'Para pendiri memiliki ide cemerlang untuk platform SaaS yang menggunakan AI untuk menganalisis data kampanye pemasaran dan memberikan rekomendasi pengoptimalan anggaran. Mereka membutuhkan mitra teknis untuk membangun produk dari awal, dari desain hingga peluncuran.',
+    solution: 'Kami bekerja sama dengan klien dalam sprint desain 2 minggu untuk memvalidasi ide dan membuat prototipe. Kemudian, selama 4 bulan, tim kami yang terdiri dari 1 Product Manager, 2 Backend Engineers, 1 Frontend Engineer, dan 1 Data Scientist membangun MVP menggunakan arsitektur microservices di AWS. Solusi ini mengintegrasikan beberapa API pemasaran (Google Ads, Facebook Ads) dan menggunakan model machine learning untuk memberikan rekomendasi.',
+    results: [
+      { metric: 'Waktu dari Ide ke Peluncuran MVP', value: '4 Bulan' },
+      { metric: 'Kemampuan Memproses Data', value: 'Mampu menganalisis 10 juta+ baris data iklan per hari' },
+      { metric: 'Biaya Infrastruktur Awal', value: 'Dioptimalkan menggunakan arsitektur serverless, mengurangi biaya sebesar 60% dibandingkan perkiraan awal' },
+      { metric: 'Umpan Balik Pengguna Awal', value: 'Sangat positif, memungkinkan klien untuk mendapatkan pendanaan awal (seed funding) mereka' }
+    ],
+    testimonial: '"Bekerja dengan my-aicustom.com lebih seperti memiliki co-founder teknis daripada sekadar menyewa software house. Keahlian mereka dalam AI dan pengembangan yang gesit sangat penting dalam mengubah visi kami menjadi produk nyata yang dicintai oleh pengguna awal kami."'
+  }
+};
+
 export const allServices = [
     aiAnalytics,
     aiStrategy,
@@ -1444,5 +1631,6 @@ export const allServices = [
     computerVision,
     posRental,
     trainingChangeManagement,
-    webDevelopment
+    webDevelopment,
+    softwareHouse
 ]

@@ -1,65 +1,19 @@
 ---
+import { allServices } from '../data/services';
 const productTourHref = '/service/';
 const contactHref = '/contact/';
 const blogHref = '/blog/';
 
 const logos = ['Sagara Technology', 'Ekrut', 'Lifepack', 'Datasintesa'];
 
-const solutions = [
-  {
-    title: 'Otomatisasi Layanan Pelanggan',
-    description:
-      'Terapkan agen AI di WhatsApp, Instagram, dan Web untuk memberikan jawaban instan 24/7.',
-    features: [
-      'Perutean FAQ AI dengan serah terima agen langsung',
-      'Integrasi CRM dan tiket',
-      'Alur kerja tindak lanjut dan eskalasi',
-      'Dasbor analitik untuk pemimpin CS',
-    ],
-    price: 'Mulai dari Rp500.000 / bulan',
-    ctaLabel: 'Minta Demo Langsung',
-    ctaHref: contactHref,
-  },
-  {
-    title: 'Mesin Artikel AI',
-    description: 'Publikasikan artikel SEO setiap bulan dengan penulis yang disesuaikan dengan suara merek Anda.',
-    features: [
-      '25 artikel bentuk panjang dikirimkan setiap bulan',
-      'Pengelompokan kata kunci otomatis',
-      'Publikasi otomatis ke blog dan platform mitra',
-      'Alur kerja backlink dan penggunaan kembali opsional',
-    ],
-    price: 'Mulai dari Rp1.000.000 / bulan',
-    ctaLabel: 'Lihat Contoh Artikel AI',
-    ctaHref: blogHref,
-  },
-  {
-    title: 'Otomatisasi Pemasaran',
-    description: 'Orkestrasikan kampanye multi-saluran dengan analitik kinerja bawaan.',
-    features: [
-      'Kirim kampanye yang dipersonalisasi ke ribuan orang',
-      'Integrasi CRM dengan segmentasi cerdas',
-      'Penilaian prospek AI dan pengurutan pemeliharaan',
-      'Analisis dan pelaporan keterlibatan',
-    ],
-    price: 'Mulai dari Rp500.000 / bulan',
-    ctaLabel: 'Lihat Dasbor Pemasaran',
-    ctaHref: productTourHref,
-  },
-  {
-    title: 'Agen AI Kustom',
-    description: 'Rancang alur kerja AI perusahaan yang disesuaikan dengan proses bisnis Anda.',
-    features: [
-      'Integrasi di seluruh CRM dan ERP',
-      'Orkestrasi multi-agen',
-      'SLA premium dan dukungan khusus',
-      'Lingkup fleksibel dengan inovasi bersama',
-    ],
-    price: 'Harga: Mulai dari Rp3–5 juta untuk memulai',
-    ctaLabel: 'Konsultasikan Proyek Anda',
-    ctaHref: contactHref,
-  },
-];
+const solutions = allServices.map(service => ({
+  title: service.title,
+  description: service.hero.subheading,
+  features: service.solution.features.map(feature => feature.name),
+  price: service.pricing.price,
+  ctaLabel: 'Learn More',
+  ctaHref: `/service/${service.slug}`
+}));
 
 const testimonials = [
   {
@@ -186,14 +140,14 @@ const pricingTiers = [
       <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Solusi AI yang dibuat dengan mempertimbangkan alur kerja Anda</h2>
       <p class="mt-4 text-gray-600 dark:text-gray-300">Pilih otomatisasi yang sesuai dengan prioritas Anda dan dapatkan hasil yang terukur dalam beberapa minggu—bukan bulan.</p>
     </div>
-    <div class="mt-16 grid gap-8 lg:grid-cols-2">
+    <div class="mt-16 grid gap-8 lg:grid-cols-3">
       {solutions.map((solution) => (
         <article class="flex h-full flex-col justify-between gap-8 rounded-3xl border border-gray-100 bg-white/80 p-8 shadow-lg shadow-blue-100 transition hover:-translate-y-1 hover:shadow-blue-200/60 dark:border-gray-800 dark:bg-gray-900/80 dark:shadow-blue-900/20">
           <div class="space-y-4">
             <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">{solution.title}</h3>
             <p class="text-gray-600 dark:text-gray-300">{solution.description}</p>
             <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
-              {solution.features.map((feature) => (
+              {solution.features.slice(0, 2).map((feature) => (
                 <li class="flex items-start gap-3">
                   <span class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-500/20 dark:text-blue-100">
                     <svg class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.704 5.29a1 1 0 010 1.415l-6.708 6.706a1 1 0 01-1.414 0L3.296 7.124a1 1 0 011.414-1.414l4.167 4.166 5.999-5.999a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
