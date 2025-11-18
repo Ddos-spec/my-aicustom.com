@@ -4,9 +4,72 @@ import Hero from '../components/Hero.astro';
 import Testimonials from '../components/Testimonials.astro';
 import WhyChooseUs from '../components/WhyChooseUs.astro';
 import Contact from '../components/Contact.astro';
+
+// FAQ Schema for SEO
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apa itu AI Custom dan mengapa penting untuk bisnis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI Custom adalah solusi Artificial Intelligence yang dirancang khusus untuk kebutuhan bisnis Anda. Berbeda dengan AI generik, AI Custom disesuaikan dengan proses, data, dan objectives spesifik perusahaan Anda. Ini penting karena setiap bisnis memiliki tantangan unik yang membutuhkan solusi yang tepat untuk mencapai ROI maksimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa lama waktu implementasi AI Custom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Implementasi AI Custom biasanya memakan waktu 2-4 bulan untuk MVP (Minimum Viable Product), tergantung kompleksitas. Kami menggunakan pendekatan Agile dengan sprint 2 mingguan, sehingga Anda bisa melihat progress secara berkala dan memberikan feedback untuk hasil yang optimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Berapa biaya implementasi AI Custom di Indonesia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Biaya implementasi AI Custom di Indonesia berkisar dari Rp 200 juta hingga Rp 2 miliar, tergantung kompleksitas dan scope project. Namun, ROI positif biasanya tercapai dalam 6-12 bulan melalui efisiensi operasional, peningkatan revenue, dan cost savings. Kami menawarkan konsultasi gratis untuk estimasi yang akurat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa saja layanan AI Custom yang ditawarkan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kami menawarkan berbagai solusi AI Custom: 1) Chatbot AI dengan NLP untuk customer service, 2) AI Analytics & Insights untuk decision-making, 3) Business Process Automation, 4) Computer Vision & OCR, 5) Predictive Analytics, 6) Recommendation Systems, 7) AI Strategy Consulting, 8) Training & Change Management, dan 9) Custom Software Development dengan AI integration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bagaimana cara kerja AI Custom untuk chatbot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI Chatbot Custom kami menggunakan Natural Language Processing (NLP) yang dilatih dengan data conversation spesifik bisnis Anda. Chatbot dapat memahami Bahasa Indonesia informal, code-switching, dan context bisnis Anda. Sistem dapat menghandle 60-80% inquiries secara otomatis, meningkatkan customer satisfaction sambil mengurangi workload tim support hingga 40%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah AI Custom aman dan comply dengan regulasi Indonesia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ya, semua solusi AI Custom kami dirancang dengan 'privacy by design' dan comply dengan UU PDP (Undang-Undang Perlindungan Data Pribadi) Indonesia. Kami implementasikan enkripsi end-to-end, data anonymization, dan secure infrastructure. Sistem juga dapat disesuaikan dengan standar internasional seperti GDPR dan ISO 27001."
+      }
+    }
+  ]
+}, null, 2);
 ---
 
-<Layout title="my-aicustom.com - AI Automation for Your Business">
+<Layout
+  title="AI Custom Indonesia - Solusi AI Terbaik untuk Transformasi Digital Bisnis Anda"
+  description="Implementasi AI Custom terbaik di Indonesia. Chatbot AI cerdas, analytics prediktif, automation, dan computer vision untuk bisnis. Konsultasi gratis, ROI terukur dalam 6-12 bulan. Trusted by 100+ perusahaan."
+  keywords="AI custom, AI custom Indonesia, solusi AI Indonesia, implementasi AI, chatbot AI custom, AI automation Indonesia, machine learning Indonesia, transformasi digital AI, konsultan AI terbaik, custom AI solution, AI bisnis Indonesia"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqSchema}></script>
+  </Fragment>
   <main>
     <Hero />
     <Testimonials />

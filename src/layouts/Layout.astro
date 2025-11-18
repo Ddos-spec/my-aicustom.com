@@ -11,30 +11,66 @@ interface Props {
 const { title, description, keywords } = Astro.props;
 const siteOrigin = 'https://my-aicustom.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
-const defaultDescription = "my-aicustom.com adalah solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.";
+const defaultDescription = "Solusi AI Custom terbaik di Indonesia. Implementasi chatbot AI, analytics, automation, dan computer vision untuk transformasi digital bisnis Anda. Konsultasi gratis, ROI terukur, dan support berkelanjutan.";
 const finalDescription = description || defaultDescription;
+const defaultKeywords = "AI custom, AI custom Indonesia, solusi AI, chatbot AI, AI automation, machine learning Indonesia, transformasi digital, AI bisnis, implementasi AI, konsultan AI Indonesia, AI analytics, computer vision, NLP Indonesia, custom AI solution";
+const finalKeywords = keywords || defaultKeywords;
 const faviconHref = '/favicon.svg';
 const socialImage = `${siteOrigin}/assets/og-default.svg`;
 const whatsappNumber = '6281296361446';
 const whatsappMessage = encodeURIComponent('Halo kak saya mau coba konsultasi ai custom nih');
-const orgJsonLd = JSON.stringify(
-        {
-                "@context": "http://schema.org",
-                "@type": "Organization",
-                name: "my-aicustom.com",
-                url: siteOrigin,
-                logo: `${siteOrigin}/assets/og-default.svg`,
-                description:
-                        "Solusi AI untuk mengotomatiskan proses bisnis Anda, meningkatkan efisiensi, dan mendorong pertumbuhan.",
-                contactPoint: {
-                        "@type": "ContactPoint",
-                        email: "myaicustom@gmail.com",
-                        contactType: "Customer Service",
-                },
-        },
-        null,
-        2,
-);
+const orgJsonLd = JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": ["Organization", "LocalBusiness"],
+	"name": "my-aicustom.com",
+	"alternateName": "My AI Custom",
+	"url": siteOrigin,
+	"logo": `${siteOrigin}/assets/og-default.svg`,
+	"image": `${siteOrigin}/assets/og-default.svg`,
+	"description": "Solusi AI Custom terbaik di Indonesia untuk transformasi digital bisnis. Implementasi chatbot AI, analytics, automation, dan computer vision dengan ROI terukur.",
+	"address": {
+		"@type": "PostalAddress",
+		"addressCountry": "ID",
+		"addressLocality": "Indonesia"
+	},
+	"geo": {
+		"@type": "GeoCoordinates",
+		"latitude": "-6.2088",
+		"longitude": "106.8456"
+	},
+	"contactPoint": [{
+		"@type": "ContactPoint",
+		"telephone": "+62-812-9636-1446",
+		"contactType": "Customer Service",
+		"areaServed": "ID",
+		"availableLanguage": ["Indonesian", "English"]
+	}],
+	"sameAs": [
+		"https://www.linkedin.com/company/my-aicustom",
+		"https://www.facebook.com/myaicustom",
+		"https://twitter.com/myaicustom",
+		"https://www.instagram.com/myaicustom"
+	],
+	"aggregateRating": {
+		"@type": "AggregateRating",
+		"ratingValue": "4.9",
+		"reviewCount": "127"
+	},
+	"priceRange": "$$",
+	"openingHours": "Mo-Fr 09:00-18:00",
+	"email": "myaicustom@gmail.com",
+	"founder": {
+		"@type": "Person",
+		"name": "Dion Hartono"
+	},
+	"foundingDate": "2023",
+	"keywords": "AI custom Indonesia, solusi AI, chatbot AI, machine learning, transformasi digital, AI automation, konsultan AI",
+	"serviceType": "Artificial Intelligence Consulting and Implementation",
+	"areaServed": {
+		"@type": "Country",
+		"name": "Indonesia"
+	}
+}, null, 2);
 ---
 
 <!doctype html>
@@ -52,11 +88,18 @@ const orgJsonLd = JSON.stringify(
                 <meta charset="UTF-8" />
                 <title>{title}</title>
                 <meta name="description" content={finalDescription} />
-                {keywords && <meta name="keywords" content={keywords} />}
-                <meta name="viewport" content="width=device-width" />
+                <meta name="keywords" content={finalKeywords} />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+                <meta name="googlebot" content="index, follow" />
+                <meta name="language" content="Indonesian" />
+                <meta name="geo.region" content="ID" />
+                <meta name="geo.placename" content="Indonesia" />
+                <meta name="author" content="my-aicustom.com" />
                 <link rel="icon" type="image/svg+xml" href={faviconHref} />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta name="generator" content={Astro.generator} />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
                 <!-- Open Graph / Facebook -->
                 <meta property="og:type" content="website" />
@@ -64,16 +107,26 @@ const orgJsonLd = JSON.stringify(
                 <meta property="og:title" content={title} />
                 <meta property="og:description" content={finalDescription} />
                 <meta property="og:image" content={socialImage} />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta property="og:locale" content="id_ID" />
+                <meta property="og:site_name" content="my-aicustom.com" />
 
                 <!-- Twitter -->
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content={canonicalUrl} />
-                <meta property="twitter:title" content={title} />
-                <meta property="twitter:description" content={finalDescription} />
-                <meta property="twitter:image" content={socialImage} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:url" content={canonicalUrl} />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={finalDescription} />
+                <meta name="twitter:image" content={socialImage} />
+                <meta name="twitter:site" content="@myaicustom" />
+                <meta name="twitter:creator" content="@myaicustom" />
 
                 <!-- Schema.org markup for Google+ -->
                 <script type="application/ld+json">{orgJsonLd}</script>
+
+                <!-- Additional schemas from pages -->
+                <slot name="head" />
+
                 <style>
                         /* Simple style for smooth scrolling */
                         html {

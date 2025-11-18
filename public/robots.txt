@@ -1,4 +1,37 @@
-# Example: Allow all bots to scan and index your site.
-# Full syntax: https://developers.google.com/search/docs/advanced/robots/create-robots-txt
+# my-aicustom.com robots.txt
+# Optimized for SEO - Allow all beneficial bots, block malicious ones
+
+# Allow all good search engine bots
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-Mobile
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+User-agent: Baiduspider
+User-agent: YandexBot
+User-agent: facebookexternalhit
+User-agent: LinkedInBot
+User-agent: Twitterbot
+Allow: /
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: BLEXBot
+Disallow: /
+
+# Allow all other bots (including AI crawlers like GPTBot, ChatGPT-User)
 User-agent: *
 Allow: /
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any in future)
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://my-aicustom.com/sitemap.xml
