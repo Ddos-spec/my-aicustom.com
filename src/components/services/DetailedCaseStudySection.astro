@@ -1,0 +1,43 @@
+---
+import type { ServicePage } from '../../types/service';
+
+interface Props {
+  detailedCaseStudy: ServicePage['detailedCaseStudy'];
+}
+
+const { detailedCaseStudy } = Astro.props;
+if (!detailedCaseStudy) return null;
+---
+
+<section class="py-16 sm:py-20 bg-gray-50 dark:bg-slate-800">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">{detailedCaseStudy.title}</h2>
+    </div>
+    <div class="mt-8 rounded-lg bg-white dark:bg-slate-900 p-8 shadow-lg">
+      <h3 class="text-2xl font-semibold text-gray-800 dark:text-white">{detailedCaseStudy.client}</h3>
+      <div class="mt-6">
+        <h4 class="text-lg font-semibold text-gray-700">Tantangan</h4>
+        <p class="mt-2 text-gray-600">{detailedCaseStudy.challenge}</p>
+      </div>
+      <div class="mt-6">
+        <h4 class="text-lg font-semibold text-gray-700">Solusi</h4>
+        <p class="mt-2 text-gray-600">{detailedCaseStudy.solution}</p>
+      </div>
+      <div class="mt-6">
+        <h4 class="text-lg font-semibold text-gray-700">Hasil</h4>
+        <div class="mt-4 grid grid-cols-2 gap-4">
+          {detailedCaseStudy.results.map(result => (
+            <div class="rounded-md bg-blue-50 p-4 text-center">
+              <p class="text-3xl font-bold text-blue-600">{result.value}</p>
+              <p class="mt-1 text-sm text-gray-600">{result.metric}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="mt-8 border-t pt-6">
+        <blockquote class="text-lg italic text-gray-600">"{detailedCaseStudy.testimonial}"</blockquote>
+      </div>
+    </div>
+  </div>
+</Section>

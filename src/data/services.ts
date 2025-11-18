@@ -104,6 +104,83 @@ export const aiAnalytics: ServicePage = {
     chatMockup: 'https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDB8fDB8fHww', // Placeholder
     architectureDiagram: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDB8fDB8fHww', // Placeholder
   },
+  howItWorks: {
+    title: 'Proses Kerja Kami: Dari Data Mentah Menjadi Aksi Strategis',
+    steps: [
+      {
+        name: 'Fase 1: Discovery & Strategy Alignment (1-2 Minggu)',
+        description: 'Kami tidak langsung membuat kode. Kami memulai dengan sesi workshop mendalam bersama para pemangku kepentingan Anda (C-level, kepala departemen, tim analis) untuk memahami tujuan bisnis yang paling mendesak. Apa pertanyaan kunci yang ingin Anda jawab? KPI apa yang paling penting? Di fase ini, kami memetakan sumber data yang ada, menilai kualitasnya, dan bersama-sama mendefinisikan metrik kesuksesan proyek. Outputnya adalah dokumen "Project Charter" yang jelas.'
+      },
+      {
+        name: 'Fase 2: Data Engineering & Modeling (2-4 Minggu)',
+        description: 'Di sinilah pekerjaan berat teknis dimulai. Tim data engineer kami membangun data pipeline yang kokoh dan otomatis untuk mengumpulkan dan membersihkan data dari berbagai sumber. Secara paralel, tim data scientist kami mulai melakukan exploratory data analysis (EDA) untuk menemukan pola awal dan mulai mengembangkan model machine learning prediktif. Kami bekerja dalam sprint dua mingguan, memberikan update kemajuan secara berkala.'
+      },
+      {
+        name: 'Fase 3: Dashboard Development & UAT (2-3 Minggu)',
+        description: 'Setelah data matang dan model teruji, tim Business Intelligence kami mulai merancang dan membangun dashboard interaktif. Kami fokus pada user experience (UX) untuk memastikan dashboard tidak hanya kaya informasi, tetapi juga mudah digunakan oleh semua level pengguna, dari eksekutif hingga operasional. Sebelum peluncuran, kami akan melakukan User Acceptance Test (UAT) bersama tim Anda untuk mendapatkan feedback dan melakukan penyesuaian.'
+      },
+      {
+        name: 'Fase 4: Deployment, Training & Support (Berkelanjutan)',
+        description: 'Solusi kami di-deploy ke lingkungan produksi (cloud atau on-premise). Tapi pekerjaan kami tidak berhenti di situ. Kami menyediakan sesi pelatihan yang komprehensif untuk tim Anda agar mereka dapat memanfaatkan dashboard secara maksimal. Kami juga menawarkan paket dukungan teknis dan konsultasi berkelanjutan untuk memastikan solusi analytics Anda terus berkembang seiring dengan pertumbuhan bisnis Anda.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Fitur & Manfaat Langsung untuk Bisnis Anda',
+    features: [
+      {
+        name: 'Data Pipeline End-to-End',
+        description: 'Kami tidak hanya menghubungkan data, kami membangun jalan tol data. Ini mencakup otomatisasi proses ETL/ELT, penjadwalan job, implementasi logika bisnis yang kompleks, dan mekanisme data quality check yang proaktif untuk mendeteksi anomali. Manfaatnya: Anda mendapatkan data yang konsisten, terpercaya, dan selalu up-to-date tanpa perlu intervensi manual, membebaskan waktu tim Anda untuk analisis, bukan rekap data.'
+      },
+      {
+        name: 'Advanced Predictive Modeling',
+        description: 'Kami menerapkan algoritma machine learning terkini untuk menjawab pertanyaan "apa yang akan terjadi?". Contohnya termasuk model regresi untuk demand forecasting, model klasifikasi untuk churn prediction, dan algoritma clustering untuk segmentasi pelanggan. Manfaatnya: Anda dapat beralih dari pengambilan keputusan reaktif menjadi proaktif, mengantisipasi kebutuhan pasar, dan mengurangi risiko bisnis secara signifikan.'
+      },
+      {
+        name: 'Self-Service BI & Visualisasi Interaktif',
+        description: 'Kami memberdayakan tim Anda dengan kemampuan untuk "bertanya" pada data. Dashboard kami dilengkapi dengan filter dinamis, fitur drill-down, dan kemampuan untuk mengekspor data. Manfaatnya: Mengurangi ketergantungan pada tim IT untuk permintaan laporan ad-hoc. Tim bisnis dapat secara mandiri mengeksplorasi data, menemukan insight baru, dan menjawab pertanyaan bisnis dengan cepat.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Perusahaan Menengah ke Atas (Mid-to-Large Enterprise) yang memiliki volume data besar namun kesulitan mengubahnya menjadi insight strategis.',
+      'Tim Business Intelligence atau Analitik yang ada saat ini terbebani dengan permintaan laporan manual dan ingin beralih ke analisis yang lebih canggih.',
+      'Pemimpin Bisnis (C-Level, Direktur) yang membutuhkan akses cepat ke metrik kinerja utama dan insight prediktif untuk pengambilan keputusan yang lebih baik.',
+      'Departemen Operasional (Sales, Marketing, Supply Chain) yang ingin mengoptimalkan proses sehari-hari mereka berdasarkan data real-time, bukan intuisi.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Memilih Kami Sebagai Partner AI Analytics Anda?',
+    advantages: [
+      {
+        name: 'Fokus pada Dampak Bisnis, Bukan Hanya Teknologi',
+        description: 'Banyak vendor hanya fokus pada teknologi. Kami berbeda. Kami memulai dari masalah bisnis Anda dan bekerja mundur untuk merancang solusi teknis yang paling tepat. Metrik kesuksesan kami adalah ROI yang Anda dapatkan, bukan seberapa canggih model yang kami bangun.'
+      },
+      {
+        name: 'Tim Ahli Lintas Disiplin',
+        description: 'Tim kami terdiri dari Data Engineers, Data Scientists, BI Developers, dan Business Consultants. Pendekatan terintegrasi ini memastikan solusi yang kami berikan tidak hanya canggih secara teknis, tetapi juga praktis, relevan dengan industri Anda, dan mudah diadopsi oleh tim Anda.'
+      },
+      {
+        name: 'Solusi Custom, Bukan "Satu untuk Semua"',
+        description: 'Kami tidak menjual produk perangkat lunak yang kaku. Setiap solusi yang kami bangun dirancang khusus (tailor-made) untuk menjawab tantangan unik bisnis Anda, menggunakan arsitektur dan teknologi yang paling sesuai dengan ekosistem IT yang sudah Anda miliki.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Transformasi Ritel F&B',
+    client: 'Sebuah Jaringan Restoran Cepat Saji Nasional',
+    challenge: 'Klien mengalami kesulitan dalam merencanakan tingkat persediaan (inventory) di ratusan cabangnya. Mereka sering mengalami overstock (pemborosan bahan baku) di beberapa lokasi, sementara di lokasi lain terjadi stock-out (kehilangan penjualan) pada jam-jam sibuk. Keputusan pembelian masih sangat bergantung pada perkiraan manajer cabang yang subjektif.',
+    solution: 'Kami membangun sistem demand forecasting terpusat. Pertama, kami mengintegrasikan data dari sistem POS, data cuaca historis, dan data event lokal. Kemudian, kami mengembangkan model machine learning (time-series forecasting) untuk memprediksi jumlah penjualan per item per jam untuk setiap cabang. Hasil prediksi ini secara otomatis diumpankan ke dalam dashboard perencanaan inventori yang mudah digunakan oleh tim supply chain.',
+    results: [
+      { metric: 'Akurasi Demand Forecast', value: 'Meningkat dari 65% menjadi 91%' },
+      { metric: 'Pemborosan Bahan Baku (Overstock)', value: 'Berkurang sebesar 35%' },
+      { metric: 'Kehilangan Penjualan (Stock-out)', value: 'Menurun sebesar 80%' },
+      { metric: 'Waktu Perencanaan Manual', value: 'Berkurang dari 2 hari menjadi 30 menit' }
+    ],
+    testimonial: '"Solusi dari my-aicustom.com benar-benar mengubah cara kami mengelola inventori. Kami sekarang dapat membuat keputusan berbasis data yang akurat, mengurangi pemborosan secara drastis, dan memastikan produk kami selalu tersedia untuk pelanggan. Ini adalah game-changer bagi efisiensi operasional kami."'
+  }
 };
 
 export const aiStrategy: ServicePage = {
@@ -196,6 +273,83 @@ export const aiStrategy: ServicePage = {
   visualAssets: {
     architectureDiagram: 'https://images.unsplash.com/photo-1529119368496-2dfda6ec2804?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVzaW5lc3MlMjBzdHJhdGVneXxlbnwwfHwwfHx8MA%',
   },
+  howItWorks: {
+    title: 'Proses Kerja Kami: Dari Visi Menjadi Aksi dan Hasil',
+    steps: [
+      {
+        name: 'Fase 1: AI Vision & Strategy Workshop (1 Minggu)',
+        description: 'Kami memfasilitasi sesi strategis dengan tim kepemimpinan Anda untuk menyelaraskan visi AI dengan tujuan bisnis inti. Kami akan mengidentifikasi peluang terbesar, memetakan potensi tantangan, dan menetapkan kerangka kerja untuk mengukur ROI. Tujuannya adalah untuk menciptakan pemahaman bersama dan komitmen dari semua pemangku kepentingan.'
+      },
+      {
+        name: 'Fase 2: AI Maturity & Opportunity Assessment (2-3 Minggu)',
+        description: 'Tim konsultan kami melakukan audit mendalam terhadap kapabilitas data, proses bisnis, dan talenta di organisasi Anda. Kami menggunakan matriks penilaian yang terstruktur untuk mengidentifikasi "quick wins" (inisiatif berdampak tinggi dengan upaya rendah) dan fondasi strategis jangka panjang. Hasilnya adalah laporan "State of AI Readiness".'
+      },
+      {
+        name: 'Fase 3: Roadmap Development & Business Case (2 Minggu)',
+        description: 'Berdasarkan hasil assessment, kami berkolaborasi dengan Anda untuk membangun roadmap implementasi AI yang realistis dan bertahap untuk 12-24 bulan ke depan. Setiap inisiatif dalam roadmap akan dilengkapi dengan business case yang solid, termasuk proyeksi biaya, potensi keuntungan, dan metrik KPI yang jelas untuk melacak kemajuan.'
+      },
+      {
+        name: 'Fase 4: Governance & Change Management Planning (Berkelanjutan)',
+        description: 'Teknologi hanyalah sebagian dari cerita. Kami membantu Anda merancang kerangka kerja tata kelola AI (AI governance) dan rencana manajemen perubahan (change management) untuk memastikan adopsi yang sukses. Ini termasuk mendefinisikan peran dan tanggung jawab baru, serta merancang program pelatihan untuk meningkatkan keterampilan tim Anda.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Layanan Advisory Kami',
+    features: [
+      {
+        name: 'AI Maturity Assessment',
+        description: 'Kami menggunakan kerangka kerja yang komprehensif untuk mengevaluasi kesiapan AI Anda di lima domain kunci: Strategi, Data, Teknologi, Proses, dan Organisasi. Anda akan mendapatkan skor yang jelas dan perbandingan (benchmark) dengan standar industri, memberikan Anda pemahaman yang akurat tentang posisi Anda saat ini.'
+      },
+      {
+        name: 'Opportunity Identification & Prioritization',
+        description: 'Kami membantu Anda beralih dari ide-ide abstrak menjadi daftar inisiatif AI yang konkret dan dapat ditindaklanjuti. Menggunakan matriks dampak/upaya, kami membantu Anda memprioritaskan proyek yang akan memberikan nilai bisnis terbesar dalam waktu tercepat, memastikan investasi Anda memberikan hasil yang optimal.'
+      },
+      {
+        name: 'Technology Stack & Vendor Selection',
+        description: 'Pusing memilih antara puluhan vendor AI dan platform teknologi? Kami memberikan panduan objektif dan berbasis data untuk membantu Anda memilih arsitektur teknologi dan mitra vendor yang paling sesuai dengan kebutuhan, skala, dan anggaran Anda, menghindari "vendor lock-in" yang mahal.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'CEO atau Dewan Direksi yang ingin menjadikan AI sebagai keunggulan kompetitif inti, bukan sekadar "proyek sampingan".',
+      'Chief Digital Officer (CDO) atau Chief Information Officer (CIO) yang ditugaskan untuk memimpin inisiatif transformasi digital.',
+      'Perusahaan yang telah mencoba beberapa proyek AI secara sporadis tetapi gagal mendapatkan traksi atau ROI yang signifikan.',
+      'Bisnis yang berada di industri yang sangat kompetitif dan menyadari bahwa adopsi AI adalah kunci untuk bertahan dan berkembang.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Memilih Kami Sebagai Partner Strategi AI Anda?',
+    advantages: [
+      {
+        name: 'Pengalaman Lintas Industri',
+        description: 'Tim kami memiliki pengalaman dalam merancang strategi AI untuk berbagai sektor, dari keuangan dan ritel hingga manufaktur. Ini memungkinkan kami untuk membawa wawasan dan praktik terbaik dari berbagai industri ke dalam konteks bisnis spesifik Anda.'
+      },
+      {
+        name: 'Pendekatan Pragmatis dan Berbasis ROI',
+        description: 'Kami tidak akan menyarankan Anda untuk berinvestasi dalam teknologi "hype" terbaru. Rekomendasi kami selalu didasarkan pada business case yang kuat, dengan jalur yang jelas menuju profitabilitas dan dampak bisnis yang terukur.'
+      },
+      {
+        name: 'Jembatan Antara Bisnis dan Teknologi',
+        description: 'Kami fasih dalam "bahasa" bisnis dan teknologi. Kemampuan kami untuk menerjemahkan tujuan bisnis yang kompleks menjadi persyaratan teknis yang jelas (dan sebaliknya) memastikan keselarasan penuh antara tim eksekutif dan tim implementasi.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Strategi AI untuk Perusahaan Logistik',
+    client: 'Perusahaan Logistik Pihak Ketiga (3PL) Terkemuka',
+    challenge: 'Klien menghadapi tekanan margin yang meningkat akibat persaingan harga dan kenaikan biaya operasional. Mereka memiliki banyak data operasional (lokasi truk, waktu pengiriman, konsumsi bahan bakar) tetapi tidak tahu bagaimana memanfaatkannya secara strategis untuk meningkatkan efisiensi.',
+    solution: 'Kami melakukan assessment selama 4 minggu dan mengidentifikasi tiga peluang AI utama: 1) Optimasi rute pengiriman secara real-time untuk mengurangi biaya bahan bakar, 2) Predictive maintenance untuk armada truk guna mengurangi downtime, dan 3) Otomatisasi proses perencanaan kapasitas gudang. Kami menyusun roadmap 18 bulan, dimulai dengan proyek optimasi rute sebagai "quick win".',
+    results: [
+      { metric: 'Potensi Penghematan Biaya Bahan Bakar', value: '15% per tahun' },
+      { metric: 'Potensi Pengurangan Downtime Armada', value: '30%' },
+      { metric: 'Proyeksi Peningkatan Efisiensi Gudang', value: '20%' },
+      { metric: 'ROI Proyeksi Roadmap 18 Bulan', value: '250%' }
+    ],
+    testimonial: '"Kerja sama dengan my-aicustom.com memberikan kami kejelasan dan arah yang kami butuhkan. Roadmap yang mereka hasilkan sangat konkret dan berbasis data, memberi kami kepercayaan diri untuk berinvestasi dalam inisiatif AI yang benar-benar akan menggerakkan bisnis kami ke depan."'
+  }
 };
 
 export const businessProcessAutomation: ServicePage = {
@@ -296,6 +450,83 @@ export const businessProcessAutomation: ServicePage = {
   visualAssets: {
     architectureDiagram: 'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YXV0b21hdGlvbnxlbnwwfHwwfHx8MA==',
   },
+  howItWorks: {
+    title: 'Proses Kerja Kami: Dari Audit Manual Hingga Otomasi Penuh',
+    steps: [
+      {
+        name: 'Fase 1: Process Discovery & Automation Audit (1-2 Minggu)',
+        description: 'Kami bekerja sama dengan tim Anda untuk memetakan proses bisnis Anda saat ini secara end-to-end. Melalui wawancara dan observasi, kami mengidentifikasi tugas-tugas yang repetitif, memakan waktu, dan rentan kesalahan. Kami kemudian memprioritaskan peluang otomatisasi berdasarkan potensi ROI dan kemudahan implementasi.'
+      },
+      {
+        name: 'Fase 2: Solution Design & Prototyping (2 Minggu)',
+        description: 'Setelah proses kandidat diidentifikasi, kami merancang alur kerja otomatis (to-be process). Kami membuat prototipe fungsional yang mendemonstrasikan bagaimana otomatisasi akan bekerja dalam lingkungan Anda. Ini memungkinkan Anda untuk memberikan feedback sebelum pengembangan skala penuh dimulai.'
+      },
+      {
+        name: 'Fase 3: Development & Integration (2-4 Minggu)',
+        description: 'Tim developer kami membangun "robot" perangkat lunak (software bots) atau alur kerja otomatis menggunakan platform RPA dan workflow automation terkemuka. Kami menangani semua integrasi yang diperlukan dengan sistem Anda yang ada (ERP, CRM, dll.) untuk memastikan aliran data yang mulus.'
+      },
+      {
+        name: 'Fase 4: Testing, Deployment & Optimization (Berkelanjutan)',
+        description: 'Kami melakukan pengujian yang ketat untuk memastikan bot bekerja dengan andal dan akurat. Setelah deployment, kami memantau kinerja bot secara terus-menerus dan melakukan optimisasi untuk memaksimalkan efisiensi dan menangani setiap pengecualian (exceptions) yang mungkin timbul.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Kemampuan Otomatisasi Kami',
+    features: [
+      {
+        name: 'Robotic Process Automation (RPA)',
+        description: 'Kami menggunakan bot perangkat lunak untuk meniru tindakan manusia di antarmuka pengguna (UI). Ini sempurna untuk mengotomatisasi tugas-tugas di aplikasi lama (legacy systems) yang tidak memiliki API. Bot dapat melakukan login, copy-paste data, mengisi formulir, dan mengklik tombol, 24/7 tanpa lelah.'
+      },
+      {
+        name: 'Intelligent Document Processing (IDP)',
+        description: 'Dengan menggabungkan OCR dan AI, kami dapat secara otomatis mengekstrak, mengklasifikasikan, dan memvalidasi data dari dokumen tidak terstruktur seperti invoice, PO, dan formulir aplikasi. Ini menghilangkan kebutuhan untuk entri data manual yang membosankan dan rawan kesalahan.'
+      },
+      {
+        name: 'Workflow Automation & Orchestration',
+        description: 'Kami merancang alur kerja digital yang mengelola proses dari awal hingga akhir. Sistem secara otomatis merutekan tugas ke orang yang tepat untuk persetujuan, mengirimkan notifikasi dan pengingat, dan memastikan bahwa tidak ada langkah yang terlewat, meningkatkan transparansi dan akuntabilitas.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Departemen Keuangan yang ingin mempercepat siklus procure-to-pay dan order-to-cash.',
+      'Departemen HR yang ingin mengotomatisasi proses onboarding karyawan, administrasi penggajian, dan manajemen cuti.',
+      'Tim Operasional yang menangani volume transaksi tinggi dan ingin mengurangi pekerjaan manual untuk fokus pada tugas-tugas bernilai tambah.',
+      'Perusahaan yang ingin meningkatkan kepatuhan (compliance) dengan memastikan proses dijalankan secara konsisten sesuai dengan aturan yang ditetapkan.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Memilih Kami untuk Proyek Otomatisasi Anda?',
+    advantages: [
+      {
+        name: 'Pendekatan Berbasis Proses',
+        description: 'Kami tidak hanya menjual teknologi; kami menjual hasil bisnis. Kami memulai dengan analisis proses yang mendalam untuk memastikan kami mengotomatisasi proses yang benar dengan cara yang benar, seringkali menyederhanakan proses tersebut sebelum mengotomatiskannya.'
+      },
+      {
+        name: 'Keahlian Integrasi Sistem',
+        description: 'Tim kami berpengalaman dalam mengintegrasikan solusi otomatisasi dengan berbagai sistem enterprise (SAP, Oracle, Salesforce, dll.). Kami memastikan bahwa otomatisasi Anda tidak menciptakan silo data baru, melainkan terhubung secara mulus dengan ekosistem teknologi Anda.'
+      },
+      {
+        name: 'Fokus pada Tata Kelola & Skalabilitas',
+        description: 'Kami membangun program otomatisasi Anda dengan fondasi yang kuat. Kami membantu Anda mendirikan Center of Excellence (CoE) untuk otomatisasi, menetapkan praktik terbaik, dan membangun program yang dapat diskalakan di seluruh organisasi Anda secara berkelanjutan.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Otomatisasi Proses Invoice di Perusahaan Manufaktur',
+    client: 'Perusahaan Manufaktur Komponen Otomotif',
+    challenge: 'Tim Accounts Payable (AP) mereka memproses lebih dari 5.000 invoice per bulan secara manual. Proses ini memakan waktu rata-rata 15 menit per invoice, seringkali menyebabkan keterlambatan pembayaran, denda, dan hubungan yang tegang dengan pemasok.',
+    solution: 'Kami mengimplementasikan solusi Intelligent Document Processing (IDP). Sebuah bot email secara otomatis mengunduh lampiran invoice. Bot IDP kemudian membaca dan mengekstrak data kunci (nomor invoice, tanggal, jumlah, PO). Data ini divalidasi silang dengan data PO di sistem ERP. Jika cocok, invoice secara otomatis dijadwalkan untuk pembayaran. Jika ada pengecualian, invoice dirutekan ke staf AP untuk peninjauan.',
+    results: [
+      { metric: 'Waktu Proses per Invoice', value: 'Berkurang dari 15 menit menjadi 2 menit' },
+      { metric: 'Tingkat Pemrosesan "Straight-Through"', value: '75% (tanpa intervensi manusia)' },
+      { metric: 'Biaya Pemrosesan per Invoice', value: 'Menurun sebesar 60%' },
+      { metric: 'Pemanfaatan Diskon Pembayaran Awal', value: 'Meningkat sebesar 40%' }
+    ],
+    testimonial: '"Proyek otomatisasi ini telah merevolusi departemen AP kami. Tim kami sekarang dapat fokus pada tugas-tugas strategis seperti manajemen kas dan hubungan dengan pemasok, bukan lagi terjebak dalam entri data. ROI yang kami dapatkan jauh melampaui ekspektasi awal kami."'
+  }
 };
 
 export const chatbot: ServicePage = {
@@ -411,6 +642,83 @@ export const chatbot: ServicePage = {
     chatMockup: 'https://images.unsplash.com/photo-1762330465857-07e4c81c0dfa?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2hhdGJvdCUyMGFpfGVufDB8fDB8fHww',
     architectureDiagram: 'https://images.unsplash.com/photo-1684493735679-359868df0e18?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhdGJvdCUyMGFpfGVufDB8fDB8fHww',
   },
+  howItWorks: {
+    title: 'Proses Kerja Kami: Dari Konsep Hingga Asisten Virtual Cerdas',
+    steps: [
+      {
+        name: 'Fase 1: Use Case Discovery & Persona Definition (1 Minggu)',
+        description: 'Kami memulai dengan workshop untuk memahami tujuan Anda. Apa tugas utama yang akan diemban chatbot? Siapa target penggunanya? Kami mendefinisikan persona chatbot (misalnya, ramah & santai atau formal & profesional) dan memetakan alur percakapan (conversation flows) utama.'
+      },
+      {
+        name: 'Fase 2: Knowledge Base & NLP Training (2 Minggu)',
+        description: 'Anda menyediakan data Anda (FAQ, deskripsi produk, dokumen kebijakan), dan kami menyusunnya menjadi knowledge base yang terstruktur. Tim NLP kami kemudian melatih model bahasa kami menggunakan data ini untuk memahami maksud (intent) dan entitas spesifik yang relevan dengan bisnis Anda.'
+      },
+      {
+        name: 'Fase 3: Development & Integration (2-3 Minggu)',
+        description: 'Developer kami membangun logika chatbot dan mengintegrasikannya dengan saluran pilihan Anda (WhatsApp, Website, dll.). Jika diperlukan, kami juga membangun konektor API ke sistem backend Anda, seperti CRM atau sistem e-commerce, untuk memungkinkan chatbot melakukan tindakan transaksional (misalnya, cek status pesanan).'
+      },
+      {
+        name: 'Fase 4: User Testing & Continuous Improvement (Berkelanjutan)',
+        description: 'Sebelum peluncuran penuh, kami melakukan pengujian dengan sekelompok pengguna untuk mengidentifikasi potensi kebingungan atau alur yang buntu. Setelah diluncurkan, dashboard analitik kami memungkinkan Anda untuk terus memantau kinerja chatbot, meninjau percakapan, dan menambahkan pengetahuan baru, sehingga chatbot Anda menjadi lebih pintar seiring waktu.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Fitur Unggulan Chatbot Kami',
+    features: [
+      {
+        name: 'Advanced Intent Recognition & Disambiguation',
+        description: 'Chatbot kami tidak hanya mencocokkan kata kunci. Ia memahami maksud sebenarnya di balik pertanyaan pengguna, bahkan jika kalimatnya ambigu. Jika ada beberapa kemungkinan maksud, chatbot dapat secara cerdas bertanya kembali untuk klarifikasi, memastikan pengguna selalu mendapatkan jawaban yang tepat.'
+      },
+      {
+        name: 'Seamless Human Handover',
+        description: 'Kami tahu kapan mesin perlu mundur. Anda dapat menetapkan aturan khusus (misalnya, jika pengguna menyebut kata "komplain" atau menunjukkan sentimen negatif) yang akan secara otomatis dan mulus mengalihkan percakapan ke agen manusia. Transkrip percakapan penuh akan diberikan kepada agen untuk konteks.'
+      },
+      {
+        name: 'Transactional Capabilities & API Integration',
+        description: 'Chatbot kami bisa lebih dari sekadar menjawab pertanyaan. Dengan integrasi API, ia dapat melakukan tindakan nyata seperti membuat reservasi, memproses pesanan, memperbarui detail akun pelanggan, atau menjadwalkan janji temu, memberikan otomatisasi layanan mandiri yang sesungguhnya.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Bisnis E-commerce & Ritel yang ingin mengotomatisasi pertanyaan umum tentang produk, pengiriman, dan status pesanan.',
+      'Perusahaan Jasa (Travel, Real Estate, Pendidikan) yang ingin melayani dan mengkualifikasi prospek (leads) 24/7.',
+      'Tim Dukungan Pelanggan (Customer Support) yang ingin mengurangi volume tiket untuk pertanyaan berulang dan fokus pada masalah yang lebih kompleks.',
+      'Bisnis yang ingin meningkatkan keterlibatan (engagement) di platform populer seperti WhatsApp dan Facebook Messenger.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Membangun Chatbot Bersama Kami?',
+    advantages: [
+      {
+        name: 'Keahlian NLP untuk Bahasa Indonesia',
+        description: 'Model bahasa kami telah dilatih secara ekstensif dengan data Bahasa Indonesia, termasuk bahasa sehari-hari dan gaul. Ini memastikan chatbot Anda terdengar natural dan benar-benar memahami nuansa bahasa lokal, tidak seperti solusi global yang hanya diterjemahkan.'
+      },
+      {
+        name: 'Fokus pada Arsitektur yang Scalable',
+        description: 'Kami membangun chatbot di atas infrastruktur cloud yang andal dan dapat diskalakan. Baik Anda melayani seratus atau satu juta pengguna, arsitektur kami memastikan waktu respons yang cepat dan ketersediaan yang tinggi tanpa penurunan kinerja.'
+      },
+      {
+        name: 'Kemitraan Jangka Panjang',
+        description: 'Kami tidak hanya membangun dan pergi. Kami melihat diri kami sebagai mitra jangka panjang Anda dalam conversational AI. Kami menyediakan analitik berkelanjutan, wawasan, dan rekomendasi untuk membantu Anda terus meningkatkan dan memperluas kemampuan chatbot Anda seiring waktu.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Otomatisasi Layanan Pelanggan untuk Brand D2C',
+    client: 'Brand Fashion Direct-to-Consumer (D2C)',
+    challenge: 'Selama periode puncak (misalnya, peluncuran produk baru atau promo Harbolnas), tim CS mereka yang terdiri dari 5 orang benar-benar kewalahan oleh pertanyaan yang masuk melalui Instagram DM dan WhatsApp, terutama pertanyaan "di mana pesanan saya?". Waktu respons rata-rata melonjak menjadi lebih dari 4 jam.',
+    solution: 'Kami mengimplementasikan chatbot WhatsApp yang terintegrasi dengan sistem manajemen pesanan mereka (Shopify). Chatbot dilatih untuk menangani tiga kasus penggunaan utama: 1) Pelacakan pesanan secara real-time, 2) Menjawab FAQ tentang kebijakan pengembalian, dan 3) Memberikan detail produk. Untuk pertanyaan lain, chatbot akan mengalihkannya ke agen CS.',
+    results: [
+      { metric: 'Volume Pertanyaan yang Ditangani Otomatis', value: '65%' },
+      { metric: 'Waktu Respons Rata-rata', value: 'Berkurang dari 4 jam menjadi < 1 menit' },
+      { metric: 'Kebutuhan Staf CS Tambahan Saat Peak Season', value: 'Terkurangi sebesar 100%' },
+      { metric: 'Tingkat Kepuasan Pelanggan (CSAT)', value: 'Meningkat sebesar 25%' }
+    ],
+    testimonial: '"Chatbot ini telah mengubah cara kami beroperasi. Tim kami sekarang dapat bernapas lega selama periode sibuk dan fokus pada membangun hubungan dengan pelanggan, sementara chatbot menangani tugas-tugas repetitif. Pelanggan kami juga menyukai respons instan yang mereka dapatkan."'
+  }
 };
 
 export const computerVision: ServicePage = {
@@ -524,6 +832,83 @@ export const computerVision: ServicePage = {
   visualAssets: {
     architectureDiagram: 'https://images.unsplash.com/photo-1559137771-536eecb999ab?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFjaWFsJTIwcmVjb2duaXRpb258ZW58MHx8MHx8fDA%',
   },
+  howItWorks: {
+    title: 'Proses Kerja Kami: Dari Gambar Menjadi Insight dan Aksi',
+    steps: [
+      {
+        name: 'Fase 1: Problem Framing & Data Collection (1-2 Minggu)',
+        description: 'Kami bekerja sama dengan Anda untuk mendefinisikan masalah visual yang ingin Anda selesaikan secara presisi. Apa kriteria untuk "cacat produk"? Data apa yang perlu diekstrak dari KTP? Kami kemudian membantu Anda mengumpulkan dan menganotasi (memberi label) dataset gambar awal yang akan digunakan untuk melatih model AI.'
+      },
+      {
+        name: 'Fase 2: Model Training & Fine-Tuning (2-4 Minggu)',
+        description: 'Tim computer vision engineer kami menggunakan dataset Anda untuk melatih model deep learning. Kami bereksperimen dengan berbagai arsitektur (seperti CNN, Transformers) dan melakukan fine-tuning untuk mencapai tingkat akurasi tertinggi. Proses ini seringkali bersifat iteratif, di mana kami mungkin meminta data tambahan untuk menangani kasus-kasus yang sulit.'
+      },
+      {
+        name: 'Fase 3: API Development & Integration (2 Minggu)',
+        description: 'Setelah model mencapai akurasi yang diinginkan, kami membungkusnya dalam sebuah API yang aman dan scalable. Ini memungkinkan aplikasi Anda yang sudah ada untuk dengan mudah "memanggil" model kami, mengirimkan gambar, dan menerima hasilnya (misalnya, teks yang diekstrak atau koordinat cacat produk) dalam format terstruktur seperti JSON.'
+      },
+      {
+        name: 'Fase 4: Deployment & Performance Monitoring (Berkelanjutan)',
+        description: 'Kami mendeploy model ke lingkungan cloud atau on-premise yang paling sesuai. Kami juga mengimplementasikan sistem logging dan monitoring untuk melacak kinerja model secara real-time. Jika kami mendeteksi adanya penurunan akurasi (model drift), kami akan secara proaktif melatih ulang model dengan data baru.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Kemampuan Computer Vision Kami',
+    features: [
+      {
+        name: 'Template-based & Template-free OCR',
+        description: 'Untuk dokumen terstruktur seperti formulir, kami menggunakan pendekatan berbasis template untuk akurasi tertinggi. Untuk dokumen tidak terstruktur seperti invoice dari berbagai vendor, kami menggunakan model AI yang dapat memahami tata letak dan mengekstrak data tanpa memerlukan template, memberikan fleksibilitas maksimal.'
+      },
+      {
+        name: 'Liveness Detection & Anti-Spoofing',
+        description: 'Dalam kasus penggunaan e-KYC, keamanan adalah yang utama. Solusi pengenalan wajah kami dilengkapi dengan teknologi liveness detection pasif dan aktif untuk memastikan bahwa pengguna adalah orang sungguhan, bukan foto, video, atau topeng. Ini membantu mencegah upaya penipuan identitas.'
+      },
+      {
+        name: 'Object Detection, Segmentation & Classification',
+        description: 'Kami dapat melatih model untuk tidak hanya mengklasifikasikan seluruh gambar, tetapi juga untuk mendeteksi lokasi (object detection) dan bahkan menguraikan bentuk presisi (segmentation) dari berbagai objek di dalam gambar. Ini adalah kunci untuk aplikasi seperti inspeksi kualitas, analisis citra medis, atau manajemen inventaris otomatis.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Lembaga Keuangan (Bank, Fintech, Asuransi) yang ingin mengotomatisasi dan mengamankan proses onboarding pelanggan (e-KYC).',
+      'Perusahaan Manufaktur yang ingin mengotomatisasi inspeksi kualitas visual di lini produksi untuk mengurangi cacat.',
+      'Departemen Akuntansi & Keuangan yang memproses ribuan invoice, kuitansi, atau formulir setiap bulan.',
+      'Perusahaan Logistik & Pergudangan yang ingin mengotomatisasi pelacakan aset dan pemrosesan dokumen pengiriman.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Memilih Kami untuk Solusi Computer Vision Anda?',
+    advantages: [
+      {
+        name: 'Model yang Di-Fine-Tuned untuk Data Indonesia',
+        description: 'Model OCR kami telah dilatih secara khusus untuk mengenali format dan variasi dokumen Indonesia (KTP, SIM, NPWP), memberikan akurasi yang lebih tinggi dibandingkan solusi "out-of-the-box" global. Kami memahami tantangan unik dari data lokal.'
+      },
+      {
+        name: 'Arsitektur Deployment yang Fleksibel',
+        description: 'Kami memahami bahwa setiap perusahaan memiliki persyaratan keamanan dan latensi yang berbeda. Kami menawarkan opsi deployment yang fleksibel, mulai dari API berbasis cloud yang mudah digunakan, hingga deployment on-premise di server Anda untuk kontrol dan keamanan data yang maksimal.'
+      },
+      {
+        name: 'Keahlian dalam MLOps (Machine Learning Operations)',
+        description: 'Membangun prototipe model itu mudah, tetapi mengelolanya dalam produksi itu sulit. Tim kami memiliki keahlian MLOps yang mendalam untuk memastikan model Anda tidak hanya akurat saat diluncurkan, tetapi juga tetap andal, termonitor, dan terus meningkat seiring waktu.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Otomatisasi e-KYC untuk Perusahaan Fintech Lending',
+    client: 'Perusahaan Fintech Peer-to-Peer Lending',
+    challenge: 'Proses verifikasi peminjam baru mereka sepenuhnya manual. Peminjam mengunggah foto KTP dan selfie. Tim verifikasi kemudian secara manual memeriksa data KTP, mencocokkannya dengan isian formulir, dan membandingkan foto selfie dengan foto di KTP. Proses ini memakan waktu hingga 24 jam dan sangat rentan terhadap penipuan.',
+    solution: 'Kami membangun alur kerja e-KYC otomatis. Pengguna mengunggah foto KTP dan melakukan sesi selfie video singkat. Sistem kami secara otomatis: 1) Mengekstrak semua data dari KTP menggunakan OCR (termasuk NIK, nama, alamat), 2) Melakukan liveness detection pada video selfie untuk mencegah spoofing, 3) Membandingkan wajah dari selfie dengan foto di KTP menggunakan face matching AI, dan 4) Memberikan skor kepercayaan untuk setiap verifikasi.',
+    results: [
+      { metric: 'Waktu Proses Verifikasi Rata-rata', value: 'Berkurang dari 24 jam menjadi < 60 detik' },
+      { metric: 'Tingkat Upaya Penipuan yang Terdeteksi', value: 'Meningkat sebesar 300%' },
+      { metric: 'Biaya Operasional Tim Verifikasi', value: 'Berkurang sebesar 70%' },
+      { metric: 'Tingkat Konversi Peminjam', value: 'Meningkat karena pengalaman onboarding yang instan' }
+    ],
+    testimonial: '"Solusi Computer Vision dari my-aicustom.com adalah pengubah permainan bagi kami. Kami dapat melakukan scale-up bisnis kami tanpa harus menambah jumlah tim verifikasi secara linear. Kecepatan dan keamanan proses onboarding kami sekarang menjadi keunggulan kompetitif utama."'
+  }
 };
 
 export const posRental: ServicePage = {
@@ -624,6 +1009,83 @@ export const posRental: ServicePage = {
   visualAssets: {
     chatMockup: 'https://images.unsplash.com/photo-1647427017067-8f33ccbae493?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9pbnQlMjBvZiUyMHNhbGV8ZW58MHx8MHx8fDA%',
   },
+  howItWorks: {
+    title: 'Proses Sewa & Kustomisasi POS Kami',
+    steps: [
+      {
+        name: 'Fase 1: Konsultasi & Pemilihan Paket (1-2 Hari)',
+        description: 'Anda menghubungi kami dan menceritakan tentang bisnis Anda. Tim kami akan membantu merekomendasikan paket hardware dan software yang paling sesuai dengan kebutuhan dan anggaran Anda, baik untuk satu kafe kecil maupun jaringan multi-cabang.'
+      },
+      {
+        name: 'Fase 2: Setup Menu & Konfigurasi (2-3 Hari)',
+        description: 'Setelah paket dipilih, Anda cukup mengirimkan daftar menu atau produk Anda dalam format Excel. Tim kami akan melakukan semua setup awal untuk Anda, termasuk mengunggah produk, mengatur harga, dan mengkonfigurasi layout meja (untuk F&B).'
+      },
+      {
+        name: 'Fase 3: Instalasi & Pelatihan di Tempat (1 Hari)',
+        description: 'Teknisi kami akan datang ke lokasi Anda untuk memasang semua perangkat keras dan memastikan semuanya terhubung dengan benar. Kami kemudian akan memberikan sesi pelatihan langsung kepada Anda dan staf Anda tentang cara menggunakan sistem POS secara efektif.'
+      },
+      {
+        name: 'Fase 4: Dukungan Teknis & Upgrade (Berkelanjutan)',
+        description: 'Layanan kami tidak berhenti setelah instalasi. Tim dukungan teknis kami siap membantu Anda 24/7 melalui telepon atau remote access. Seiring pertumbuhan bisnis Anda, Anda dapat dengan mudah meng-upgrade paket atau menambah fitur baru kapan saja.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Fitur Unggulan Sistem POS Kami',
+    features: [
+      {
+        name: 'Manajemen Inventori Real-Time',
+        description: 'Sistem kami secara otomatis mengurangi stok setiap kali ada penjualan. Anda dapat mengatur notifikasi untuk stok yang menipis, melacak pergerakan bahan baku, dan menghasilkan laporan inventaris yang akurat, membantu Anda mengurangi pemborosan dan menghindari kehabisan stok.'
+      },
+      {
+        name: 'Program Loyalitas & CRM Pelanggan',
+        description: 'Bangun hubungan yang lebih kuat dengan pelanggan Anda. Kumpulkan data pelanggan, buat program loyalitas berbasis poin atau diskon, dan kirimkan promosi yang ditargetkan melalui email atau SMS langsung dari dashboard POS Anda. Ubah pembeli sesekali menjadi pelanggan setia.'
+      },
+      {
+        name: 'Analitik Penjualan & Laporan Mendalam',
+        description: 'Dapatkan wawasan bisnis yang berharga. Dasbor analitik kami memungkinkan Anda untuk melihat produk terlaris, jam-jam tersibuk, kinerja staf, dan banyak lagi. Buat keputusan bisnis yang lebih cerdas berdasarkan data, bukan tebakan.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Pengusaha F&B (Restoran, Kafe, Katering) yang baru memulai dan ingin meminimalkan investasi awal.',
+      'Pemilik Toko Ritel yang membutuhkan sistem kasir modern dengan manajemen inventori yang kuat.',
+      'Penyelenggara Event atau pemilik Pop-up Store yang membutuhkan solusi POS jangka pendek dan fleksibel.',
+      'Bisnis Waralaba yang membutuhkan sistem terpusat untuk mengelola banyak cabang secara konsisten.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Menyewa POS dari Kami?',
+    advantages: [
+      {
+        name: 'Bebas Biaya Modal Awal (Zero Capex)',
+        description: 'Hilangkan beban investasi puluhan juta rupiah untuk membeli perangkat keras. Model sewa kami memungkinkan Anda untuk mengalihkan arus kas Anda ke area bisnis yang lebih penting seperti pemasaran atau pengembangan produk.'
+      },
+      {
+        name: 'Dukungan Teknis & Perawatan Penuh',
+        description: 'Dengan membeli, Anda bertanggung jawab atas perbaikan dan pemeliharaan. Dengan menyewa dari kami, jika ada perangkat yang rusak, kami akan memperbaikinya atau menggantinya tanpa biaya tambahan, memberikan Anda ketenangan pikiran.'
+      },
+      {
+        name: 'Selalu Terkini (Future-Proof)',
+        description: 'Teknologi terus berkembang. Model sewa kami memastikan Anda selalu memiliki akses ke perangkat keras dan pembaruan perangkat lunak terbaru tanpa harus terus-menerus membeli peralatan baru. Biarkan kami yang mengelola siklus hidup teknologi untuk Anda.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Efisiensi Operasional untuk Coffee Shop',
+    client: 'Sebuah Coffee Shop Independen Populer',
+    challenge: 'Klien awalnya menggunakan mesin kasir manual dan pencatatan stok di buku tulis. Mereka kesulitan melacak penjualan secara akurat, sering kehabisan biji kopi atau susu pada jam sibuk, dan tidak memiliki cara untuk memberi penghargaan kepada pelanggan setia mereka.',
+    solution: 'Kami menyediakan Paket Profesional kami, termasuk satu tablet POS, printer, dan cash drawer. Kami membantu mengunggah menu mereka dan mengaktifkan fitur manajemen inventori untuk melacak bahan baku utama. Kami juga membantu mereka meluncurkan program loyalitas "Beli 5 Gratis 1" yang dikelola melalui sistem.',
+    results: [
+      { metric: 'Waktu yang Dihabiskan untuk Rekap Penjualan Harian', value: 'Berkurang dari 30 menit menjadi 5 menit' },
+      { metric: 'Kasus Kehabisan Stok (Stock-out)', value: 'Menurun sebesar 90%' },
+      { metric: 'Tingkat Kunjungan Kembali Pelanggan', value: 'Meningkat sebesar 20% dalam 3 bulan' },
+      { metric: 'Akurasi Laporan Penjualan', value: 'Mencapai 99.9%' }
+    ],
+    testimonial: '"Beralih ke sistem POS sewa dari my-aicustom.com adalah keputusan terbaik yang kami buat. Operasional kami menjadi jauh lebih lancar, dan kami akhirnya memiliki data yang kami butuhkan untuk benar-benar memahami bisnis kami. Dukungan tim mereka juga luar biasa!"'
+  }
 };
 
 export const trainingChangeManagement: ServicePage = {
@@ -724,6 +1186,83 @@ export const trainingChangeManagement: ServicePage = {
   visualAssets: {
     architectureDiagram: 'https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2hhbmdlJTIwbWFuYWdlbWVudHxlbnwwfHwwfHx8MA%',
   },
+  howItWorks: {
+    title: 'Proses Kerja Kami: Memastikan Adopsi, Bukan Hanya Implementasi',
+    steps: [
+      {
+        name: 'Fase 1: Change Impact Assessment (1 Minggu)',
+        description: 'Kami memulai dengan menganalisis dampak perubahan teknologi baru terhadap berbagai peran dan proses dalam organisasi Anda. Kami memetakan siapa yang akan terpengaruh, seberapa besar, dan bagaimana cara kerja mereka akan berubah. Ini membantu kami merancang intervensi yang paling relevan dan efektif.'
+      },
+      {
+        name: 'Fase 2: Communication & Stakeholder Engagement Plan (1-2 Minggu)',
+        description: 'Berdasarkan assessment, kami mengembangkan rencana komunikasi multi-saluran untuk membangun kesadaran dan keinginan untuk berubah. Kami mengidentifikasi "change champions" di dalam tim Anda dan memberdayakan mereka untuk membantu menyebarkan pesan positif dan mengatasi resistensi dari rekan-rekan mereka.'
+      },
+      {
+        name: 'Fase 3: Customized Training Program Development & Delivery (2-3 Minggu)',
+        description: 'Kami merancang dan menyampaikan program pelatihan yang disesuaikan, bukan generik. Menggunakan pendekatan "learn-practice-apply", kami menggabungkan sesi teori dengan latihan langsung (hands-on) menggunakan data dan skenario yang relevan dengan pekerjaan sehari-hari peserta, memastikan pembelajaran yang mendalam.'
+      },
+      {
+        name: 'Fase 4: Reinforcement & Sustainment (Berkelanjutan)',
+        description: 'Perubahan tidak berhenti setelah pelatihan selesai. Kami membantu Anda membangun mekanisme untuk memperkuat perilaku baru, seperti sesi coaching pasca-pelatihan, materi "quick reference", dan penyesuaian metrik kinerja (KPI) untuk menyelaraskan insentif dengan cara kerja yang baru.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Komponen Layanan Kami',
+    features: [
+      {
+        name: 'Stakeholder Analysis & Mapping',
+        description: 'Kami menggunakan alat seperti matriks pengaruh/kepentingan untuk mengidentifikasi semua pemangku kepentingan, memahami perspektif mereka, dan merancang strategi keterlibatan yang ditargetkan untuk masing-masing kelompok, dari yang sangat mendukung hingga yang paling resisten.'
+      },
+      {
+        name: 'Role-Based Training Curriculum',
+        description: 'Kami tidak memberikan pelatihan yang sama untuk semua orang. Eksekutif akan mendapatkan ringkasan strategis, manajer akan dilatih tentang cara memimpin tim mereka melalui transisi, dan pengguna akhir akan mendapatkan pelatihan praktis yang mendalam tentang cara menggunakan sistem baru dalam alur kerja mereka.'
+      },
+      {
+        name: 'Resistance Management Framework',
+        description: 'Kami secara proaktif mengantisipasi dan merencanakan resistensi. Kami memberikan para pemimpin dan manajer alat dan teknik komunikasi yang terbukti untuk mendengarkan kekhawatiran, mengatasi kesalahpahaman, dan mengubah penolakan menjadi partisipasi aktif.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Perusahaan yang akan meluncurkan sistem atau platform teknologi baru yang signifikan (misalnya, ERP, CRM, atau sistem AI custom).',
+      'Tim Proyek yang menyadari bahwa keberhasilan teknis tidak menjamin adopsi oleh pengguna.',
+      'Pemimpin HR atau Learning & Development yang bertanggung jawab untuk meningkatkan keterampilan (upskilling/reskilling) tenaga kerja.',
+      'Organisasi yang mengalami tingkat adopsi pengguna yang rendah pada investasi teknologi sebelumnya.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Kami Berbeda dari Firma Pelatihan Lain?',
+    advantages: [
+      {
+        name: 'Fokus pada "Why", Bukan Hanya "How"',
+        description: 'Banyak pelatihan hanya fokus pada cara mengklik tombol ("how"). Kami memulai dengan menjelaskan mengapa perubahan ini penting ("why") bagi individu dan organisasi. Ini membangun motivasi intrinsik yang merupakan kunci adopsi jangka panjang.'
+      },
+      {
+        name: 'Integrasi dengan Metodologi Manajemen Proyek',
+        description: 'Pendekatan change management kami dirancang untuk berjalan secara paralel dan terintegrasi dengan siklus hidup manajemen proyek Anda (misalnya, Agile atau Waterfall). Kami memastikan bahwa aktivitas "manusia" selaras dengan tonggak pencapaian teknis.'
+      },
+      {
+        name: 'Pengalaman Praktis, Bukan Teoritis',
+        description: 'Konsultan kami adalah para praktisi yang telah memimpin inisiatif perubahan yang kompleks di dunia nyata. Kami membawa pengalaman langsung dan studi kasus nyata, bukan hanya teori dari buku teks, ke dalam setiap keterlibatan dengan klien.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Adopsi CRM Baru di Tim Penjualan',
+    client: 'Distributor Nasional Barang Konsumsi',
+    challenge: 'Perusahaan menginvestasikan dana besar dalam sistem CRM baru (Salesforce) untuk menggantikan spreadsheet dan email. Namun, setelah 3 bulan, tingkat adopsi di antara 200 tenaga penjualan mereka kurang dari 20%. Tim penjualan merasa sistem baru itu rumit dan memperlambat mereka.',
+    solution: 'Kami diundang untuk "menyelamatkan" proyek tersebut. Kami memulai dengan serangkaian focus group discussion (FGD) untuk memahami akar masalah resistensi. Berdasarkan temuan, kami: 1) Meluncurkan kampanye komunikasi yang menyoroti "quick wins" bagi para sales. 2) Merancang ulang pelatihan menjadi sesi singkat berbasis skenario. 3) Bekerja dengan manajemen penjualan untuk mengintegrasikan metrik penggunaan CRM ke dalam skema komisi mereka.',
+    results: [
+      { metric: 'Tingkat Adopsi Pengguna Aktif Harian', value: 'Meningkat dari 20% menjadi 85% dalam 2 bulan' },
+      { metric: 'Akurasi Data Pipeline Penjualan', value: 'Meningkat sebesar 70%' },
+      { metric: 'Waktu yang Dihabiskan Sales untuk Pelaporan Manual', value: 'Berkurang 5 jam per minggu' },
+      { metric: 'Visibilitas Manajemen terhadap Prospek Penjualan', value: 'Meningkat 100%' }
+    ],
+    testimonial: '"Program change management dari my-aicustom.com adalah apa yang hilang dari implementasi awal kami. Mereka membantu kami memahami sisi manusia dari perubahan teknologi dan memberi kami alat untuk mengubah skeptisisme menjadi antusiasme. Investasi kami akhirnya membuahkan hasil."'
+  }
 };
 
 export const webDevelopment: ServicePage = {
@@ -818,6 +1357,83 @@ export const webDevelopment: ServicePage = {
   visualAssets: {
     chatMockup: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYiUyMGRldmVsb3BlcnxlbnwwfHwwfHx8MA==',
   },
+  howItWorks: {
+    title: 'Proses Pengembangan Web Kami: Dari Ide Menjadi Situs Web Berkinerja Tinggi',
+    steps: [
+      {
+        name: 'Fase 1: Discovery & Planning (1 Minggu)',
+        description: 'Setiap proyek hebat dimulai dengan pemahaman yang mendalam. Kami mengadakan lokakarya untuk memahami tujuan bisnis Anda, audiens target, dan proposisi nilai unik Anda. Kami menganalisis pesaing dan menentukan arsitektur informasi. Hasilnya adalah Rencana Proyek yang terperinci.'
+      },
+      {
+        name: 'Fase 2: UX/UI Design (2 Minggu)',
+        description: 'Tim desainer kami membuat wireframe untuk memetakan alur pengguna (user flow) dan kemudian mengembangkan desain antarmuka (UI) dengan fidelitas tinggi yang modern, intuitif, dan selaras dengan identitas merek Anda. Anda akan meninjau dan menyetujui setiap layar sebelum kami menulis satu baris kode pun.'
+      },
+      {
+        name: 'Fase 3: Development & CMS Integration (3-4 Minggu)',
+        description: 'Developer kami menghidupkan desain menggunakan teknologi web modern yang cepat dan aman. Kami mengembangkan komponen yang dapat digunakan kembali, mengintegrasikan situs dengan Headless CMS pilihan Anda (misalnya, Contentful, Strapi) untuk memudahkan pembaruan konten, dan menerapkan praktik terbaik SEO teknis sejak awal.'
+      },
+      {
+        name: 'Fase 4: Testing, Launch & Optimization (1 Minggu)',
+        description: 'Sebelum peluncuran, kami melakukan pengujian komprehensif di berbagai perangkat dan browser, memeriksa kinerja, keamanan, dan aksesibilitas. Setelah situs web Anda ditayangkan, kami akan memantau kinerjanya dan memberikan rekomendasi berkelanjutan untuk optimisasi konversi dan SEO.'
+      }
+    ]
+  },
+  featuresDeepDive: {
+    title: 'Detail Keunggulan Teknis Kami',
+    features: [
+      {
+        name: 'Performance-First Architecture',
+        description: 'Kami terobsesi dengan kecepatan. Kami menggunakan Static Site Generation (SSG) dengan kerangka kerja seperti Astro atau Next.js, mengoptimalkan gambar secara otomatis, dan meminimalkan JavaScript untuk mencapai skor Google Lighthouse mendekati sempurna, memastikan pengalaman pengguna yang luar biasa dan peringkat SEO yang lebih baik.'
+      },
+      {
+        name: 'Technical SEO Foundation',
+        description: 'Kami membangun SEO langsung ke dalam DNA situs web Anda. Ini termasuk struktur URL yang bersih, data terstruktur (Schema.org) untuk hasil pencarian yang kaya, pembuatan sitemap XML otomatis, dan rendering sisi server (SSR) untuk memastikan pengindeksan yang sempurna oleh mesin pencari.'
+      },
+      {
+        name: 'Headless CMS for Content Flexibility',
+        description: 'Kami memberdayakan tim Anda untuk mengelola konten secara mandiri. Dengan mengintegrasikan Headless CMS, tim pemasaran Anda dapat memperbarui teks, gambar, dan bahkan membuat halaman baru tanpa memerlukan bantuan pengembang, memberikan Anda kelincahan untuk bergerak cepat.'
+      }
+    ]
+  },
+  idealCustomerProfile: {
+    title: 'Layanan Ini Ideal Untuk Siapa?',
+    profiles: [
+      'Startup yang membutuhkan landing page yang dioptimalkan untuk konversi untuk meluncurkan produk baru mereka.',
+      'Bisnis yang mapan yang situs webnya sudah ketinggalan zaman, lambat, dan tidak ramah seluler.',
+      'Tim Pemasaran yang ingin memiliki kontrol lebih besar atas konten situs web tanpa bergantung pada departemen IT.',
+      'Perusahaan yang ingin membangun kehadiran online yang profesional dan kredibel untuk menarik bakat dan investor.'
+    ]
+  },
+  competitiveAdvantage: {
+    title: 'Mengapa Membangun Situs Web Anda Bersama Kami?',
+    advantages: [
+      {
+        name: 'Desain Berpusat pada Pengguna & Konversi',
+        description: 'Kami tidak hanya membuat situs web yang terlihat bagus; kami merancang pengalaman yang memandu pengunjung untuk mengambil tindakan yang Anda inginkan. Setiap keputusan desain didasarkan pada prinsip-prinsip pengalaman pengguna (UX) dan optimisasi tingkat konversi (CRO).'
+      },
+      {
+        name: 'Transparansi Penuh Selama Proyek',
+        description: 'Anda akan selalu tahu persis di mana posisi proyek Anda. Kami menyediakan akses ke papan manajemen proyek kami, mengadakan check-in mingguan, dan berkomunikasi secara proaktif. Tidak ada kejutan atau tenggat waktu yang terlewat.'
+      },
+      {
+        name: 'Kemitraan Jangka Panjang',
+        description: 'Peluncuran situs web hanyalah awal. Kami melihat diri kami sebagai mitra digital jangka panjang Anda. Kami menawarkan paket perawatan, dukungan, dan optimisasi berkelanjutan untuk memastikan situs web Anda terus memberikan nilai bagi bisnis Anda lama setelah diluncurkan.'
+      }
+    ]
+  },
+  detailedCaseStudy: {
+    title: 'Studi Kasus Mendalam: Peningkatan Situs Web Perusahaan SaaS B2B',
+    client: 'Perusahaan Software-as-a-Service (SaaS) B2B',
+    challenge: 'Situs web WordPress lama mereka lambat, sulit diperbarui, dan tidak menghasilkan prospek (leads) yang berkualitas. Waktu muat halaman lebih dari 5 detik, dan tim pemasaran harus meminta bantuan pengembang untuk setiap perubahan kecil pada konten.',
+    solution: 'Kami merancang ulang dan membangun kembali situs web mereka dari awal menggunakan Next.js untuk kinerja tinggi dan Contentful sebagai Headless CMS. Kami berfokus pada pembuatan jalur konversi yang jelas dengan studi kasus yang menonjol dan formulir permintaan demo yang disederhanakan. Kami juga mengimplementasikan data terstruktur untuk semua layanan mereka.',
+    results: [
+      { metric: 'Waktu Muat Halaman Rata-rata', value: 'Berkurang dari 5.2 detik menjadi 1.2 detik' },
+      { metric: 'Skor Kinerja Google Lighthouse', value: 'Meningkat dari 45 menjadi 98' },
+      { metric: 'Prospek Berkualitas yang Dihasilkan per Bulan', value: 'Meningkat sebesar 200%' },
+      { metric: 'Peringkat Kata Kunci Organik di Halaman Pertama', value: 'Meningkat sebesar 80%' }
+    ],
+    testimonial: '"Situs web baru ini telah mengubah bisnis kami. Tidak hanya terlihat jauh lebih profesional, tetapi juga sangat cepat dan akhirnya menghasilkan prospek yang kami butuhkan untuk bertumbuh. Kemampuan tim pemasaran kami untuk mengelola konten sendiri telah menjadi pengubah permainan dalam hal kelincahan."'
+  }
 };
 
 export const allServices = [

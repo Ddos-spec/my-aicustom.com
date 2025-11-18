@@ -61,6 +61,43 @@ export interface ServicePage {
       client: string;
     };
   };
+  howItWorks?: {
+    title: string;
+    steps: {
+      name: string;
+      description: string;
+    }[];
+  };
+  featuresDeepDive?: {
+    title: string;
+    features: {
+      name: string;
+      description: string;
+      icon?: string;
+    }[];
+  };
+  idealCustomerProfile?: {
+    title: string;
+    profiles: string[];
+  };
+  competitiveAdvantage?: {
+    title: string;
+    advantages: {
+      name: string;
+      description: string;
+    }[];
+  };
+  detailedCaseStudy?: {
+    title: string;
+    client: string;
+    challenge: string;
+    solution: string;
+    results: {
+      metric: string;
+      value: string;
+    }[];
+    testimonial: string;
+  };
   pricing: {
     title: string;
     price: string;
