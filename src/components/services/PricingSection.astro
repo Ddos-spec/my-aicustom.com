@@ -1,0 +1,25 @@
+
+---
+import type { ServicePage } from '../../types/service';
+
+interface Props {
+  pricing: ServicePage['pricing'];
+}
+
+const { pricing } = Astro.props;
+---
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-4xl px-6 text-center">
+    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+      {pricing.title}
+    </h2>
+    <p class="mt-4 text-2xl font-semibold text-slate-700 dark:text-slate-200">
+      {pricing.price}
+    </p>
+    <div class="mt-8">
+      <a href="/konsultasi" class="inline-block rounded-full bg-sky-600 px-10 py-5 text-xl font-semibold text-white transition hover:bg-sky-700">
+        {pricing.cta}
+      </a>
+    </div>
+  </div>
+</section>
