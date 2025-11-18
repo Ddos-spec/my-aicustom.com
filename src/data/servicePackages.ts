@@ -128,4 +128,43 @@ export const servicePackages: ServicePackage[] = [
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80',
     imageAlt: 'Executive briefing mengenai strategi AI perusahaan',
   },
+  {
+    title: 'Web Development',
+    slug: 'web-development',
+    description:
+      'Membangun website profesional dan responsif yang sesuai dengan kebutuhan bisnis Anda, dari landing page hingga e-commerce.',
+    detailedDescription:
+      'Kami menawarkan layanan pengembangan web yang komprehensif, mulai dari desain UI/UX yang menarik hingga implementasi backend yang kuat. Kami menggunakan teknologi modern untuk memastikan website Anda cepat, aman, dan mudah dikelola. Layanan ini mencakup optimasi SEO dasar, integrasi media sosial, dan dukungan purna jual.',
+    features: [
+      'Desain responsif & mobile-friendly',
+      'Optimasi SEO dasar',
+      'Integrasi sistem pihak ketiga',
+      'Dukungan teknis & pemeliharaan',
+    ],
+    ctaLabel: 'Lihat Detail',
+    ctaLabelAction: 'Konsultasikan Segera',
+    ctaHref: 'https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Web%20Development.',
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4cd085?auto=format&fit=crop&w=400&q=80',
+    imageAlt: 'Pengembang web sedang coding di depan banyak monitor',
+  },
+  {
+    title: 'POS Rental',
+    slug: 'pos-rental',
+    description:
+      'Solusi penyewaan sistem Point of Sale (POS) yang fleksibel untuk berbagai jenis usaha, lengkap dengan hardware dan software.',
+    detailedDescription:
+      'Kami menyediakan layanan penyewaan sistem POS yang terjangkau dan mudah digunakan, cocok untuk UMKM, event, atau bisnis musiman. Paket penyewaan kami mencakup hardware (tablet/PC, printer, scanner barcode) dan software POS dengan fitur lengkap seperti manajemen inventaris, laporan penjualan, dan integrasi pembayaran. Tim support kami siap membantu instalasi dan pelatihan.',
+    features: [
+      'Hardware & software POS lengkap',
+      'Manajemen inventaris & laporan penjualan',
+      'Integrasi pembayaran digital',
+      'Dukungan instalasi & pelatihan',
+    ],
+    ctaLabel: 'Lihat Detail',
+    ctaLabelAction: 'Konsultasikan Segera',
+    ctaHref: 'https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20POS%20Rental.',
+    image: 'https://images.unsplash.com/photo-1587495979130-241079167c86?auto=format&fit=crop&w=400&q=80',
+    imageAlt: 'Sistem Point of Sale (POS) di sebuah toko ritel',
+  },
 ];
+
