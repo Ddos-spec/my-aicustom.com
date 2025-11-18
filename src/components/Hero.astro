@@ -15,29 +15,6 @@ const solutions = allServices.map(service => ({
   ctaHref: `/service/${service.slug}`
 }));
 
-const testimonials = [
-  {
-    quote:
-      '"Dalam enam minggu kami mengganti perutean manual dengan AI dan memotong waktu tunggu hingga setengahnya. Tim memandu kami melalui setiap sprint."',
-    name: 'Ayu Rahman',
-    role: 'Kepala Pengalaman Pelanggan, Lifepack',
-    avatar: 'https://i.pravatar.cc/150?img=11',
-  },
-  {
-    quote:
-      '"Kampanye yang dulu membutuhkan sepuluh orang sekarang berjalan dengan dua orang. Pelaporan, tindak lanjut, dan eksperimen terjadi secara otomatis."',
-    name: 'Hadi Prakoso',
-    role: 'VP Pertumbuhan, Ekrut',
-    avatar: 'https://i.pravatar.cc/150?img=22',
-  },
-  {
-    quote:
-      '"Templat tata kelola dan dukungan manajemen perubahan membuat tim kepatuhan kami percaya diri untuk menskalakan AI ke wilayah baru."',
-    name: 'Nadya Santoso',
-    role: 'Direktur Operasi, Datasintesa',
-    avatar: 'https://i.pravatar.cc/150?img=36',
-  },
-];
 
 const pricingTiers = [
   {
@@ -329,45 +306,6 @@ const pricingTiers = [
   </div>
 </section>
 
-<section class="bg-slate-950 py-24 text-white">
-  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-12 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
-      <div class="space-y-6">
-        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-widest">
-          <span class="h-2 w-2 rounded-full bg-sky-400"></span>
-          Cerita Klien
-        </span>
-        <h2 class="text-3xl font-semibold leading-tight sm:text-4xl">Kemenangan otomatisasi dari tim lintas fungsi yang kami dukung</h2>
-        <p class="text-slate-200">
-          Umpan balik nyata dari para pemimpin pemasaran, operasi, dan produk yang membangun bersama kami. Setiap cerita menyoroti metrik yang mereka lacak dan ritual yang menjaga adopsi tetap tinggi.
-        </p>
-        <a
-          href={contactHref}
-          class="inline-flex w-fit items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.35em] text-slate-900 transition hover:bg-slate-100"
-        >
-          Pesan panggilan penemuan
-          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-      <div class="space-y-6">
-        {testimonials.map((testimonial) => (
-          <blockquote class="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-[0_24px_80px_-50px_rgba(56,189,248,0.65)]">
-            <p class="text-lg text-slate-100">{testimonial.quote}</p>
-            <footer class="mt-4 flex items-center gap-3">
-              <img src={testimonial.avatar} alt={testimonial.name} loading="lazy" class="h-12 w-12 rounded-full object-cover" />
-              <div class="text-sm text-slate-300">
-                <p class="font-semibold text-white">{testimonial.name}</p>
-                <p>{testimonial.role}</p>
-              </div>
-            </footer>
-          </blockquote>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="bg-white py-24 dark:bg-gray-950">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
