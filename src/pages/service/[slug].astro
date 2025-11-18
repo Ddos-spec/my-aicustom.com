@@ -11,6 +11,11 @@ import RoiSection from '../../components/services/RoiSection.astro';
 import FaqSection from '../../components/services/FaqSection.astro';
 import SuccessMetricsSection from '../../components/services/SuccessMetricsSection.astro';
 import PricingSection from '../../components/services/PricingSection.astro';
+import HowItWorksSection from '../../components/services/HowItWorksSection.astro';
+import FeaturesDeepDiveSection from '../../components/services/FeaturesDeepDiveSection.astro';
+import IdealCustomerProfileSection from '../../components/services/IdealCustomerProfileSection.astro';
+import CompetitiveAdvantageSection from '../../components/services/CompetitiveAdvantageSection.astro';
+import DetailedCaseStudySection from '../../components/services/DetailedCaseStudySection.astro';
 import CTA from '../../components/CTA.astro';
 
 export async function getStaticPaths() {
@@ -26,7 +31,12 @@ const { service } = Astro.props;
   <HeroSection hero={service.hero} />
   <ProblemSection problem={service.problem} />
   <SolutionSection solution={service.solution} />
+  <FeaturesDeepDiveSection featuresDeepDive={service.featuresDeepDive} />
+  <IdealCustomerProfileSection idealCustomerProfile={service.idealCustomerProfile} />
+  <HowItWorksSection howItWorks={service.howItWorks} />
   <UseCasesSection useCases={service.useCases} />
+  <DetailedCaseStudySection detailedCaseStudy={service.detailedCaseStudy} />
+  <CompetitiveAdvantageSection competitiveAdvantage={service.competitiveAdvantage} />
   <TechnicalSection technical={service.technical} />
   <RoiSection roi={service.roi} />
   <FaqSection faq={service.faq} />

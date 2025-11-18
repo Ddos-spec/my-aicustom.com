@@ -1,0 +1,30 @@
+---
+import type { ServicePage } from '../../types/service';
+
+interface Props {
+  howItWorks: ServicePage['howItWorks'];
+}
+
+const { howItWorks } = Astro.props;
+if (!howItWorks) return null;
+---
+
+<section class="py-16 sm:py-20 bg-gray-50 dark:bg-slate-800">
+  <div class="container mx-auto px-4">
+    <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">{howItWorks.title}</h2>
+    </div>
+    <div class="relative mt-12">
+      <div class="absolute left-1/2 -ml-0.5 h-full w-1 bg-gray-200"></div>
+      {howItWorks.steps.map((step, index) => (
+        <div class="relative mb-8 flex items-center">
+          <div class="absolute left-1/2 -ml-4 h-8 w-8 rounded-full bg-blue-500 text-white flex items-center justify-center font-bold">{index + 1}</div>
+          <div class={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left ml-auto'}`}>
+            <h3 class="text-xl font-semibold text-gray-800">{step.name}</h3>
+            <p class="mt-2 text-gray-600">{step.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Section>
