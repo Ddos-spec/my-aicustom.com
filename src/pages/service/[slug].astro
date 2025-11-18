@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { servicePackages } from '../../data/servicePackages';
+import CTA from '../../components/CTA.astro';
+
+export async function getStaticPaths() {
+  return servicePackages.map(service => ({
+    params: { slug: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+---
+<Layout title={service.title}>
+  <section class="py-24">
+    <div class="mx-auto max-w-4xl px-6">
+      <a href="/service" class="text-sm font-semibold text-sky-600 dark:text-sky-300 hover:text-sky-800 dark:hover:text-sky-200">
+        &larr; Kembali ke Layanan
+      </a>
+      <h1 class="mt-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">{service.title}</h1>
+      <p class="mt-6 text-lg text-slate-600 dark:text-slate-300">{service.detailedDescription}</p>
+      
+      <div class="mt-12">
+        <h2 class="text-2xl font-semibold text-slate-900 dark:text-white">Fitur Utama</h2>
+        <ul class="mt-6 space-y-4">
+          {service.features.map(feature => (
+            <li class="flex items-start gap-3">
+              <svg class="h-6 w-6 flex-none text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="text-base text-slate-700 dark:text-slate-300">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="mt-16 text-center">
+        <a href="/konsultasi" class="inline-block rounded-full bg-sky-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-sky-700">
+          {service.ctaLabelAction}
+        </a>
+      </div>
+    </div>
+  </section>
+  <CTA />
+</Layout>

@@ -34,7 +34,7 @@ const ensureHref = (path: string) => {
             ))}
           </ul>
           <a
-            href={ensureHref(service.ctaHref)}
+            href={`/service/${service.slug}`}
             class="mt-8 inline-flex items-center text-sm font-semibold text-sky-600 transition hover:text-sky-800 dark:text-sky-300 dark:hover:text-sky-200"
           >
             {service.ctaLabel}
