@@ -1,0 +1,27 @@
+
+---
+import type { ServicePage } from '../../types/service';
+
+interface Props {
+  technical: ServicePage['technical'];
+}
+
+const { technical } = Astro.props;
+---
+<section class="py-16 sm:py-20 bg-slate-50 dark:bg-slate-800">
+  <div class="mx-auto max-w-4xl px-6">
+    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white text-center">
+      {technical.title}
+    </h2>
+    <div class="mt-10">
+      <dl class="space-y-6">
+        {technical.highlights.map(highlight => (
+          <div class="flex justify-between items-baseline">
+            <dt class="text-base font-medium text-slate-600 dark:text-slate-300">{highlight.name}</dt>
+            <dd class="text-lg font-semibold text-slate-900 dark:text-white">{highlight.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+</section>

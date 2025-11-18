@@ -1,0 +1,28 @@
+
+---
+import type { ServicePage } from '../../types/service';
+
+interface Props {
+  hero: ServicePage['hero'];
+}
+
+const { hero } = Astro.props;
+---
+<section class="py-20 sm:py-28 bg-white dark:bg-slate-900">
+  <div class="mx-auto max-w-4xl px-6 text-center">
+    <h1 class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
+      {hero.tagline}
+    </h1>
+    <p class="mt-6 text-lg text-slate-600 dark:text-slate-300">
+      {hero.subheading}
+    </p>
+    <div class="mt-10">
+      <a href="/konsultasi" class="inline-block rounded-full bg-sky-600 px-8 py-4 text-lg font-semibold text-white transition hover:bg-sky-700">
+        {hero.cta}
+      </a>
+    </div>
+  </div>
+  <div class="mt-16 sm:mt-20">
+    <img src={hero.visual} alt={hero.tagline} class="mx-auto w-full max-w-4xl rounded-lg shadow-lg" />
+  </div>
+</section>
