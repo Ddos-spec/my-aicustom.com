@@ -12,9 +12,9 @@ interface Props {
 const { title, description, keywords } = Astro.props;
 const siteOrigin = 'https://my-aicustom.com';
 const canonicalUrl = new URL(Astro.url.pathname, siteOrigin).toString();
-const defaultDescription = "Solusi AI Custom terbaik di Indonesia. Implementasi chatbot AI, analytics, automation, dan computer vision untuk transformasi digital bisnis Anda. Konsultasi gratis, ROI terukur, dan support berkelanjutan.";
+const defaultDescription = "Jasa pengembangan AI Custom untuk bisnis di Indonesia. Implementasi AI agent, chatbot AI, automation, analytics, dan computer vision dengan ROI terukur.";
 const finalDescription = description || defaultDescription;
-const defaultKeywords = "AI custom, AI custom Indonesia, solusi AI, chatbot AI, AI automation, machine learning Indonesia, transformasi digital, AI bisnis, implementasi AI, konsultan AI Indonesia, AI analytics, computer vision, NLP Indonesia, custom AI solution";
+const defaultKeywords = "jasa AI Indonesia, pengembangan AI custom, implementasi AI bisnis, AI agent Indonesia, chatbot AI custom, AI automation Indonesia, konsultan AI Indonesia";
 const finalKeywords = keywords || defaultKeywords;
 const faviconHref = '/favicon.svg';
 const socialImage = `${siteOrigin}/assets/og-default.svg`;
@@ -28,7 +28,7 @@ const orgJsonLd = JSON.stringify({
 	"url": siteOrigin,
 	"logo": `${siteOrigin}/assets/og-default.svg`,
 	"image": `${siteOrigin}/assets/og-default.svg`,
-	"description": "Solusi AI Custom terbaik di Indonesia untuk transformasi digital bisnis. Implementasi chatbot AI, analytics, automation, dan computer vision dengan ROI terukur.",
+	"description": "Perusahaan jasa pengembangan AI custom di Indonesia untuk implementasi AI agent, chatbot, automation, analytics, dan computer vision.",
 	"address": {
 		"@type": "PostalAddress",
 		"addressCountry": "ID",
@@ -65,8 +65,8 @@ const orgJsonLd = JSON.stringify({
 		"name": "Dion Hartono"
 	},
 	"foundingDate": "2023",
-	"keywords": "AI custom Indonesia, solusi AI, chatbot AI, machine learning, transformasi digital, AI automation, konsultan AI",
-	"serviceType": "Artificial Intelligence Consulting and Implementation",
+	"keywords": "jasa AI Indonesia, pengembangan AI custom, implementasi AI bisnis, AI agent Indonesia, AI automation",
+	"serviceType": "Jasa Pengembangan AI Custom",
 	"areaServed": {
 		"@type": "Country",
 		"name": "Indonesia"
