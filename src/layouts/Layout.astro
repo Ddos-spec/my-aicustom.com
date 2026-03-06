@@ -160,6 +160,35 @@ const orgJsonLd = JSON.stringify({
                                 font-family: var(--font-display);
                                 letter-spacing: -0.012em;
                         }
+
+                        /* Performance guard for lower-end laptops and mobile devices */
+                        @media (max-width: 1366px) {
+                                [class*='backdrop-blur'] {
+                                        -webkit-backdrop-filter: none !important;
+                                        backdrop-filter: none !important;
+                                }
+
+                                [class*='shadow-['],
+                                .shadow-2xl,
+                                .shadow-xl,
+                                .shadow-lg {
+                                        box-shadow: 0 10px 24px -16px rgba(15, 23, 42, 0.35) !important;
+                                }
+                        }
+
+                        @media (prefers-reduced-motion: reduce) {
+                                *,
+                                *::before,
+                                *::after {
+                                        animation-duration: 0.01ms !important;
+                                        animation-iteration-count: 1 !important;
+                                        transition-duration: 0.01ms !important;
+                                }
+
+                                html {
+                                        scroll-behavior: auto;
+                                }
+                        }
                 </style>
         </head>
         <body class="site-shell bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-200 pt-16">
