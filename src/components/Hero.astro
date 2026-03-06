@@ -19,66 +19,66 @@ const solutions = allServices.map(service => ({
 const pricingTiers = [
   {
     name: 'Basic',
-    description: '1 modul AI, 1 integrasi standar, pelaporan mingguan — Mulai Rp250.000 / bulan',
+    description: '1 modul AI, 1 integrasi standar, pelaporan mingguan - Mulai Rp250.000 / bulan',
     highlight: false,
   },
   {
     name: 'Pro',
-    description: '2 modul + CRM + analitik otomatis — Mulai Rp500.000 / bulan',
+    description: '2 modul + CRM + analitik otomatis - Mulai Rp500.000 / bulan',
     highlight: true,
   },
   {
     name: 'Enterprise',
-    description: 'Semua modul, orkestrasi multi-agen, SLA, pemberdayaan tim — Harga khusus',
+    description: 'Semua modul, orkestrasi multi-agen, SLA, pemberdayaan tim - Harga khusus',
     highlight: false,
   },
 ];
+const proofMetrics = [
+  { value: '127+', label: 'Implementasi AI aktif', note: 'Lintas tim operasi, layanan, dan growth' },
+  { value: '6-12 bulan', label: 'Rata-rata ROI awal', note: 'Tracking KPI dimulai sejak sprint pertama' },
+  { value: '99.3%', label: 'SLA otomatisasi', note: 'Monitoring real-time dengan fallback manusia' },
+];
 ---
-<section class="relative overflow-hidden bg-slate-950 text-white">
+<section class="relative overflow-hidden bg-sky-50 text-slate-900">
   <div class="absolute inset-0">
-    <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-900/90 to-sky-900/60"></div>
-    <div class="absolute -left-40 top-10 h-72 w-72 rounded-full bg-sky-500/20 blur-3xl"></div>
-    <div class="absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-indigo-500/20 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_8%_8%,rgba(56,189,248,0.28),transparent_36%),radial-gradient(circle_at_92%_0%,rgba(59,130,246,0.2),transparent_34%),linear-gradient(180deg,#edf7ff_0%,#f7fbff_52%,#ffffff_100%)]"></div>
+    <div class="absolute inset-0 opacity-45 [background-image:linear-gradient(to_right,rgba(56,189,248,0.14)_1px,transparent_1px),linear-gradient(to_bottom,rgba(56,189,248,0.14)_1px,transparent_1px)] [background-size:38px_38px]"></div>
   </div>
-  <div class="relative mx-auto flex max-w-screen-xl flex-col gap-16 px-4 pb-28 pt-32 sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:pt-40">
+  <div class="relative mx-auto flex max-w-screen-xl flex-col gap-16 px-4 pb-20 pt-32 sm:px-6 lg:px-8 lg:flex-row lg:items-center lg:pb-24 lg:pt-40">
     <div class="max-w-2xl space-y-8 lg:flex-1">
-      <span class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-2 text-sm font-semibold uppercase tracking-widest">
-        <span class="h-2 w-2 rounded-full bg-sky-400"></span>
-        Platform AI untuk tim operasi &amp; pertumbuhan
+      <span class="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white/70 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">
+        <span class="h-2 w-2 rounded-full bg-sky-500"></span>
+        AI Custom Indonesia
       </span>
-      <h1 class="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-        Otomatisasi AI yang Memahami DNA Bisnis Anda
+      <h1 class="text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl md:text-6xl">
+        Otomatisasi AI premium dengan
+        <span class="text-blue-600"> identitas biru muda brand Anda.</span>
       </h1>
-      <p class="text-lg text-slate-200">
-        Selesaikan pekerjaan berulang, skalakan dukungan pelanggan, dan buka pendapatan baru dengan cetak biru otomatisasi yang dirancang untuk alur kerja Anda.
+      <p class="max-w-xl text-lg text-slate-600">
+        Kami gabungkan strategi, implementasi, dan pendampingan adoption dalam satu squad, jadi AI bukan sekadar demo tetapi sistem yang dipakai harian oleh tim bisnis.
       </p>
       <div class="flex flex-wrap gap-4">
         <a
           href={productTourHref}
-          class="inline-flex items-center justify-center rounded-full bg-sky-500 px-7 py-3 text-base font-semibold text-white shadow-lg shadow-sky-900/40 transition hover:bg-sky-400 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-300"
+          class="inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-lg shadow-blue-200/80 transition hover:bg-blue-500 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200"
         >
-          Dapatkan Tur Produk
+          Lihat Solusi Kami
         </a>
         <a
           href={contactHref}
-          class="inline-flex items-center justify-center rounded-full border border-white/40 px-7 py-3 text-base font-semibold text-white transition hover:border-white/60 hover:bg-white/10 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
+          class="inline-flex items-center justify-center rounded-full border border-sky-200 bg-white/70 px-7 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-blue-700 transition hover:border-sky-300 hover:bg-white focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-100"
         >
-          Jadwalkan Panggilan Strategi
+          Audit Workflow Gratis
         </a>
       </div>
-      <ul class="flex flex-wrap gap-6 text-sm text-slate-200/80">
-        <li class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0110 10v1a5 5 0 01-5 5h-1a3 3 0 11-6 0H9a5 5 0 01-5-5v-1A10 10 0 0112 2zm0 2a8 8 0 00-8 8v1a3 3 0 003 3h1a1 1 0 011 1 1 1 0 002 0 1 1 0 011-1h1a3 3 0 003-3v-1a8 8 0 00-8-8z" /></svg>
-          Strategi, implementasi, dan pemberdayaan perubahan dalam satu tim
-        </li>
-        <li class="flex items-center gap-2">
-          <svg class="h-5 w-5 text-sky-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4a2 2 0 012-2h4.5a2 2 0 011.414.586l7.5 7.5A2 2 0 0120 11.5V20a2 2 0 01-2 2h-5a1 1 0 01-1-1v-5a3 3 0 00-3-3H6a2 2 0 01-2-2V4z" /></svg>
-          Integrasi di seluruh CRM, ERP, dan saluran yang sudah Anda gunakan
-        </li>
-      </ul>
+      <div class="grid gap-3 sm:grid-cols-3">
+        {proofMetrics.map((item) => (
+          <article class="rounded-2xl border border-sky-200 bg-white/85 p-4 shadow-[0_16px_40px_-28px_rgba(59,130,246,0.7)] backdrop-blur"><p class="text-2xl font-semibold text-blue-700">{item.value}</p><p class="mt-1 text-sm font-medium text-slate-800">{item.label}</p><p class="mt-2 text-xs text-slate-500">{item.note}</p></article>
+        ))}
+      </div>
     </div>
     <div class="relative flex-1">
-      <div class="relative mx-auto max-w-xl overflow-hidden rounded-[2.75rem] border border-white/10 bg-slate-900/60 p-3 shadow-[0_45px_120px_-50px_rgba(14,165,233,0.75)] backdrop-blur">
+      <div class="relative mx-auto max-w-xl overflow-hidden rounded-[2.75rem] border border-sky-200/70 bg-white/80 p-3 shadow-[0_45px_120px_-58px_rgba(59,130,246,0.75)] backdrop-blur">
         <div class="relative overflow-hidden rounded-[2.25rem]">
           <img
             src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80"
@@ -86,23 +86,22 @@ const pricingTiers = [
             class="h-full w-full object-cover"
             loading="lazy"
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-900/10 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-blue-900/35 via-transparent to-transparent"></div>
         </div>
-        <div class="absolute bottom-8 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-3xl border border-white/10 bg-white/10 p-4 backdrop-blur md:block">
-          <p class="text-sm font-semibold text-white">Analitik agen waktu nyata & pagar pengaman SLA</p>
-          <p class="mt-1 text-xs text-slate-200/80">Pantau CSAT, backlog, dan cakupan otomatisasi dari satu dasbor.</p>
+        <div class="absolute bottom-8 left-1/2 hidden w-[85%] -translate-x-1/2 rounded-3xl border border-sky-200 bg-white/90 p-4 shadow-lg shadow-blue-100/70 backdrop-blur md:block">
+          <p class="text-sm font-semibold text-slate-900">Analitik real-time dan SLA guardrail aktif 24/7</p>
+          <p class="mt-1 text-xs text-slate-600">Pantau CSAT, backlog, dan coverage otomatisasi dalam satu command center.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<section class="border-b border-slate-100 bg-white py-10 dark:border-slate-800 dark:bg-gray-950">
+<section class="border-b border-sky-100 bg-white py-10">
   <div class="mx-auto flex max-w-screen-xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8">
-    <p class="text-sm font-semibold uppercase tracking-[0.35em] text-slate-500">Dipercaya oleh tim pemasaran, layanan pelanggan, dan pertumbuhan di</p>
-    <div class="flex flex-wrap items-center justify-center gap-8 text-base font-semibold text-slate-400 dark:text-slate-500">
+    <p class="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Dipercaya oleh tim pemasaran, layanan pelanggan, dan pertumbuhan di</p>
+    <div class="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-slate-600 sm:gap-8 sm:text-base">
       {logos.map((logo) => (
-        <span class="flex items-center gap-2 text-slate-500 dark:text-slate-300">
+        <span class="rounded-full border border-sky-100 bg-sky-50 px-4 py-2">
           {logo}
         </span>
       ))}
@@ -116,7 +115,7 @@ const pricingTiers = [
       <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Transformasi Digital</span>
       <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Mengapa AI Custom Penting untuk Bisnis Anda</h2>
       <p class="mt-6 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-        Di era digital yang serba cepat, bisnis yang tidak beradaptasi akan tertinggal. Kecerdasan Buatan (AI) bukan lagi teknologi futuristik—ini adalah kebutuhan strategis yang dapat membedakan Anda dari kompetitor. Namun, solusi AI generik sering kali gagal memenuhi kebutuhan unik setiap bisnis.
+        Di era digital yang serba cepat, bisnis yang tidak beradaptasi akan tertinggal. Kecerdasan Buatan (AI) bukan lagi teknologi futuristik - ini adalah kebutuhan strategis yang dapat membedakan Anda dari kompetitor. Namun, solusi AI generik sering kali gagal memenuhi kebutuhan unik setiap bisnis.
       </p>
     </div>
     <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -231,7 +230,7 @@ const pricingTiers = [
           </svg>
         </div>
         <h3 class="text-2xl font-semibold">Business-First Approach</h3>
-        <p class="mt-4 leading-relaxed text-slate-300">Kami tidak mulai dari teknologi—kami mulai dari business objectives Anda. Setiap fitur yang kami develop harus tied directly ke KPI dan bottom-line impact. Technology is just the means, business value is the end.</p>
+        <p class="mt-4 leading-relaxed text-slate-300">Kami tidak mulai dari teknologi - kami mulai dari business objectives Anda. Setiap fitur yang kami develop harus tied directly ke KPI dan bottom-line impact. Technology is just the means, business value is the end.</p>
       </div>
       <div class="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition hover:bg-white/10">
         <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500/20">
@@ -269,7 +268,7 @@ const pricingTiers = [
     <div class="mx-auto max-w-3xl text-center">
       <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-semibold text-sky-700 dark:bg-sky-500/20 dark:text-sky-100">Solusi AI Lengkap</span>
       <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">Portfolio Solusi AI yang Komprehensif</h2>
-      <p class="mt-4 text-gray-600 dark:text-gray-300">Dari analytics hingga automation, dari chatbot hingga computer vision—kami memiliki expertise untuk mentransformasi setiap aspek bisnis Anda dengan AI. Pilih solusi yang sesuai dengan prioritas Anda dan dapatkan hasil yang terukur dalam beberapa minggu.</p>
+      <p class="mt-4 text-gray-600 dark:text-gray-300">Dari analytics hingga automation, dari chatbot hingga computer vision - kami memiliki expertise untuk mentransformasi setiap aspek bisnis Anda dengan AI. Pilih solusi yang sesuai dengan prioritas Anda dan dapatkan hasil yang terukur dalam beberapa minggu.</p>
     </div>
     <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {solutions.map((solution) => (
@@ -349,3 +348,5 @@ const pricingTiers = [
     </div>
   </div>
 </section>
+
+
