@@ -1629,8 +1629,6 @@ export const allServices = [
     businessProcessAutomation,
     chatbot,
     computerVision,
-    posRental,
     trainingChangeManagement,
-    webDevelopment,
     softwareHouse
 ]

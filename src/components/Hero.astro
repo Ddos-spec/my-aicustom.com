@@ -6,9 +6,7 @@ const blogHref = '/blog/';
 
 const logos = ['Sagara Technology', 'Ekrut', 'Lifepack', 'Datasintesa'];
 
-const solutions = allServices
-  .filter((service) => service.slug !== 'web-development' && service.slug !== 'pos-rental')
-  .map(service => ({
+const solutions = allServices.map(service => ({
   title: service.title,
   description: service.hero.subheading,
   features: service.solution.features.map(feature => feature.name),
