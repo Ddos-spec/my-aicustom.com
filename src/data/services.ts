@@ -531,10 +531,10 @@ export const businessProcessAutomation: ServicePage = {
 
 export const chatbot: ServicePage = {
   slug: 'chatbot-ai-custom',
-  title: 'Chatbot AI Custom',
+  title: 'Chatbot AI Agentic Custom',
   seo: {
     title: 'Chatbot AI Indonesia & WhatsApp Business | my-aicustom.com',
-    description: 'Bangun Chatbot AI custom yang dirancang khusus untuk pasar Indonesia. Terintegrasi dengan WhatsApp, didukung NLP bilingual (Indonesia-Inggris), untuk automasi customer service 24/7.',
+    description: 'Bangun Chatbot AI Agentic Custom yang dirancang khusus untuk pasar Indonesia. Terintegrasi dengan WhatsApp, didukung NLP bilingual (Indonesia-Inggris), untuk automasi customer service 24/7.',
     keywords: ['chatbot AI Indonesia', 'chatbot WhatsApp bisnis', 'NLP chatbot', 'customer service automation', 'conversational AI Indonesia'],
   },
   hero: {
@@ -1227,7 +1227,7 @@ export const trainingChangeManagement: ServicePage = {
   idealCustomerProfile: {
     title: 'Layanan Ini Ideal Untuk Siapa?',
     profiles: [
-      'Perusahaan yang akan meluncurkan sistem atau platform teknologi baru yang signifikan (misalnya, ERP, CRM, atau sistem AI custom).',
+      'Perusahaan yang akan meluncurkan sistem atau platform teknologi baru yang signifikan (misalnya, ERP, CRM, atau sistem AI Agentic Custom).',
       'Tim Proyek yang menyadari bahwa keberhasilan teknis tidak menjamin adopsi oleh pengguna.',
       'Pemimpin HR atau Learning & Development yang bertanggung jawab untuk meningkatkan keterampilan (upskilling/reskilling) tenaga kerja.',
       'Organisasi yang mengalami tingkat adopsi pengguna yang rendah pada investasi teknologi sebelumnya.'
@@ -1632,3 +1632,4 @@ export const allServices = [
     trainingChangeManagement,
     softwareHouse
 ]
+

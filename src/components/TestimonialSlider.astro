@@ -20,11 +20,11 @@ const testimonials = [
   },
 ];
 ---
-<section id="testimonials" class="bg-white py-24 dark:bg-gray-900">
+<section id="testimonials" class="bg-white py-24">
   <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-3xl text-center">
-      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">Testimoni Sukses</h2>
-      <p class="mt-4 text-gray-600 dark:text-gray-300">
+      <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Testimoni Sukses</h2>
+      <p class="mt-4 text-gray-600">
         Tim lintas industri mempercayakan akselerasi otomatisasi pada my-aicustom.com.
       </p>
     </div>
@@ -38,7 +38,7 @@ const testimonials = [
     >
       <button
         type="button"
-        class="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-blue-100 bg-white p-3 text-blue-600 shadow-md transition hover:border-blue-200 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-700 dark:bg-gray-800 dark:text-blue-200 dark:hover:bg-gray-700"
+        class="absolute left-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-blue-100 bg-white p-3 text-blue-600 shadow-md transition hover:border-blue-200 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed disabled:opacity-40:bg-gray-700"
         data-prev
         aria-label="Slide sebelumnya"
       >
@@ -46,13 +46,13 @@ const testimonials = [
       </button>
       <button
         type="button"
-        class="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-blue-100 bg-white p-3 text-blue-600 shadow-md transition hover:border-blue-200 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-700 dark:bg-gray-800 dark:text-blue-200 dark:hover:bg-gray-700"
+        class="absolute right-0 top-1/2 z-20 -translate-y-1/2 rounded-full border border-blue-100 bg-white p-3 text-blue-600 shadow-md transition hover:border-blue-200 hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 disabled:cursor-not-allowed disabled:opacity-40:bg-gray-700"
         data-next
         aria-label="Slide selanjutnya"
       >
         <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8.293 5.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L12.586 12 8.293 7.707a1 1 0 010-1.414z" /></svg>
       </button>
-      <div class="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm shadow-blue-100 dark:border-gray-800 dark:bg-gray-800">
+      <div class="overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm shadow-blue-100">
         <div
           class="flex touch-pan-y select-none transition-transform duration-700 ease-out"
           data-track
@@ -76,7 +76,7 @@ const testimonials = [
               >
                 <path d="M9.5 3A5.5 5.5 0 004 8.5v1A3.5 3.5 0 007.5 13H9v1A4 4 0 015 18a1 1 0 102 0 2 2 0 012-2 2 2 0 002-2V8.5A5.5 5.5 0 009.5 3zM18.5 3A5.5 5.5 0 0013 8.5v1A3.5 3.5 0 0016.5 13H18v1a4 4 0 01-4 4 1 1 0 100 2 6 6 0 006-6V8.5A5.5 5.5 0 0018.5 3z" />
               </svg>
-              <blockquote class="text-lg text-gray-700 dark:text-gray-200">{testimonial.quote}</blockquote>
+              <blockquote class="text-lg text-gray-700">{testimonial.quote}</blockquote>
               <figcaption class="flex items-center gap-4 pt-4">
                 <img
                   src={testimonial.avatar}
@@ -85,8 +85,8 @@ const testimonials = [
                   loading="lazy"
                 />
                 <div>
-                  <p class="font-semibold text-gray-900 dark:text-white">{testimonial.name}</p>
-                  <p class="text-sm text-gray-500 dark:text-gray-300">{testimonial.role}</p>
+                  <p class="font-semibold text-gray-900">{testimonial.name}</p>
+                  <p class="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </figcaption>
             </figure>

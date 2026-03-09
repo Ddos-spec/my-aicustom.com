@@ -628,9 +628,9 @@ Membangun operating model AI yang matang adalah journey, bukan destination. Mula
   },
   {
     slug: 'ai-custom-implementation-best-practices',
-    title: 'Best Practices Implementasi AI Custom untuk Bisnis Indonesia',
+    title: 'Best Practices Implementasi AI Agentic Custom untuk Bisnis Indonesia',
     excerpt:
-      'Panduan lengkap untuk mengimplementasikan solusi AI custom yang sesuai dengan kebutuhan bisnis lokal dan meningkatkan ROI secara signifikan.',
+      'Panduan lengkap untuk mengimplementasikan solusi AI Agentic Custom yang sesuai dengan kebutuhan bisnis lokal dan meningkatkan ROI secara signifikan.',
     category: 'strategy',
     categoryLabel: 'Strategi',
     publishDate: '2024-03-15',
@@ -640,10 +640,10 @@ Membangun operating model AI yang matang adalah journey, bukan destination. Mula
       'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80',
     thumbnailImage:
       'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80',
-    tags: ['AI Custom', 'Implementation', 'Best Practices'],
+    tags: ['AI Agentic Custom', 'Implementation', 'Best Practices'],
     isFeatured: false,
     content: `
-Pasar Indonesia menawarkan peluang luar biasa untuk transformasi digital melalui AI, namun juga menghadirkan tantangan unik yang tidak ditemui di pasar Barat. Dari infrastruktur yang beragam, regulasi lokal yang berkembang, hingga karakteristik consumer behavior yang khas—implementasi AI custom di Indonesia memerlukan pendekatan yang disesuaikan. Artikel ini menguraikan best practices yang telah terbukti efektif dalam ratusan implementasi AI di berbagai industri di Indonesia, dari e-commerce hingga perbankan, dari manufaktur hingga retail.
+Pasar Indonesia menawarkan peluang luar biasa untuk transformasi digital melalui AI, namun juga menghadirkan tantangan unik yang tidak ditemui di pasar Barat. Dari infrastruktur yang beragam, regulasi lokal yang berkembang, hingga karakteristik consumer behavior yang khas—implementasi AI Agentic Custom di Indonesia memerlukan pendekatan yang disesuaikan. Artikel ini menguraikan best practices yang telah terbukti efektif dalam ratusan implementasi AI di berbagai industri di Indonesia, dari e-commerce hingga perbankan, dari manufaktur hingga retail.
 
 ## Memahami Konteks Indonesia: Tantangan dan Peluang
 
@@ -810,7 +810,7 @@ Brilliant AI solution yang tidak digunakan adalah failure. Di Indonesia, change 
 
 ## Kesimpulan: Roadmap to Success
 
-Implementasi AI custom di Indonesia adalah journey yang rewarding jika didekati dengan strategic mindset, respect untuk local context, dan commitment untuk continuous improvement. Ingatlah prinsip-prinsip inti:
+Implementasi AI Agentic Custom di Indonesia adalah journey yang rewarding jika didekati dengan strategic mindset, respect untuk local context, dan commitment untuk continuous improvement. Ingatlah prinsip-prinsip inti:
 
 *   **Solve real business problems,** bukan pursue technology for technology's sake.
 *   **Build solid data foundation** sebelum fall in love dengan fancy algorithms.
@@ -1097,9 +1097,9 @@ Pasar Indonesia is vibrant, diverse, dan full of opportunity. Chatbot yang succe
   },
   {
     slug: 'roi-ai-custom-solution',
-    title: 'Mengukur ROI dari Solusi AI Custom: Metrik yang Benar-Benar Penting',
+    title: 'Mengukur ROI dari Solusi AI Agentic Custom: Metrik yang Benar-Benar Penting',
     excerpt:
-      'Framework praktis untuk mengukur return on investment dari implementasi AI custom, dengan fokus pada metrik bisnis yang dapat ditindaklanjuti.',
+      'Framework praktis untuk mengukur return on investment dari implementasi AI Agentic Custom, dengan fokus pada metrik bisnis yang dapat ditindaklanjuti.',
     category: 'analytics',
     categoryLabel: 'Data & Analitik',
     publishDate: '2024-02-28',
@@ -1114,7 +1114,7 @@ Pasar Indonesia is vibrant, diverse, dan full of opportunity. Chatbot yang succe
     content: `
 "Kami spent 500 juta untuk AI project, tapi bagaimana cara tahu apakah ini worth it?" Pertanyaan ini haunts setiap executive yang approve budget AI. Dan sayangnya, banyak perusahaan struggle untuk menjawabnya dengan concrete numbers. Akibatnya? AI initiatives dipandang sebagai "expensive experiment" tanpa clear value, funding cuts di wave pertama austerity, dan skepticism dari stakeholders yang justified.
 
-Problem-nya bukan bahwa AI tidak deliver value—sering kali AI delivers massive value. Problem-nya adalah kita tidak measure dengan benar. Technical metrics seperti "model accuracy 95%" tidak berarti apa-apa untuk CFO. Dan vague statements seperti "improved efficiency" tidak actionable untuk business leaders. Artikel ini akan menguraikan framework comprehensive dan practical untuk mengukur ROI dari solusi AI custom, dengan focus pada metrics yang truly matter untuk business decision-making.
+Problem-nya bukan bahwa AI tidak deliver value—sering kali AI delivers massive value. Problem-nya adalah kita tidak measure dengan benar. Technical metrics seperti "model accuracy 95%" tidak berarti apa-apa untuk CFO. Dan vague statements seperti "improved efficiency" tidak actionable untuk business leaders. Artikel ini akan menguraikan framework comprehensive dan practical untuk mengukur ROI dari solusi AI Agentic Custom, dengan focus pada metrics yang truly matter untuk business decision-making.
 
 ## Mengapa Mengukur ROI AI itu Challenging?
 
@@ -1138,7 +1138,7 @@ AI sering kali butuh time untuk reach full potential. Model butuh data untuk imp
 
 Initial development cost adalah hanya tip of iceberg. Ongoing costs untuk data infrastructure, model retraining, monitoring, maintenance, dan scaling sering kali forgot dalam initial ROI calculation, leading to inflated expectations.
 
-## Framework ROI untuk AI Custom: 5-Layer Approach
+## Framework ROI untuk AI Agentic Custom: 5-Layer Approach
 
 Framework ini structured untuk capture both tangible dan intangible value, short-term dan long-term impact, dan untuk facilitate clear communication dengan diverse stakeholders.
 
@@ -1421,7 +1421,7 @@ If certain features atau use cases aren't delivering expected ROI, pivot. Kill u
 
 ## Kesimpulan: ROI as Continuous Journey
 
-Measuring ROI dari AI custom solution bukan one-time exercise—ini adalah ongoing discipline. Markets change, models drift, user behaviors evolve. Framework yang robust capture both short-term wins dan long-term strategic value, both tangible returns dan intangible benefits.
+Measuring ROI dari AI Agentic Custom solution bukan one-time exercise—ini adalah ongoing discipline. Markets change, models drift, user behaviors evolve. Framework yang robust capture both short-term wins dan long-term strategic value, both tangible returns dan intangible benefits.
 
 Key takeaways:
 
@@ -1455,3 +1455,4 @@ export const getRelatedArticles = (slug: string, take = 3) =>
 
 export const findPostBySlug = (slug: string) =>
   blogPosts.find((post) => post.slug === slug);
+

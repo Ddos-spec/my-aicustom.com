@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import AiVsChatbot from '../components/AiVsChatbot.astro';
+import LlmBrainFeatures from '../components/LlmBrainFeatures.astro';
+import AiUseCases from '../components/AiUseCases.astro';
 import Testimonials from '../components/Testimonials.astro';
 import WhyChooseUs from '../components/WhyChooseUs.astro';
 import Contact from '../components/Contact.astro';
@@ -12,39 +15,39 @@ const faqSchema = JSON.stringify({
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Apa itu AI Custom dan mengapa penting untuk bisnis?",
+      "name": "Apa itu AI Agentic Custom dan mengapa penting untuk bisnis?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "AI Custom adalah solusi Artificial Intelligence yang dirancang khusus untuk kebutuhan bisnis Anda. Berbeda dengan AI generik, AI Custom disesuaikan dengan proses, data, dan objectives spesifik perusahaan Anda. Ini penting karena setiap bisnis memiliki tantangan unik yang membutuhkan solusi yang tepat untuk mencapai ROI maksimal."
+        "text": "AI Agentic Custom adalah solusi Artificial Intelligence yang dirancang khusus untuk kebutuhan bisnis Anda. Berbeda dengan AI generik, AI Agentic Custom disesuaikan dengan proses, data, dan objectives spesifik perusahaan Anda. Ini penting karena setiap bisnis memiliki tantangan unik yang membutuhkan solusi yang tepat untuk mencapai ROI maksimal."
       }
     },
     {
       "@type": "Question",
-      "name": "Berapa lama waktu implementasi AI Custom?",
+      "name": "Berapa lama waktu implementasi AI Agentic Custom?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Implementasi AI Custom biasanya memakan waktu 2-4 bulan untuk MVP (Minimum Viable Product), tergantung kompleksitas. Kami menggunakan pendekatan Agile dengan sprint 2 mingguan, sehingga Anda bisa melihat progress secara berkala dan memberikan feedback untuk hasil yang optimal."
+        "text": "Implementasi AI Agentic Custom biasanya memakan waktu 2-4 bulan untuk MVP (Minimum Viable Product), tergantung kompleksitas. Kami menggunakan pendekatan Agile dengan sprint 2 mingguan, sehingga Anda bisa melihat progress secara berkala dan memberikan feedback untuk hasil yang optimal."
       }
     },
     {
       "@type": "Question",
-      "name": "Berapa biaya implementasi AI Custom di Indonesia?",
+      "name": "Berapa biaya implementasi AI Agentic Custom di Indonesia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Biaya implementasi AI Custom di Indonesia berkisar dari Rp 200 juta hingga Rp 2 miliar, tergantung kompleksitas dan scope project. Namun, ROI positif biasanya tercapai dalam 6-12 bulan melalui efisiensi operasional, peningkatan revenue, dan cost savings. Kami menawarkan konsultasi gratis untuk estimasi yang akurat."
+        "text": "Biaya implementasi AI Agentic Custom di Indonesia berkisar dari Rp 200 juta hingga Rp 2 miliar, tergantung kompleksitas dan scope project. Namun, ROI positif biasanya tercapai dalam 6-12 bulan melalui efisiensi operasional, peningkatan revenue, dan cost savings. Kami menawarkan konsultasi gratis untuk estimasi yang akurat."
       }
     },
     {
       "@type": "Question",
-      "name": "Apa saja layanan AI Custom yang ditawarkan?",
+      "name": "Apa saja layanan AI Agentic Custom yang ditawarkan?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Kami fokus pada jasa pengembangan AI Custom: 1) AI Agent Development, 2) Chatbot AI NLP untuk customer service, 3) AI Analytics & Insights, 4) Business Process Automation, 5) Computer Vision & OCR, 6) Predictive Analytics, 7) AI Strategy Consulting, dan 8) Training & Change Management."
+        "text": "Kami fokus pada jasa pengembangan AI Agentic Custom: 1) AI Agent Development, 2) Chatbot AI NLP untuk customer service, 3) AI Analytics & Insights, 4) Business Process Automation, 5) Computer Vision & OCR, 6) Predictive Analytics, 7) AI Strategy Consulting, dan 8) Training & Change Management."
       }
     },
     {
       "@type": "Question",
-      "name": "Bagaimana cara kerja AI Custom untuk chatbot?",
+      "name": "Bagaimana cara kerja AI Agentic Custom untuk chatbot?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "AI Chatbot Custom kami menggunakan Natural Language Processing (NLP) yang dilatih dengan data conversation spesifik bisnis Anda. Chatbot dapat memahami Bahasa Indonesia informal, code-switching, dan context bisnis Anda. Sistem dapat menghandle 60-80% inquiries secara otomatis, meningkatkan customer satisfaction sambil mengurangi workload tim support hingga 40%."
@@ -52,10 +55,10 @@ const faqSchema = JSON.stringify({
     },
     {
       "@type": "Question",
-      "name": "Apakah AI Custom aman dan comply dengan regulasi Indonesia?",
+      "name": "Apakah AI Agentic Custom aman dan comply dengan regulasi Indonesia?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ya, semua solusi AI Custom kami dirancang dengan 'privacy by design' dan comply dengan UU PDP (Undang-Undang Perlindungan Data Pribadi) Indonesia. Kami implementasikan enkripsi end-to-end, data anonymization, dan secure infrastructure. Sistem juga dapat disesuaikan dengan standar internasional seperti GDPR dan ISO 27001."
+        "text": "Ya, semua solusi AI Agentic Custom kami dirancang dengan 'privacy by design' dan comply dengan UU PDP (Undang-Undang Perlindungan Data Pribadi) Indonesia. Kami implementasikan enkripsi end-to-end, data anonymization, dan secure infrastructure. Sistem juga dapat disesuaikan dengan standar internasional seperti GDPR dan ISO 27001."
       }
     }
   ]
@@ -63,17 +66,21 @@ const faqSchema = JSON.stringify({
 ---
 
 <Layout
-  title="Jasa Pengembangan AI Custom Indonesia | my-aicustom.com"
+  title="Jasa Pengembangan AI Agentic Custom Indonesia | my-aicustom.com"
   description="Perusahaan jasa AI di Indonesia untuk pengembangan AI agent, chatbot AI, automation, analytics, dan computer vision. Konsultasi gratis dengan roadmap implementasi AI."
-  keywords="jasa AI Indonesia, jasa pengembangan AI, AI custom Indonesia, implementasi AI bisnis, AI agent development, chatbot AI Indonesia, AI automation"
+  keywords="jasa AI Indonesia, jasa pengembangan AI, AI Agentic Custom Indonesia, implementasi AI bisnis, AI agent development, chatbot AI Indonesia, AI automation"
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={faqSchema}></script>
   </Fragment>
   <main>
     <Hero />
+    <AiVsChatbot />
+    <LlmBrainFeatures />
+    <AiUseCases />
     <Testimonials />
     <WhyChooseUs />
     <Contact />
   </main>
 </Layout>
+
