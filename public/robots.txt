@@ -34,4 +34,4 @@ Crawl-delay: 1
 # Disallow: /private/
 
 # Sitemap location
-Sitemap: https://my-aicustom.com/sitemap.xml
+Sitemap: https://my-aicustom.com/sitemap-index.xml
