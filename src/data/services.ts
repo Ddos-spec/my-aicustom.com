@@ -1623,6 +1623,29 @@ export const softwareHouse: ServicePage = {
   }
 };
 
+export const aiBusinessConsultation: ServicePage = {
+  slug: 'jasa-ai-custom-bisnis',
+  title: 'Jasa AI Custom untuk Bisnis',
+  seo: {
+    title: 'Jasa AI Custom untuk Bisnis Indonesia | my-aicustom.com',
+    description: 'Solusi cerdas untuk kendala bisnis Anda dengan jasa AI custom. Dapatkan konsultasi gratis, demo trial gratis, dan rekomendasi AI yang tepat sasaran untuk operasional, layanan pelanggan, dan pertumbuhan bisnis.',
+    keywords: ['jasa AI custom', 'konsultasi AI bisnis', 'demo AI gratis', 'solusi AI Indonesia', 'AI untuk bisnis'],
+  },
+  hero: {
+    tagline: 'Solusi Cerdas, Bisnis Dengan AI.',
+    subheading: 'Apapun masalah bisnis Anda, kami bantu memilih dan menyiapkan solusi AI yang benar-benar relevan, tanpa fitur berlebihan dan tanpa membuat tim Anda repot di awal.',
+    cta: 'Mulai Konsultasi Gratis',
+    visual: 'https://images.unsplash.com/photo-1552664730-d307ca884978?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBjb25zdWx0aW5nfGVufDB8fDB8fHww',
+  },
+  problem: { title: 'Problem: Banyak Bisnis Tahu Butuh AI, Tapi Tidak Tahu Mulai dari Mana', points: ['Tim Anda ingin meningkatkan efisiensi, mempercepat respons, atau menaikkan konversi, tetapi belum jelas jenis AI apa yang paling tepat untuk kebutuhan nyata bisnis.', 'Banyak penawaran AI terdengar canggih namun terlalu kompleks, mahal, atau penuh fitur yang tidak benar-benar dipakai oleh tim operasional sehari-hari.', 'Tanpa demo, validasi use case, dan arahan implementasi yang jelas, keputusan adopsi AI sering tertunda atau berakhir pada solusi yang tidak menyelesaikan masalah inti.'] },
+  solution: { title: 'Apa yang Anda Dapatkan', features: [{ name: 'Konsultasi Gratis Sampai Jadi', description: 'Kami bantu memetakan kebutuhan, prioritas, dan use case sampai Anda benar-benar paham solusi AI yang paling cocok untuk bisnis Anda.' }, { name: 'Demo Trial Gratis', description: 'Sebelum mengambil keputusan, Anda bisa melihat simulasi atau alur kerja AI agar lebih mudah menilai manfaatnya secara nyata.' }, { name: 'Solusi Tepat Sasaran', description: 'Kami merekomendasikan jenis AI yang memang diperlukan bisnis Anda, fokus pada hasil dan implementasi praktis, bukan fitur berlebihan.' }] },
+  useCases: { title: 'Contoh Kebutuhan yang Cocok Ditangani', cases: [{ industry: 'Customer Service & WhatsApp', benefit: 'Mempercepat respons, menjawab FAQ, dan menyaring prospek masuk secara otomatis tanpa mengorbankan kualitas komunikasi.' }, { industry: 'Operasional Internal', benefit: 'Mengurangi pekerjaan manual berulang seperti rekap data, routing tugas, dan follow-up sehingga tim bisa fokus pada keputusan penting.' }, { industry: 'Sales & Growth', benefit: 'Membantu kualifikasi lead, menyusun respons awal, dan mempercepat tindak lanjut untuk peluang bisnis yang lebih cepat bergerak.' }] },
+  technical: { title: 'Pendekatan Implementasi Kami', highlights: [{ name: 'Discovery', value: 'Audit kebutuhan bisnis, target hasil, dan prioritas use case sebelum menentukan solusi.' }, { name: 'Validasi Cepat', value: 'Demo trial atau proof of concept ringan untuk memastikan solusi memang relevan.' }, { name: 'Eksekusi', value: 'Implementasi bertahap agar tim Anda bisa adopsi AI tanpa mengganggu operasional utama.' }] },
+  faq: { title: 'Pertanyaan yang Sering Muncul', questions: [{ question: 'Apakah konsultasinya benar-benar gratis?', answer: 'Ya. Tahap awal konsultasi dan pemetaan kebutuhan kami sediakan tanpa biaya agar Anda bisa memahami opsi AI yang paling masuk akal sebelum melangkah lebih jauh.' }, { question: 'Kalau belum yakin dengan solusi yang ditawarkan bagaimana?', answer: 'Itulah gunanya demo trial dan validasi use case. Kami bantu menunjukkan alur kerja yang relevan sebelum Anda mengambil keputusan implementasi.' }, { question: 'Apakah solusi ini hanya untuk perusahaan besar?', answer: 'Tidak. Pendekatan kami bisa disesuaikan untuk bisnis yang baru mulai mengeksplorasi AI maupun perusahaan yang sudah ingin menskalakan automasi dan insight.' }] },
+  pricing: { title: 'Mulai dari Konsultasi Gratis', price: 'Custom pricing', cta: 'Diskusikan Kebutuhan AI Anda' },
+  visualAssets: { chatMockup: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWklMjBidXNpbmVzc3xlbnwwfHwwfHx8MA', architectureDiagram: 'https://images.unsplash.com/photo-1551434678-e076c223a692?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVhbSUyMG1lZXRpbmd8ZW58MHx8MHx8fDA' },
+};
+
 export const allServices = [
     aiAnalytics,
     aiStrategy,
@@ -1630,6 +1653,7 @@ export const allServices = [
     chatbot,
     computerVision,
     trainingChangeManagement,
-    softwareHouse
+    softwareHouse,
+    aiBusinessConsultation
 ]
 
