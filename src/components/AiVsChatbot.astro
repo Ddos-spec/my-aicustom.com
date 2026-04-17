@@ -1,1 +1,234 @@
-<section class="bg-white py-24 overflow-hidden transition-colors duration-300"> <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8"> <div class="grid gap-12 lg:grid-cols-2 lg:items-center"> <!-- Text Content --> <div class="space-y-8 reveal-left"> <div> <span class="inline-flex items-center justify-center rounded-full bg-red-50 px-4 py-1 text-sm font-bold text-red-600 mb-4">Masalah Chatbot Biasa</span> <h2 class="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Tinggalkan Chatbot Jadul yang Bikin Pelanggan Frustrasi.</h2> </div> <p class="text-lg leading-relaxed text-slate-600 "> Pelanggan benci saat harus memilih opsi "Tekan 1 untuk X, Tekan 2 untuk Y" atau mendapat balasan kaku "Maaf, saya tidak mengerti maksud Anda". </p> <div class="space-y-6"> <div class="flex gap-4"> <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600 "> <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> </div> <div> <h3 class="font-bold text-slate-900 ">Chatbot Tradisional (Kaku)</h3> <p class="mt-1 text-sm text-slate-600 ">Hanya bisa membalas jika pelanggan mengetik kata kunci yang persis (keyword matching). Tidak mengerti konteks atau typo.</p> </div> </div> <div class="flex gap-4"> <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600 shadow-inner"> <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> </div> <div> <h3 class="font-bold text-blue-700 ">AI Agent Kami (Cerdas)</h3> <p class="mt-1 text-sm text-slate-600 ">Didukung LLM (seperti GPT-4 / Gemini). Memahami konteks, bahasa gaul, singkatan, dan bisa memandu pelanggan ke konversi layaknya manusia.</p> </div> </div> </div> </div> <!-- Image Area for Bos to Replace --> <div class="relative mx-auto w-full max-w-lg lg:max-w-none reveal-right delay-200"> <div class="absolute -inset-4 bg-gradient-to-r from-red-100 to-blue-100 blur-2xl opacity-50 rounded-[3rem]"></div> <div class="relative rounded-[2rem] bg-slate-100 border border-slate-200 overflow-hidden shadow-xl aspect-[4/3] flex items-center justify-center group"> <img src="/assets/images/vs-chatbot.png" alt="Perbandingan Chatbot vs AI Agent" class="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-500 group-hover:scale-105" /> </div> </div> </div> </div> </section>
+---
+const comparison = [
+  { title: 'AI Chatbot', accent: 'from-red-100 to-white', badge: 'Cocok untuk FAQ tetap', points: ['Jawaban biasanya terpaku pada alur dan keyword.', 'Bagus untuk pertanyaan berulang yang polanya hampir sama.', 'Kurang fleksibel saat user bertanya di luar skenario.'] },
+  { title: 'AI Agent', accent: 'from-blue-100 to-white', badge: 'Cocok untuk percakapan dinamis', points: ['Membaca konteks, tujuan user, dan riwayat percakapan.', 'Bisa memandu user sampai aksi berikutnya lebih jelas.', 'Lebih pas untuk lead qualification, CS, dan workflow bisnis.'] },
+];
+const demoSlots = [
+  { q: '', a: '' },
+  { q: '', a: '' },
+  { q: '', a: '' },
+  { q: '', a: '' },
+  { q: '', a: '' },
+];
+---
+
+<section class="bg-white py-24 overflow-hidden transition-colors duration-300">
+  <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-3xl text-center reveal-up">
+      <span class="inline-flex items-center justify-center rounded-full bg-sky-100 px-4 py-1 text-sm font-bold text-sky-700">AI Chatbot vs AI Agent</span>
+      <h2 class="mt-6 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">Beda chatbot biasa dengan AI Agent yang benar-benar bisa bantu closing percakapan.</h2>
+      <p class="mt-5 text-lg leading-relaxed text-slate-600">Chatbot cocok untuk jawaban yang seragam. AI Agent lebih kuat untuk percakapan yang butuh konteks, arah, dan tindak lanjut. Di bawah ini ada demo interaktif supaya tim Anda bisa mencoba sendiri alurnya.</p>
+    </div>
+    <div class="mt-14 grid gap-6 lg:grid-cols-2">
+      {comparison.map((item) => (
+        <article class={`reveal-up rounded-[2rem] border border-slate-200 bg-gradient-to-br ${item.accent} p-8 shadow-lg shadow-slate-900/5`}>
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="text-2xl font-bold text-slate-900">{item.title}</h3>
+            <span class="rounded-full border border-slate-200 bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-slate-600">{item.badge}</span>
+          </div>
+          <ul class="mt-6 space-y-4 text-sm leading-relaxed text-slate-600">
+            {item.points.map((point) => (
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-500"></span><span>{point}</span></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+    <div class="mt-10 flex flex-col gap-5 rounded-[2rem] border border-slate-200 bg-slate-50 p-6 shadow-sm reveal-up sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">Demo interaktif</p>
+        <h3 class="mt-2 text-2xl font-bold text-slate-900">Ubah sendiri 5 slot percakapan dan lihat preview-nya langsung.</h3>
+        <p class="mt-2 max-w-2xl text-sm text-slate-600">Masukkan pertanyaan dan jawaban versi bisnis Anda, lalu perlihatkan perbedaannya ke tim atau calon klien lewat tampilan chat yang mirip WhatsApp.</p>
+      </div>
+      <button type="button" data-demo-open class="inline-flex items-center justify-center rounded-full bg-sky-600 px-7 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-white shadow-lg shadow-sky-200 transition hover:bg-sky-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200">Lihat Demo</button>
+    </div>
+  </div>
+</section>
+
+<div id="agent-demo-modal" class="fixed inset-0 z-[80] hidden" aria-hidden="true">
+  <div data-demo-close class="absolute inset-0 bg-slate-950/55 backdrop-blur-sm"></div>
+  <div role="dialog" aria-modal="true" aria-labelledby="agent-demo-title" class="relative mx-auto mt-6 flex h-[calc(100vh-3rem)] w-[min(1120px,calc(100%-1.5rem))] flex-col overflow-hidden rounded-[2rem] bg-white shadow-2xl shadow-slate-950/25 sm:mt-8 sm:h-[calc(100vh-4rem)]">
+    <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4">
+      <div><p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">Demo AI Agent</p><h3 id="agent-demo-title" class="text-lg font-bold text-slate-900">Atur 5 percakapan dan lihat simulasi chat</h3></div>
+      <button type="button" data-demo-close class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900" aria-label="Tutup demo">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+    <div class="border-b border-slate-200 bg-white px-5 py-3">
+      <div class="inline-flex rounded-full border border-slate-200 bg-slate-50 p-1">
+        <button type="button" data-demo-tab="chatbot" class="rounded-full bg-sky-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white shadow-sm transition">AI Chatbot</button>
+        <button type="button" data-demo-tab="agent" class="rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-slate-600 transition hover:text-slate-900">AI Agent</button>
+      </div>
+    </div>
+    <div data-demo-panel="chatbot" class="grid min-h-0 flex-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+      <div class="min-h-0 overflow-y-auto border-b border-slate-200 bg-slate-50 p-5 lg:border-b-0 lg:border-r">
+        <div class="mb-5 rounded-2xl border border-sky-100 bg-white p-4 text-sm text-slate-600">Isi 5 pasangan pertanyaan dan jawaban, lalu klik <span class="font-semibold text-slate-900">Simpan Konfigurasi</span>. Setelah itu, uji percakapannya dari panel chat di sebelah kanan.</div>
+        <div class="space-y-4">
+          {demoSlots.map((slot, index) => (
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Slot {index + 1}</p>
+              <label class="mt-3 block text-sm font-semibold text-slate-800">Pertanyaan</label>
+              <input data-demo-question type="text" value={slot.q} placeholder="Contoh: Apakah AI ini bisa dipakai di WhatsApp?" class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-2 focus:ring-sky-100" />
+              <label class="mt-4 block text-sm font-semibold text-slate-800">Jawaban</label>
+              <textarea data-demo-answer rows="4" placeholder="Contoh: Bisa. AI Agent dapat menjawab FAQ, menyaring lead, dan meneruskan percakapan ke tim Anda." class="mt-2 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 outline-none transition focus:border-sky-400 focus:bg-white focus:ring-2 focus:ring-sky-100">{slot.a}</textarea>
+            </div>
+          ))}
+        </div>
+        <div class="sticky bottom-0 mt-5 space-y-3 border-t border-slate-200 bg-slate-50 pt-4">
+          <p data-demo-status class="text-sm text-slate-500">Belum ada konfigurasi tersimpan.</p>
+          <div class="flex flex-wrap gap-3">
+            <button type="button" data-demo-save class="inline-flex items-center justify-center rounded-full bg-sky-600 px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white shadow-lg shadow-sky-200 transition hover:bg-sky-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-sky-200">Simpan Konfigurasi</button>
+            <button type="button" data-demo-reset class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-slate-700 transition hover:bg-slate-100 focus:outline-none focus-visible:ring-4 focus-visible:ring-slate-100">Reset Chat</button>
+          </div>
+        </div>
+      </div>
+      <div class="min-h-0 bg-[#e9f2ec] p-5">
+        <div class="mx-auto flex h-full w-full max-w-md flex-col overflow-hidden rounded-[2rem] border border-slate-200 bg-[#efeae2] shadow-xl">
+          <div class="flex items-center gap-3 bg-[#0b7f69] px-4 py-4 text-white">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-sm font-semibold">AI</div>
+            <div class="min-w-0 flex-1"><p class="truncate text-sm font-semibold">Demo AI Agent</p><p class="text-xs text-white/80">Online sekarang</p></div>
+            <button type="button" class="rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/90">Preview</button>
+          </div>
+          <div id="agent-demo-preview" class="flex-1 space-y-3 overflow-y-auto bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.75),transparent_24%),radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.55),transparent_18%),linear-gradient(180deg,#efeae2_0%,#ddeee3_100%)] p-4"></div>
+          <div class="border-t border-slate-200 bg-[#f0f2f5] px-4 py-3">
+            <div class="flex items-center gap-2 rounded-full bg-white px-2 py-2 shadow-sm">
+              <input data-demo-message type="text" placeholder="Ketik pesan untuk dites..." class="min-w-0 flex-1 bg-transparent px-3 py-2 text-sm text-slate-700 outline-none" />
+              <button type="button" data-demo-send class="rounded-full bg-sky-600 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-white transition hover:bg-sky-700">Kirim</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-demo-panel="agent" class="hidden min-h-0 flex-1 overflow-y-auto bg-[radial-gradient(circle_at_10%_10%,rgba(56,189,248,0.12),transparent_28%),linear-gradient(180deg,#f8fbff_0%,#eef6ff_100%)] p-5 sm:p-8">
+      <div class="mx-auto flex w-full max-w-4xl flex-col justify-center gap-8 self-center">
+        <div class="text-center">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">Demo AI Agent</p>
+          <h4 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Placeholder untuk video demo AI Agent</h4>
+          <p class="mt-4 text-base leading-relaxed text-slate-600">Bagian ini sengaja disiapkan sebagai slot video. Nanti saat video final sudah ada, area ini tinggal kita ganti tanpa perlu mengubah alur popup yang lain.</p>
+        </div>
+        <div class="rounded-[2rem] border border-sky-200 bg-white/90 p-5 shadow-xl shadow-sky-100/70">
+          <div class="flex aspect-video items-center justify-center rounded-[1.5rem] border border-dashed border-sky-300 bg-[linear-gradient(135deg,#dff3ff_0%,#f8fbff_45%,#e8f2ff_100%)] p-6 text-center">
+            <div class="max-w-md space-y-4">
+              <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-sky-600 text-white shadow-lg shadow-sky-200">
+                <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 000-1.68L9.54 5.98A1 1 0 008 6.82z"></path></svg>
+              </div>
+              <p class="text-lg font-semibold text-slate-900">Slot video AI Agent siap dipasang</p>
+              <p class="text-sm leading-relaxed text-slate-600">Sementara ini masih placeholder. Begitu video demo dari kamu sudah siap, saya tinggal ganti area ini jadi player video yang sesuai.</p>
+            </div>
+          </div>
+          <div class="mt-5 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Use Case</p>
+              <p class="mt-2 text-sm font-semibold text-slate-900">Lead qualification</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Integrasi</p>
+              <p class="mt-2 text-sm font-semibold text-slate-900">WhatsApp, CRM, dan workflow internal</p>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-left">
+              <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Status</p>
+              <p class="mt-2 text-sm font-semibold text-slate-900">Placeholder aktif untuk tahap presentasi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (() => {
+    const modal = document.getElementById('agent-demo-modal');
+    const preview = document.getElementById('agent-demo-preview');
+    const composer = document.querySelector('[data-demo-message]');
+    const saveButton = document.querySelector('[data-demo-save]');
+    const sendButton = document.querySelector('[data-demo-send]');
+    const resetButton = document.querySelector('[data-demo-reset]');
+    const status = document.querySelector('[data-demo-status]');
+    const tabs = [...document.querySelectorAll('[data-demo-tab]')];
+    const panels = [...document.querySelectorAll('[data-demo-panel]')];
+    const fields = [...document.querySelectorAll('[data-demo-question]')].map((question, index) => ({ question, answer: document.querySelectorAll('[data-demo-answer]')[index] }));
+    if (!modal || !preview || !composer || !saveButton || !sendButton || !resetButton || !status || !tabs.length || !panels.length || !fields.length) return;
+    const escapeHtml = (value) => value.replace(/[&<>"']/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+    const normalize = (value) => value.trim().toLowerCase();
+    let savedPairs = [];
+    let messages = [];
+    let typingTimer;
+    let activeTab = 'chatbot';
+    const render = (typing = false) => {
+      const html = messages.map((message) => {
+        const bubbleClass = message.role === 'user'
+          ? 'justify-end"><div class="max-w-[82%] rounded-2xl rounded-br-md bg-[#d9fdd3] px-4 py-3 text-sm text-slate-800 shadow-sm'
+          : 'justify-start"><div class="max-w-[82%] rounded-2xl rounded-bl-md bg-white px-4 py-3 text-sm text-slate-700 shadow-sm';
+        return `<div class="flex ${bubbleClass}">${escapeHtml(message.text)}</div></div>`;
+      }).join('');
+      const typingHtml = typing ? '<div class="flex justify-start"><div class="inline-flex items-center gap-2 rounded-2xl rounded-bl-md bg-white px-4 py-3 text-sm text-slate-500 shadow-sm"><span>AI sedang mengetik</span><span class="inline-flex gap-1"><span class="h-2 w-2 rounded-full bg-slate-300 animate-pulse"></span><span class="h-2 w-2 rounded-full bg-slate-300 animate-pulse [animation-delay:120ms]"></span><span class="h-2 w-2 rounded-full bg-slate-300 animate-pulse [animation-delay:240ms]"></span></span></div></div>' : '';
+      preview.innerHTML = html || typingHtml ? `${html}${typingHtml}` : '<div class="rounded-2xl bg-white px-4 py-3 text-sm text-slate-500 shadow-sm">Belum ada chat. Simpan konfigurasi dulu, lalu kirim pesan dari kolom bawah untuk menguji jawaban AI.</div>';
+      preview.scrollTop = preview.scrollHeight;
+    };
+    const updateStatus = () => {
+      status.textContent = savedPairs.length
+        ? `${savedPairs.length} pasangan pertanyaan-jawaban siap diuji.`
+        : 'Belum ada konfigurasi tersimpan.';
+    };
+    const saveConfig = () => {
+      savedPairs = fields.map(({ question, answer }) => ({
+        question: question.value.trim(),
+        answer: answer.value.trim(),
+      })).filter((item) => item.question && item.answer);
+      messages = [];
+      clearTimeout(typingTimer);
+      updateStatus();
+      render();
+    };
+    const sendMessage = () => {
+      const text = composer.value.trim();
+      if (!text) return;
+      messages.push({ role: 'user', text });
+      composer.value = '';
+      clearTimeout(typingTimer);
+      render(true);
+      const match = savedPairs.find((item) => normalize(item.question) === normalize(text));
+      const reply = match ? match.answer : 'Maaf, untuk demo ini saya baru bisa menjawab pertanyaan yang sudah disimpan di panel kiri.';
+      typingTimer = window.setTimeout(() => {
+        messages.push({ role: 'bot', text: reply });
+        render();
+      }, 900);
+    };
+    const resetChat = () => {
+      messages = [];
+      composer.value = '';
+      clearTimeout(typingTimer);
+      render();
+    };
+    const setTab = (nextTab) => {
+      activeTab = nextTab;
+      tabs.forEach((tab) => {
+        const isActive = tab.getAttribute('data-demo-tab') === nextTab;
+        tab.classList.toggle('bg-sky-600', isActive);
+        tab.classList.toggle('text-white', isActive);
+        tab.classList.toggle('shadow-sm', isActive);
+        tab.classList.toggle('text-slate-600', !isActive);
+      });
+      panels.forEach((panel) => panel.classList.toggle('hidden', panel.getAttribute('data-demo-panel') !== nextTab));
+    };
+    const open = () => { modal.classList.remove('hidden'); modal.setAttribute('aria-hidden', 'false'); document.body.classList.add('overflow-hidden'); render(); };
+    const close = () => { modal.classList.add('hidden'); modal.setAttribute('aria-hidden', 'true'); document.body.classList.remove('overflow-hidden'); clearTimeout(typingTimer); };
+    document.querySelectorAll('[data-demo-open]').forEach((button) => button.addEventListener('click', open));
+    modal.querySelectorAll('[data-demo-close]').forEach((button) => button.addEventListener('click', close));
+    saveButton.addEventListener('click', saveConfig);
+    sendButton.addEventListener('click', sendMessage);
+    resetButton.addEventListener('click', resetChat);
+    tabs.forEach((tab) => tab.addEventListener('click', () => setTab(tab.getAttribute('data-demo-tab') || 'chatbot')));
+    composer.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        sendMessage();
+      }
+    });
+    window.addEventListener('keydown', (event) => { if (event.key === 'Escape' && modal.getAttribute('aria-hidden') === 'false') close(); });
+    updateStatus();
+    setTab(activeTab);
+    render();
+  })();
+</script>
