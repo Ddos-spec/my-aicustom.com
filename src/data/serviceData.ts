@@ -20,6 +20,6 @@ export const servicePackages: ServicePackage[] = servicePages.map(service => ({
   image: service.hero.visual,
   imageAlt: `Layanan ${service.title} my-aicustom.com`,
   ctaLabel: 'Lihat Detail',
-  ctaHref: `/service/${service.slug}`,
+  ctaHref: service.slug === 'web-development' ? '/jasa-pembuatan-website/' : `/service/${service.slug}`,
   features: service.solution.features.map(f => f.name),
 }));

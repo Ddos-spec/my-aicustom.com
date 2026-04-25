@@ -1,0 +1,158 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { webDevelopment } from '../data/services';
+
+const page = webDevelopment;
+const headline = 'Bikin traffic iklan berhenti buang-buang klik';
+const subheadline = 'Kami buat landing page yang langsung ke inti: satu offer, satu CTA, satu tujuan. Cocok untuk campaign ads yang butuh inquiry lebih banyak, bukan sekadar page yang terlihat bagus.';
+
+const stats = page.successMetrics?.metrics ?? [];
+const visualTiles = [
+  { label: 'Hero', value: 'Offer first' },
+  { label: 'CTA', value: 'Single action' },
+  { label: 'Proof', value: 'Trust above fold' },
+];
+---
+
+<Layout
+  title="Landing Page Ads A | my-aicustom.com"
+  description="Varian A landing page ads dengan headline direct-response untuk traffic iklan yang butuh inquiry."
+  keywords="landing page ads a, landing page konversi, jasa landing page iklan, page ads Indonesia"
+>
+  <main>
+    <section class="relative overflow-hidden bg-slate-950 text-white">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(14,165,233,0.22),transparent_28%),radial-gradient(circle_at_85%_0%,rgba(59,130,246,0.16),transparent_24%),linear-gradient(180deg,rgba(15,23,42,0.96)_0%,rgba(2,6,23,1)_100%)]"></div>
+      <div class="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-28">
+        <div>
+          <span class="inline-flex items-center rounded-full border border-sky-400/25 bg-white/5 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-sky-300">
+            Headline A
+          </span>
+          <h1 class="mt-6 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            {headline}
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300 sm:text-xl">
+            {subheadline}
+          </p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a href="/konsultasi/" class="inline-flex items-center justify-center rounded-full bg-sky-500 px-7 py-3.5 text-base font-semibold text-slate-950 transition hover:bg-sky-400">
+              Minta Audit Landing Page
+            </a>
+            <a href="/landing-page-ads-b/" class="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-base font-semibold text-white transition hover:bg-white/10">
+              Lihat Versi B
+            </a>
+          </div>
+          <div class="mt-8 grid gap-3 sm:grid-cols-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-6 text-slate-200">Copy direct-response untuk ads</div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-6 text-slate-200">Struktur dibuat untuk inquiry</div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-6 text-slate-200">Visual lebih cepat dinilai</div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-6 rounded-[2rem] bg-sky-500/15 blur-3xl"></div>
+          <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 shadow-2xl shadow-black/40 backdrop-blur">
+            <div class="flex items-center justify-between border-b border-white/10 px-5 py-4">
+              <div class="flex items-center gap-2">
+                <span class="h-3 w-3 rounded-full bg-red-400"></span>
+                <span class="h-3 w-3 rounded-full bg-amber-300"></span>
+                <span class="h-3 w-3 rounded-full bg-emerald-400"></span>
+              </div>
+              <p class="text-xs font-semibold uppercase tracking-[0.24em] text-slate-300">Preview</p>
+            </div>
+            <div class="grid gap-5 p-5">
+              <div class="rounded-[1.5rem] border border-white/10 bg-slate-950/80 p-5">
+                <div class="flex items-center justify-between">
+                  <span class="rounded-full bg-sky-500/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-300">Landing Page</span>
+                  <span class="text-xs text-slate-400">Mobile-first</span>
+                </div>
+                <div class="mt-5 grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
+                  <div>
+                    <p class="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">Headline</p>
+                    <div class="mt-2 space-y-2">
+                      <div class="h-3 w-4/5 rounded-full bg-white"></div>
+                      <div class="h-3 w-3/5 rounded-full bg-slate-400/70"></div>
+                      <div class="h-3 w-2/3 rounded-full bg-slate-400/50"></div>
+                    </div>
+                    <div class="mt-5 flex gap-3">
+                      <div class="h-10 w-36 rounded-full bg-sky-500"></div>
+                      <div class="h-10 w-28 rounded-full border border-white/15"></div>
+                    </div>
+                  </div>
+                  <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                      <span>Ad score</span>
+                      <span>9.4/10</span>
+                    </div>
+                    <div class="mt-3 space-y-3">
+                      <div class="h-2 rounded-full bg-slate-800">
+                        <div class="h-2 w-[86%] rounded-full bg-sky-400"></div>
+                      </div>
+                      <div class="h-2 rounded-full bg-slate-800">
+                        <div class="h-2 w-[78%] rounded-full bg-sky-300"></div>
+                      </div>
+                      <div class="h-2 rounded-full bg-slate-800">
+                        <div class="h-2 w-[92%] rounded-full bg-white"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="grid gap-3 sm:grid-cols-3">
+                {visualTiles.map((tile) => (
+                  <div class="rounded-2xl border border-white/10 bg-slate-950/70 px-4 py-4">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-sky-300">{tile.label}</p>
+                    <p class="mt-2 text-sm font-medium text-white">{tile.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-8">
+      <div class="mx-auto grid max-w-6xl gap-6 px-6 md:grid-cols-3">
+        {stats.map((metric) => (
+          <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6 text-center shadow-[0_18px_48px_-38px_rgba(15,23,42,0.4)]">
+            <p class="text-4xl font-bold text-sky-600">{metric.value}</p>
+            <p class="mt-2 text-sm leading-6 text-slate-600">{metric.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="bg-slate-50 py-16">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div class="rounded-[2rem] bg-slate-50 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Visual direction</p>
+            <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Landing page yang terasa seperti produk, bukan brosur.</h2>
+            <p class="mt-4 text-base leading-7 text-slate-600">
+              Kami bikin layout yang punya ritme visual, kontras, dan fokus. Pengunjung langsung tahu apa yang ditawarkan dan apa langkah berikutnya.
+            </p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-3xl border border-slate-100 bg-slate-950 p-6 text-white shadow-[0_24px_60px_-42px_rgba(15,23,42,0.45)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">Hero</p>
+              <p class="mt-3 text-sm leading-7 text-slate-300">Headline kuat, CTA tegas, dan visual mockup yang langsung menjelaskan tujuan halaman.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-[0_24px_60px_-42px_rgba(15,23,42,0.18)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">Proof</p>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Angka dan testimoni diletakkan dekat dengan CTA supaya keputusan lebih mudah diambil.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6 shadow-[0_24px_60px_-42px_rgba(15,23,42,0.18)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">Layout</p>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Section disusun vertikal dengan cukup ruang, sehingga nyaman dibaca di desktop maupun mobile.</p>
+            </div>
+            <div class="rounded-3xl border border-sky-100 bg-sky-50 p-6 shadow-[0_24px_60px_-42px_rgba(15,23,42,0.18)]">
+              <p class="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">CTA</p>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Satu tindakan utama di setiap titik penting, supaya visual dan conversion bergerak ke arah yang sama.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

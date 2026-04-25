@@ -1,0 +1,229 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProblemSection from '../components/services/ProblemSection.astro';
+import SolutionSection from '../components/services/SolutionSection.astro';
+import FeaturesDeepDiveSection from '../components/services/FeaturesDeepDiveSection.astro';
+import IdealCustomerProfileSection from '../components/services/IdealCustomerProfileSection.astro';
+import HowItWorksSection from '../components/services/HowItWorksSection.astro';
+import UseCasesSection from '../components/services/UseCasesSection.astro';
+import DetailedCaseStudySection from '../components/services/DetailedCaseStudySection.astro';
+import CompetitiveAdvantageSection from '../components/services/CompetitiveAdvantageSection.astro';
+import TechnicalSection from '../components/services/TechnicalSection.astro';
+import SuccessMetricsSection from '../components/services/SuccessMetricsSection.astro';
+import FaqSection from '../components/services/FaqSection.astro';
+import PricingSection from '../components/services/PricingSection.astro';
+import { webDevelopment } from '../data/services';
+
+const page = webDevelopment;
+
+const faqSchema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": page.faq.questions.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer,
+    },
+  })),
+}, null, 2);
+
+const valueProps = [
+  {
+    title: 'Fokus inquiry',
+    description: 'Setiap section diarahkan ke satu aksi utama: WhatsApp, form, atau request penawaran.',
+  },
+  {
+    title: 'Cepat dan meyakinkan',
+    description: 'Struktur, metadata, dan performa dibuat supaya website terasa legit sejak detik pertama dibuka.',
+  },
+  {
+    title: 'Siap dipakai ads',
+    description: 'Copy, CTA, dan layout disusun supaya cocok dipakai untuk traffic dari iklan dan campaign.',
+  },
+];
+
+const proofPoints = [
+  'Landing page untuk iklan, company profile, dan e-commerce',
+  'Copywriting yang menyorot manfaat, bukan jargon teknis',
+  'Struktur SEO dan performa yang dibangun sejak awal',
+];
+
+const closingPoints = [
+  'Butuh website baru dari nol',
+  'Mau redesign website yang sekarang kurang menjual',
+  'Ingin landing page yang langsung dipakai untuk ads',
+];
+
+const trustStats = page.successMetrics?.metrics ?? [];
+const trustQuote = page.detailedCaseStudy?.testimonial ?? '';
+const trustClient = page.detailedCaseStudy?.client ?? '';
+---
+
+<Layout
+  title="Jasa Pembuatan Website yang Fokus ke Leads | my-aicustom.com"
+  description="Jasa pembuatan website untuk bisnis yang ingin lebih banyak inquiry, WhatsApp masuk, dan penjualan. Cocok untuk landing page, company profile, dan e-commerce."
+  keywords="jasa pembuatan website, website yang menghasilkan leads, landing page konversi, company profile profesional, web development Indonesia, website SEO friendly"
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={faqSchema}></script>
+  </Fragment>
+
+  <main>
+    <section class="relative overflow-hidden bg-white">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(14,93,245,0.14),transparent_28%),radial-gradient(circle_at_80%_10%,rgba(59,130,246,0.12),transparent_24%),linear-gradient(180deg,#f8fbff_0%,#ffffff_58%,#f5f9ff_100%)]"></div>
+      <div class="relative mx-auto grid w-full max-w-6xl gap-12 px-6 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-28">
+        <div>
+          <span class="inline-flex items-center rounded-full border border-sky-200 bg-white/90 px-4 py-1 text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 shadow-sm">Jasa Pembuatan Website</span>
+          <h1 class="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Website yang bikin inquiry masuk, bukan cuma terlihat bagus
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
+            Kami membangun website yang jelas tujuannya: membuat calon pelanggan klik, isi formulir, chat WhatsApp, atau minta penawaran. Kalau website Anda belum menghasilkan inquiry, kami benahi copy, struktur, dan offer-nya.
+          </p>
+          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href="/konsultasi/"
+              class="inline-flex items-center justify-center rounded-full bg-blue-600 px-7 py-3.5 text-base font-semibold text-white shadow-lg shadow-blue-200/70 transition hover:-translate-y-0.5 hover:bg-blue-500"
+            >
+              Audit Website Gratis
+            </a>
+            <a
+              href="#paket-website"
+              class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-7 py-3.5 text-base font-semibold text-slate-700 transition hover:border-blue-200 hover:text-blue-700"
+            >
+              Lihat Solusinya
+            </a>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-2 text-sm text-slate-500">
+            <span class="rounded-full bg-slate-100 px-3 py-1">Cocok untuk traffic ads</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1">Cocok untuk sales page</span>
+            <span class="rounded-full bg-slate-100 px-3 py-1">Cocok untuk company profile</span>
+          </div>
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            {valueProps.map((item) => (
+              <article class="rounded-3xl border border-slate-100 bg-white p-5 shadow-[0_18px_48px_-34px_rgba(15,23,42,0.45)]">
+                <h2 class="text-sm font-semibold uppercase tracking-[0.14em] text-sky-700">{item.title}</h2>
+                <p class="mt-3 text-sm leading-6 text-slate-600">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-4 rounded-[2rem] bg-blue-200/20 blur-3xl"></div>
+          <img
+            src={page.hero.visual}
+            alt="Ilustrasi jasa pembuatan website yang fokus ke konversi"
+            class="relative h-full w-full rounded-[2rem] object-cover shadow-2xl shadow-sky-500/15 ring-1 ring-slate-200/70"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="paket-website" class="bg-white py-6">
+      <div class="mx-auto grid max-w-6xl gap-6 px-6 md:grid-cols-3">
+        <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6">
+          <p class="text-sm font-semibold uppercase tracking-[0.14em] text-sky-700">Yang Anda Dapat</p>
+          <p class="mt-3 text-base leading-7 text-slate-600">Landing page, company profile, atau e-commerce yang dibuat untuk menggerakkan lead dan sales.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6">
+          <p class="text-sm font-semibold uppercase tracking-[0.14em] text-sky-700">Kenapa Ini Penting</p>
+          <p class="mt-3 text-base leading-7 text-slate-600">Karena website yang baik bukan cuma informatif, tapi juga membantu tim Anda menutup prospek lebih cepat.</p>
+        </div>
+        <div class="rounded-3xl border border-slate-100 bg-slate-50 p-6">
+          <p class="text-sm font-semibold uppercase tracking-[0.14em] text-sky-700">Langkah Pertama</p>
+          <p class="mt-3 text-base leading-7 text-slate-600">Kami mulai dari audit gratis untuk melihat bagian mana yang paling cepat bisa dioptimasi untuk hasil.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-slate-50 py-10">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-[0_24px_60px_-38px_rgba(15,23,42,0.4)]">
+          <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Website yang siap jualan</p>
+              <h2 class="mt-3 text-3xl font-bold tracking-tight text-slate-900">Kalau website Anda tidak menghasilkan inquiry, itu masalah copy, struktur, atau offer.</h2>
+              <p class="mt-4 max-w-xl text-base leading-7 text-slate-600">Kami bantu identifikasi mana yang harus dipotong, ditulis ulang, dan diperkuat supaya traffic lebih cepat berubah jadi prospek.</p>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-3">
+              {proofPoints.map((point) => (
+                <div class="rounded-2xl bg-slate-50 px-4 py-4 text-sm font-medium leading-6 text-slate-700">
+                  {point}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white py-6">
+      <div class="mx-auto max-w-6xl px-6">
+        <div class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+          <div class="rounded-[2rem] border border-slate-100 bg-slate-50 p-8">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-700">Bukti kerja</p>
+            <h2 class="mt-3 text-2xl font-bold tracking-tight text-slate-900">Angka yang kami pakai untuk mengukur website yang bagus</h2>
+            <div class="mt-8 grid gap-6 sm:grid-cols-3">
+              {trustStats.map((metric) => (
+                <div class="rounded-2xl bg-white px-5 py-5 shadow-[0_18px_46px_-34px_rgba(15,23,42,0.35)]">
+                  <p class="text-3xl font-bold text-sky-600">{metric.value}</p>
+                  <p class="mt-2 text-sm leading-6 text-slate-600">{metric.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="rounded-[2rem] border border-slate-100 bg-slate-950 p-8 text-white shadow-[0_24px_60px_-38px_rgba(15,23,42,0.5)]">
+            <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">Testimoni terkait website</p>
+            <blockquote class="mt-4 text-xl leading-8 text-slate-100">
+              {trustQuote}
+            </blockquote>
+            <p class="mt-6 text-sm font-semibold text-slate-300">{trustClient}</p>
+            <p class="mt-2 text-sm leading-6 text-slate-400">Itu adalah target yang kami kejar juga untuk halaman Anda: terlihat profesional, cepat, dan menghasilkan prospek.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <ProblemSection problem={page.problem} />
+    <SolutionSection solution={page.solution} />
+    <FeaturesDeepDiveSection featuresDeepDive={page.featuresDeepDive} />
+    <IdealCustomerProfileSection idealCustomerProfile={page.idealCustomerProfile} />
+    <HowItWorksSection howItWorks={page.howItWorks} />
+    <UseCasesSection useCases={page.useCases} />
+    <DetailedCaseStudySection detailedCaseStudy={page.detailedCaseStudy} />
+    <CompetitiveAdvantageSection competitiveAdvantage={page.competitiveAdvantage} />
+    <TechnicalSection technical={page.technical} />
+    <SuccessMetricsSection successMetrics={page.successMetrics} />
+    <FaqSection faq={page.faq} />
+    <PricingSection pricing={page.pricing} />
+    <section class="bg-slate-950 py-16 text-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:items-center lg:justify-between">
+        <div class="max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-sky-300">Offer Penutup</p>
+          <h2 class="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Kalau Anda serius ingin website yang menghasilkan prospek, mulai dari audit gratis.</h2>
+          <p class="mt-4 text-base leading-7 text-slate-300">
+            Kami akan bantu lihat halaman mana yang harus dipotong, ditulis ulang, atau diperkuat supaya traffic lebih banyak berubah jadi inquiry.
+          </p>
+        </div>
+        <div class="grid gap-3 sm:grid-cols-2 lg:min-w-[24rem]">
+          {closingPoints.map((point) => (
+            <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 text-sm leading-6 text-slate-200">
+              {point}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="mx-auto mt-10 max-w-6xl px-6">
+        <a
+          href="/konsultasi/"
+          class="inline-flex items-center justify-center rounded-full bg-sky-500 px-8 py-3.5 text-base font-semibold text-slate-950 transition hover:bg-sky-400"
+        >
+          Minta Audit Gratis Sekarang
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
